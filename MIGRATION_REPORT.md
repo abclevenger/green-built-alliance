@@ -12,9 +12,15 @@ Rebuilding hundreds of pages by hand would introduce copy, spacing, and SEO drif
 2. **Fetch** each URL’s full HTML over HTTPS.
 3. **Light rewrite** of same-origin **anchor** `href` values from `https://www.greenbuilt.org/...` to root-relative paths so navigation stays on the Next deployment.
 4. **Do not rewrite** `script`, `link`, `img`, or `srcset` URLs — they continue to point at the live host’s `/wp-content/` and `/wp-includes/` unless a separate asset-mirroring pass is run.
-5. **Serve** each saved document via a **Route Handler** that returns the raw HTML. This preserves:
+5. **Serve** each saved document as a **static file** under `public/mirror/.../index.html`, mapped to public URLs with **`next.config.ts` `rewrites()`** (`beforeFiles`). This avoids bundling the mirror into a Serverless Function (see **Vercel** below). It preserves:
    - Inline and external JavaScript behavior (menus, WooCommerce, Give, calendars, etc. as long as APIs remain reachable).
    - Complete `<head>`: title, meta description, Open Graph, Twitter, canonical, `application/ld+json` (Yoast), etc.
+
+### Vercel / serverless size (250 MB limit)
+
+An earlier approach used `app/[[...slug]]/route.ts` with `fs.readFile` on `public/mirror`. Next.js/Vercel **file tracing** pulled the entire mirror into the **unzipped** Serverless Function payload and exceeded Vercel’s **250 MB** limit.
+
+**Fix (current):** no catch-all Route Handler; **`rewrites()`** only. Mirrored HTML stays in `public/` as static assets and is **not** part of the function bundle. `app/sitemap.ts` and `app/robots.ts` remain small, separate routes.
 
 ## Crawl coverage
 

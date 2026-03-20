@@ -13,6 +13,9 @@ const lists = [
   { name: "WordPress pages (Yoast page-sitemap)", file: "page-urls.txt" },
   { name: "Blog posts (Yoast post-sitemap)", file: "post-urls.txt" },
   { name: "Events (The Events Calendar tribe_events-sitemap)", file: "event-urls.txt" },
+  { name: "Category archives (Yoast category-sitemap)", file: "category-urls.txt" },
+  { name: "Author archives (WP REST /users — author-sitemap.xml 500 on live)", file: "author-urls.txt" },
+  { name: "Extra live routes (calendar, typo URL)", file: "extra-routes.txt" },
 ];
 
 let md = `# Route map — greenbuilt.org → Next.js\n\n`;

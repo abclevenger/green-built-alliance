@@ -16,7 +16,7 @@ Open [http://localhost:3000/](http://localhost:3000/) (trailing slash enabled).
 | Piece | Role |
 |-------|------|
 | `public/mirror/**/index.html` | Full page HTML saved from the live site |
-| `src/app/[[...slug]]/route.ts` | `GET` handler reads the matching `index.html` and returns it |
+| `next.config.ts` → `rewrites()` | Maps `/` and `/:path*/` to static files under `/mirror/.../index.html` (no Serverless Function; safe for **Vercel 250 MB** function limit) |
 | `mirror/manifest.json` | Crawl manifest (source URL → file path) |
 | `src/app/sitemap.ts` | Lists mirrored URLs for search engines |
 | `src/app/robots.ts` | Robots rules aligned with production |

@@ -5560,5 +5560,2345 @@
     "mirrorFile": "event/building-science-avl-save-the-date-2/index.html",
     "fetchedAt": "2026-03-20T21:05:28.311Z",
     "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/alternative-wall-systems/",
+    "mirrorFile": "category/alternative-wall-systems/index.html",
+    "fetchedAt": "2026-03-20T21:17:58.230Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/alternative-renewable-energy/",
+    "mirrorFile": "category/alternative-renewable-energy/index.html",
+    "fetchedAt": "2026-03-20T21:17:59.990Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/appliances-lighting/",
+    "mirrorFile": "category/appliances-lighting/index.html",
+    "fetchedAt": "2026-03-20T21:18:01.857Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/building-envelope/",
+    "mirrorFile": "category/building-envelope/index.html",
+    "fetchedAt": "2026-03-20T21:18:03.988Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/case-studies/",
+    "mirrorFile": "category/case-studies/index.html",
+    "fetchedAt": "2026-03-20T21:18:06.029Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/electric-vehicles/",
+    "mirrorFile": "category/electric-vehicles/index.html",
+    "fetchedAt": "2026-03-20T21:18:08.241Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-efficiency-air-sealing/",
+    "mirrorFile": "category/energy-efficiency-air-sealing/index.html",
+    "fetchedAt": "2026-03-20T21:18:10.494Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-tax-credits/",
+    "mirrorFile": "category/energy-tax-credits/index.html",
+    "fetchedAt": "2026-03-20T21:18:12.842Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/equity-the-green-economy/",
+    "mirrorFile": "category/equity-the-green-economy/index.html",
+    "fetchedAt": "2026-03-20T21:18:14.606Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/",
+    "mirrorFile": "category/green-building/index.html",
+    "fetchedAt": "2026-03-20T21:18:16.528Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/government-resources/",
+    "mirrorFile": "category/government-resources/index.html",
+    "fetchedAt": "2026-03-20T21:18:18.512Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/",
+    "mirrorFile": "category/green-built-alliance-news/index.html",
+    "fetchedAt": "2026-03-20T21:18:20.964Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-homes/",
+    "mirrorFile": "category/green-built-homes/index.html",
+    "fetchedAt": "2026-03-20T21:18:22.720Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-real-estate/",
+    "mirrorFile": "category/green-real-estate/index.html",
+    "fetchedAt": "2026-03-20T21:18:24.443Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-remodeling/",
+    "mirrorFile": "category/green-remodeling/index.html",
+    "fetchedAt": "2026-03-20T21:18:26.200Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/health-indoor-air-quality/",
+    "mirrorFile": "category/health-indoor-air-quality/index.html",
+    "fetchedAt": "2026-03-20T21:18:27.867Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/heating-cooling-systems/",
+    "mirrorFile": "category/heating-cooling-systems/index.html",
+    "fetchedAt": "2026-03-20T21:18:29.805Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/",
+    "mirrorFile": "category/articles/index.html",
+    "fetchedAt": "2026-03-20T21:18:31.846Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/index.html",
+    "fetchedAt": "2026-03-20T21:18:33.916Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/natural-building/",
+    "mirrorFile": "category/natural-building/index.html",
+    "fetchedAt": "2026-03-20T21:18:35.651Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/net-zero-energy-homes/",
+    "mirrorFile": "category/net-zero-energy-homes/index.html",
+    "fetchedAt": "2026-03-20T21:18:37.370Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/smart-growth/",
+    "mirrorFile": "category/smart-growth/index.html",
+    "fetchedAt": "2026-03-20T21:18:39.096Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/sustainable-building-materials/",
+    "mirrorFile": "category/sustainable-building-materials/index.html",
+    "fetchedAt": "2026-03-20T21:18:40.959Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/site-landscape/",
+    "mirrorFile": "category/site-landscape/index.html",
+    "fetchedAt": "2026-03-20T21:18:42.744Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/technical-checklists/",
+    "mirrorFile": "category/technical-checklists/index.html",
+    "fetchedAt": "2026-03-20T21:18:44.553Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/water-efficiency/",
+    "mirrorFile": "category/water-efficiency/index.html",
+    "fetchedAt": "2026-03-20T21:18:46.300Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/calendar/",
+    "mirrorFile": "calendar/index.html",
+    "fetchedAt": "2026-03-20T21:21:12.436Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-buiding-classes/continuing-education-courses/",
+    "mirrorFile": "green-buiding-classes/continuing-education-courses/index.html",
+    "fetchedAt": "2026-03-20T21:21:13.656Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/aleshareardongmail-com/",
+    "mirrorFile": "author/aleshareardongmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:15.465Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/alyxsouthernsustainableforests-org/",
+    "mirrorFile": "author/alyxsouthernsustainableforests-org/index.html",
+    "fetchedAt": "2026-03-20T21:21:17.052Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/amyasmithrealtor-com/",
+    "mirrorFile": "author/amyasmithrealtor-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:18.744Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/amyvandemusser-com/",
+    "mirrorFile": "author/amyvandemusser-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:20.535Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/arianeashevillehabitat-org/",
+    "mirrorFile": "author/arianeashevillehabitat-org/index.html",
+    "fetchedAt": "2026-03-20T21:21:22.122Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/aweaverashevillenc-gov/",
+    "mirrorFile": "author/aweaverashevillenc-gov/index.html",
+    "fetchedAt": "2026-03-20T21:21:23.677Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/baylessncatt-net/",
+    "mirrorFile": "author/baylessncatt-net/index.html",
+    "fetchedAt": "2026-03-20T21:21:25.648Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/benjaminashevilledrainage-com/",
+    "mirrorFile": "author/benjaminashevilledrainage-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:27.436Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/bfairclothdeltechomes-com/",
+    "mirrorFile": "author/bfairclothdeltechomes-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:29.041Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/billcarolinanativenursery-com/",
+    "mirrorFile": "author/billcarolinanativenursery-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:30.575Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/boone-guytongmail-com/",
+    "mirrorFile": "author/boone-guytongmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:32.223Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/bradgreenbuilt-org/",
+    "mirrorFile": "author/bradgreenbuilt-org/index.html",
+    "fetchedAt": "2026-03-20T21:21:33.769Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/cari/",
+    "mirrorFile": "author/cari/index.html",
+    "fetchedAt": "2026-03-20T21:21:35.380Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/carrievoglerllc-com/",
+    "mirrorFile": "author/carrievoglerllc-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:37.039Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/cbristow/",
+    "mirrorFile": "author/cbristow/index.html",
+    "fetchedAt": "2026-03-20T21:21:38.587Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/chelseygreenbuilt-org/",
+    "mirrorFile": "author/chelseygreenbuilt-org/index.html",
+    "fetchedAt": "2026-03-20T21:21:40.286Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/chrissy-burtonymail-com/",
+    "mirrorFile": "author/chrissy-burtonymail-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:41.868Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/christine-snyder4gmail-com/",
+    "mirrorFile": "author/christine-snyder4gmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:43.351Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/cmsilverthearchnc-com/",
+    "mirrorFile": "author/cmsilverthearchnc-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:44.834Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/connorlamb/",
+    "mirrorFile": "author/connorlamb/index.html",
+    "fetchedAt": "2026-03-20T21:21:46.309Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/damolambnc-cherokee-com/",
+    "mirrorFile": "author/damolambnc-cherokee-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:47.803Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/danielcleregmail-com/",
+    "mirrorFile": "author/danielcleregmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:49.293Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/danuwholetreepermaculture-tumblr-com/",
+    "mirrorFile": "author/danuwholetreepermaculture-tumblr-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:50.789Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/darrenmuckrack-com/",
+    "mirrorFile": "author/darrenmuckrack-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:52.254Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/davereliableacorn-com/",
+    "mirrorFile": "author/davereliableacorn-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:53.733Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/david-gordon/",
+    "mirrorFile": "author/david-gordon/index.html",
+    "fetchedAt": "2026-03-20T21:21:55.220Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/davidequinoxenvironmental-com/",
+    "mirrorFile": "author/davidequinoxenvironmental-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:56.739Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/denaequinoxenvironmental-com/",
+    "mirrorFile": "author/denaequinoxenvironmental-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:58.249Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/dhmcphersongmail-com/",
+    "mirrorFile": "author/dhmcphersongmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:21:59.761Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/earthtonebuildersgmail-com/",
+    "mirrorFile": "author/earthtonebuildersgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:01.509Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/ecorealkw-com/",
+    "mirrorFile": "author/ecorealkw-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:03.017Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/emiliolivingroofsinc-com/",
+    "mirrorFile": "author/emiliolivingroofsinc-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:04.644Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/emilymountainsunbuilding-com/",
+    "mirrorFile": "author/emilymountainsunbuilding-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:06.161Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/erikasundancepower-com/",
+    "mirrorFile": "author/erikasundancepower-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:07.682Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/eringreenopportunities-org/",
+    "mirrorFile": "author/eringreenopportunities-org/index.html",
+    "fetchedAt": "2026-03-20T21:22:09.545Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/evergreenconstructincgmail-com/",
+    "mirrorFile": "author/evergreenconstructincgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:11.203Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/garretsmokymountainnews-com/",
+    "mirrorFile": "author/garretsmokymountainnews-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:12.796Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/gcarrollhughesgmail-com/",
+    "mirrorFile": "author/gcarrollhughesgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:14.341Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/geoffreymtnhousing-org/",
+    "mirrorFile": "author/geoffreymtnhousing-org/index.html",
+    "fetchedAt": "2026-03-20T21:22:16.049Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/green-built-alliance/",
+    "mirrorFile": "author/green-built-alliance/index.html",
+    "fetchedAt": "2026-03-20T21:22:17.698Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/greenbuildingmountainx-com/",
+    "mirrorFile": "author/greenbuildingmountainx-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:19.329Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/grizzlyjoshgmail-com/",
+    "mirrorFile": "author/grizzlyjoshgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:20.852Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/gwengreenopportunities-org/",
+    "mirrorFile": "author/gwengreenopportunities-org/index.html",
+    "fetchedAt": "2026-03-20T21:22:22.604Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/hannahgreenbuilt-org/",
+    "mirrorFile": "author/hannahgreenbuilt-org/index.html",
+    "fetchedAt": "2026-03-20T21:22:24.190Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/hannahsmokymountainnews-com/",
+    "mirrorFile": "author/hannahsmokymountainnews-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:25.779Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/hansjademountainbuilders-com/",
+    "mirrorFile": "author/hansjademountainbuilders-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:27.276Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/hmoodyabtech-edu/",
+    "mirrorFile": "author/hmoodyabtech-edu/index.html",
+    "fetchedAt": "2026-03-20T21:22:28.953Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/infoashevillesolarcompany-com/",
+    "mirrorFile": "author/infoashevillesolarcompany-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:30.467Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/infoblueridgeenergysystems-com/",
+    "mirrorFile": "author/infoblueridgeenergysystems-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:32.057Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/infoecoforesters-org/",
+    "mirrorFile": "author/infoecoforesters-org/index.html",
+    "fetchedAt": "2026-03-20T21:22:33.576Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/infogoodmanforthejob-com/",
+    "mirrorFile": "author/infogoodmanforthejob-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:35.178Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/infomountainmoss-com/",
+    "mirrorFile": "author/infomountainmoss-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:36.718Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/infosugarhollowsolar-com/",
+    "mirrorFile": "author/infosugarhollowsolar-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:38.283Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/integritive/",
+    "mirrorFile": "author/integritive/index.html",
+    "fetchedAt": "2026-03-20T21:22:39.880Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/intern/",
+    "mirrorFile": "author/intern/index.html",
+    "fetchedAt": "2026-03-20T21:22:41.440Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jacobwncgbc-org/",
+    "mirrorFile": "author/jacobwncgbc-org/index.html",
+    "fetchedAt": "2026-03-20T21:22:43.083Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jacquinaacp-org/",
+    "mirrorFile": "author/jacquinaacp-org/index.html",
+    "fetchedAt": "2026-03-20T21:22:44.583Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/janeself-help-org/",
+    "mirrorFile": "author/janeself-help-org/index.html",
+    "fetchedAt": "2026-03-20T21:22:46.095Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jasonequinoxenvironmental-com/",
+    "mirrorFile": "author/jasonequinoxenvironmental-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:47.620Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jeffstaudingergmail-com/",
+    "mirrorFile": "author/jeffstaudingergmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:49.135Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jenmclucasd/",
+    "mirrorFile": "author/jenmclucasd/index.html",
+    "fetchedAt": "2026-03-20T21:22:50.728Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jenniferappalachianlandslide-com/",
+    "mirrorFile": "author/jenniferappalachianlandslide-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:52.151Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jennifercornerrockbuilding-com/",
+    "mirrorFile": "author/jennifercornerrockbuilding-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:53.665Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jeremiahgreenbuilt-org/",
+    "mirrorFile": "author/jeremiahgreenbuilt-org/index.html",
+    "fetchedAt": "2026-03-20T21:22:55.140Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jgachenergyhomeinspection-com/",
+    "mirrorFile": "author/jgachenergyhomeinspection-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:56.634Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jmartinikw-com/",
+    "mirrorFile": "author/jmartinikw-com/index.html",
+    "fetchedAt": "2026-03-20T21:22:58.110Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/joanenergync-org/",
+    "mirrorFile": "author/joanenergync-org/index.html",
+    "fetchedAt": "2026-03-20T21:22:59.556Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/joe/",
+    "mirrorFile": "author/joe/index.html",
+    "fetchedAt": "2026-03-20T21:23:01.091Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/joenarwhalbuilt-com/",
+    "mirrorFile": "author/joenarwhalbuilt-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:02.678Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/johngreenacresasheville-com/",
+    "mirrorFile": "author/johngreenacresasheville-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:04.282Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/johnjohnshore-com/",
+    "mirrorFile": "author/johnjohnshore-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:05.872Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/johnmueller-pegmail-com/",
+    "mirrorFile": "author/johnmueller-pegmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:07.376Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/johnsenechal-kwgmail-com/",
+    "mirrorFile": "author/johnsenechal-kwgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:09.046Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/jojoajojototayhma-com/",
+    "mirrorFile": "author/jojoajojototayhma-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:10.631Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/kat-mcreynoldsgmail-com/",
+    "mirrorFile": "author/kat-mcreynoldsgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:12.285Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/katiekatieonheiber-com/",
+    "mirrorFile": "author/katiekatieonheiber-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:13.764Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/kelvingreenbuilt-org/",
+    "mirrorFile": "author/kelvingreenbuilt-org/index.html",
+    "fetchedAt": "2026-03-20T21:23:15.343Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/kenconservationfund-org/",
+    "mirrorFile": "author/kenconservationfund-org/index.html",
+    "fetchedAt": "2026-03-20T21:23:16.944Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/kevingeosciencegroup-com/",
+    "mirrorFile": "author/kevingeosciencegroup-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:18.403Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/kristencompactcottages-com/",
+    "mirrorFile": "author/kristencompactcottages-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:19.981Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/laughingwaterscontactgmail-com/",
+    "mirrorFile": "author/laughingwaterscontactgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:21.606Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/laurayummyyards-com/",
+    "mirrorFile": "author/laurayummyyards-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:23.135Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/ldickensdeltechomes-com/",
+    "mirrorFile": "author/ldickensdeltechomes-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:24.893Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/leereclaimingwisdom-com/",
+    "mirrorFile": "author/leereclaimingwisdom-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:26.456Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/maddyashevillehabitat-org/",
+    "mirrorFile": "author/maddyashevillehabitat-org/index.html",
+    "fetchedAt": "2026-03-20T21:23:27.933Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/maggie/",
+    "mirrorFile": "author/maggie/index.html",
+    "fetchedAt": "2026-03-20T21:23:29.511Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/margaretsamselarchitects-com/",
+    "mirrorFile": "author/margaretsamselarchitects-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:31.166Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/marylovethegreengmail-com/",
+    "mirrorFile": "author/marylovethegreengmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:32.842Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/mattwncgbc-org/",
+    "mirrorFile": "author/mattwncgbc-org/index.html",
+    "fetchedAt": "2026-03-20T21:23:34.473Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/melissaoldnorthstatebuildingcompany-com/",
+    "mirrorFile": "author/melissaoldnorthstatebuildingcompany-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:36.051Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/mikal-bonilla/",
+    "mirrorFile": "author/mikal-bonilla/index.html",
+    "fetchedAt": "2026-03-20T21:23:37.724Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/mikemymosaicrealty-com/",
+    "mirrorFile": "author/mikemymosaicrealty-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:39.429Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/mmcduffwarren-wilson-edu/",
+    "mirrorFile": "author/mmcduffwarren-wilson-edu/index.html",
+    "fetchedAt": "2026-03-20T21:23:40.897Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/mvwilliamsmountainx-com/",
+    "mirrorFile": "author/mvwilliamsmountainx-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:42.413Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/nancyriverlink-org/",
+    "mirrorFile": "author/nancyriverlink-org/index.html",
+    "fetchedAt": "2026-03-20T21:23:43.942Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/nathannathansresume-com/",
+    "mirrorFile": "author/nathannathansresume-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:45.510Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/nedryandoyleearthlink-net/",
+    "mirrorFile": "author/nedryandoyleearthlink-net/index.html",
+    "fetchedAt": "2026-03-20T21:23:47.423Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/nicholsonandsungmail-com/",
+    "mirrorFile": "author/nicholsonandsungmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:49.153Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/ninargees-com/",
+    "mirrorFile": "author/ninargees-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:50.659Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/olgahighcove-com/",
+    "mirrorFile": "author/olgahighcove-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:52.160Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/perrycwappstate-edu/",
+    "mirrorFile": "author/perrycwappstate-edu/index.html",
+    "fetchedAt": "2026-03-20T21:23:53.652Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/philsoutheasternhardwoods-com/",
+    "mirrorFile": "author/philsoutheasternhardwoods-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:55.178Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/psnydernationalland-com/",
+    "mirrorFile": "author/psnydernationalland-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:56.636Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/randolphrichardsongreenbuilt-org/",
+    "mirrorFile": "author/randolphrichardsongreenbuilt-org/index.html",
+    "fetchedAt": "2026-03-20T21:23:58.139Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/rclemenzigeothermaldesigncenter-com/",
+    "mirrorFile": "author/rclemenzigeothermaldesigncenter-com/index.html",
+    "fetchedAt": "2026-03-20T21:23:59.675Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/rebaloobellsouth-net/",
+    "mirrorFile": "author/rebaloobellsouth-net/index.html",
+    "fetchedAt": "2026-03-20T21:24:01.226Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/rebeccapisgahenergy-com/",
+    "mirrorFile": "author/rebeccapisgahenergy-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:02.747Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/rjriverlink-org/",
+    "mirrorFile": "author/rjriverlink-org/index.html",
+    "fetchedAt": "2026-03-20T21:24:04.538Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/robhowardbuildingscience-com/",
+    "mirrorFile": "author/robhowardbuildingscience-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:06.182Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/robincapegmail-com/",
+    "mirrorFile": "author/robincapegmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:07.798Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/ron-czecholinskigmail-com/",
+    "mirrorFile": "author/ron-czecholinskigmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:09.459Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/rsmotleyconstructiongmail-com/",
+    "mirrorFile": "author/rsmotleyconstructiongmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:11.147Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/ryanbuildingnc-org/",
+    "mirrorFile": "author/ryanbuildingnc-org/index.html",
+    "fetchedAt": "2026-03-20T21:24:12.816Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/samruark333gmail-com/",
+    "mirrorFile": "author/samruark333gmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:14.414Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/saraannasabolgmail-com/",
+    "mirrorFile": "author/saraannasabolgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:16.040Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/sarahbethhabitat-org/",
+    "mirrorFile": "author/sarahbethhabitat-org/index.html",
+    "fetchedAt": "2026-03-20T21:24:17.603Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/scottpaperfoxcollective-com/",
+    "mirrorFile": "author/scottpaperfoxcollective-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:19.153Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/seanlivingstoneconstruction-com/",
+    "mirrorFile": "author/seanlivingstoneconstruction-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:21.018Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/smaherexactwater-com/",
+    "mirrorFile": "author/smaherexactwater-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:22.622Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/sophiebluehorizonsproject-com/",
+    "mirrorFile": "author/sophiebluehorizonsproject-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:24.396Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/springtimehomesgmail-com/",
+    "mirrorFile": "author/springtimehomesgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:26.030Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/ssfashevillearchitect-com/",
+    "mirrorFile": "author/ssfashevillearchitect-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:27.621Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/stanjcrossbrightfieldts-com/",
+    "mirrorFile": "author/stanjcrossbrightfieldts-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:29.296Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/steffi-rausch/",
+    "mirrorFile": "author/steffi-rausch/index.html",
+    "fetchedAt": "2026-03-20T21:24:30.893Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/stuartzitincharter-net/",
+    "mirrorFile": "author/stuartzitincharter-net/index.html",
+    "fetchedAt": "2026-03-20T21:24:32.531Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/summer-winkler/",
+    "mirrorFile": "author/summer-winkler/index.html",
+    "fetchedAt": "2026-03-20T21:24:34.136Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/surefootbuildersgmail-com/",
+    "mirrorFile": "author/surefootbuildersgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:35.688Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/susanna-bsmokymountainnews-com/",
+    "mirrorFile": "author/susanna-bsmokymountainnews-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:37.338Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/susanrestorewnc-com/",
+    "mirrorFile": "author/susanrestorewnc-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:38.944Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/suzannedazzlingcleaning-com/",
+    "mirrorFile": "author/suzannedazzlingcleaning-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:40.448Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/tikalivingdesignconsultants-com/",
+    "mirrorFile": "author/tikalivingdesignconsultants-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:41.990Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/tomohighcountrytimberframe-com/",
+    "mirrorFile": "author/tomohighcountrytimberframe-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:43.899Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/tormondhydrocycle-eng-com/",
+    "mirrorFile": "author/tormondhydrocycle-eng-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:45.413Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/tracyrosemountainx-com/",
+    "mirrorFile": "author/tracyrosemountainx-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:46.920Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/valeriejamorgmail-com/",
+    "mirrorFile": "author/valeriejamorgmail-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:48.509Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/vschomergreenbuilt-e-com/",
+    "mirrorFile": "author/vschomergreenbuilt-e-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:50.114Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/writermelissareardon-com/",
+    "mirrorFile": "author/writermelissareardon-com/index.html",
+    "fetchedAt": "2026-03-20T21:24:51.622Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/zashagriffin/",
+    "mirrorFile": "author/zashagriffin/index.html",
+    "fetchedAt": "2026-03-20T21:24:53.119Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-buiding-classes/regenerative-professional-accreditation/",
+    "mirrorFile": "green-buiding-classes/regenerative-professional-accreditation/index.html",
+    "fetchedAt": "2026-03-20T21:25:59.759Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/amyvandemusser-com/page/2/",
+    "mirrorFile": "author/amyvandemusser-com/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:26:01.544Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/amyvandemusser-com/page/7/",
+    "mirrorFile": "author/amyvandemusser-com/page/7/index.html",
+    "fetchedAt": "2026-03-20T21:26:03.328Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/boone-guytongmail-com/page/2/",
+    "mirrorFile": "author/boone-guytongmail-com/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:26:04.878Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/boone-guytongmail-com/page/6/",
+    "mirrorFile": "author/boone-guytongmail-com/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:26:06.414Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/cari/page/2/",
+    "mirrorFile": "author/cari/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:26:08.058Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/cari/page/4/",
+    "mirrorFile": "author/cari/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:26:09.644Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/garretsmokymountainnews-com/page/2/",
+    "mirrorFile": "author/garretsmokymountainnews-com/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:26:11.327Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/garretsmokymountainnews-com/page/3/",
+    "mirrorFile": "author/garretsmokymountainnews-com/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:26:13.219Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/green-built-alliance/page/2/",
+    "mirrorFile": "author/green-built-alliance/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:26:13.736Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/green-built-alliance/page/8/",
+    "mirrorFile": "author/green-built-alliance/page/8/index.html",
+    "fetchedAt": "2026-03-20T21:26:15.389Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/integritive/page/2/",
+    "mirrorFile": "author/integritive/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:26:16.991Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/amyvandemusser-com/page/3/",
+    "mirrorFile": "author/amyvandemusser-com/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:27:20.692Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/amyvandemusser-com/page/6/",
+    "mirrorFile": "author/amyvandemusser-com/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:27:22.267Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/boone-guytongmail-com/page/3/",
+    "mirrorFile": "author/boone-guytongmail-com/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:27:23.998Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/boone-guytongmail-com/page/5/",
+    "mirrorFile": "author/boone-guytongmail-com/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:27:25.501Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/cari/page/3/",
+    "mirrorFile": "author/cari/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:27:27.007Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/green-built-alliance/page/3/",
+    "mirrorFile": "author/green-built-alliance/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:27:28.493Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/green-built-alliance/page/7/",
+    "mirrorFile": "author/green-built-alliance/page/7/index.html",
+    "fetchedAt": "2026-03-20T21:27:30.033Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/ldickensdeltechomes-com/page/2/",
+    "mirrorFile": "author/ldickensdeltechomes-com/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:27:31.657Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/ldickensdeltechomes-com/page/3/",
+    "mirrorFile": "author/ldickensdeltechomes-com/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:27:33.408Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/maggie/page/2/",
+    "mirrorFile": "author/maggie/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:27:34.978Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/maggie/page/3/",
+    "mirrorFile": "author/maggie/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:27:36.465Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/springtimehomesgmail-com/page/2/",
+    "mirrorFile": "author/springtimehomesgmail-com/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:27:37.986Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/ssfashevillearchitect-com/page/2/",
+    "mirrorFile": "author/ssfashevillearchitect-com/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:27:39.557Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/amyvandemusser-com/page/4/",
+    "mirrorFile": "author/amyvandemusser-com/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:28:05.222Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/amyvandemusser-com/page/5/",
+    "mirrorFile": "author/amyvandemusser-com/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:28:07.035Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/boone-guytongmail-com/page/4/",
+    "mirrorFile": "author/boone-guytongmail-com/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:28:08.695Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/green-built-alliance/page/4/",
+    "mirrorFile": "author/green-built-alliance/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:28:10.505Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/green-built-alliance/page/6/",
+    "mirrorFile": "author/green-built-alliance/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:28:12.127Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/author/green-built-alliance/page/5/",
+    "mirrorFile": "author/green-built-alliance/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:29:00.750Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/calendar/list/",
+    "mirrorFile": "calendar/list/index.html",
+    "fetchedAt": "2026-03-20T21:31:56.512Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/calendar/map/",
+    "mirrorFile": "calendar/map/index.html",
+    "fetchedAt": "2026-03-20T21:31:58.087Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/alternative-renewable-energy/page/2/",
+    "mirrorFile": "category/alternative-renewable-energy/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:00.193Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/alternative-renewable-energy/page/6/",
+    "mirrorFile": "category/alternative-renewable-energy/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:32:01.653Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/appliances-lighting/page/2/",
+    "mirrorFile": "category/appliances-lighting/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:03.117Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/2/",
+    "mirrorFile": "category/articles/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:04.638Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/36/",
+    "mirrorFile": "category/articles/page/36/index.html",
+    "fetchedAt": "2026-03-20T21:32:06.130Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/building-envelope/page/2/",
+    "mirrorFile": "category/building-envelope/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:07.561Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/case-studies/page/2/",
+    "mirrorFile": "category/case-studies/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:09.142Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/case-studies/page/9/",
+    "mirrorFile": "category/case-studies/page/9/index.html",
+    "fetchedAt": "2026-03-20T21:32:10.587Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-efficiency-air-sealing/page/2/",
+    "mirrorFile": "category/energy-efficiency-air-sealing/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:12.117Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-efficiency-air-sealing/page/9/",
+    "mirrorFile": "category/energy-efficiency-air-sealing/page/9/index.html",
+    "fetchedAt": "2026-03-20T21:32:13.538Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-tax-credits/page/2/",
+    "mirrorFile": "category/energy-tax-credits/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:15.162Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-tax-credits/page/3/",
+    "mirrorFile": "category/energy-tax-credits/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:32:16.636Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/equity-the-green-economy/page/2/",
+    "mirrorFile": "category/equity-the-green-economy/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:18.144Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/equity-the-green-economy/page/4/",
+    "mirrorFile": "category/equity-the-green-economy/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:32:19.527Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/government-resources/page/2/",
+    "mirrorFile": "category/government-resources/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:20.948Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/15/",
+    "mirrorFile": "category/green-building/page/15/index.html",
+    "fetchedAt": "2026-03-20T21:32:22.396Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/2/",
+    "mirrorFile": "category/green-building/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:23.963Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/17/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/17/index.html",
+    "fetchedAt": "2026-03-20T21:32:25.349Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/2/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:27.472Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/2/",
+    "mirrorFile": "category/green-built-alliance-news/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:29.306Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/21/",
+    "mirrorFile": "category/green-built-alliance-news/page/21/index.html",
+    "fetchedAt": "2026-03-20T21:32:30.836Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-homes/page/2/",
+    "mirrorFile": "category/green-built-homes/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:32.537Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-homes/page/6/",
+    "mirrorFile": "category/green-built-homes/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:32:34.279Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-real-estate/page/2/",
+    "mirrorFile": "category/green-real-estate/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:35.845Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-remodeling/page/2/",
+    "mirrorFile": "category/green-remodeling/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:37.599Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-remodeling/page/3/",
+    "mirrorFile": "category/green-remodeling/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:32:39.100Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/health-indoor-air-quality/page/2/",
+    "mirrorFile": "category/health-indoor-air-quality/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:40.558Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/health-indoor-air-quality/page/3/",
+    "mirrorFile": "category/health-indoor-air-quality/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:32:42.130Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/heating-cooling-systems/page/2/",
+    "mirrorFile": "category/heating-cooling-systems/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:43.569Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/natural-building/page/2/",
+    "mirrorFile": "category/natural-building/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:44.962Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/natural-building/page/3/",
+    "mirrorFile": "category/natural-building/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:32:46.359Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/net-zero-energy-homes/page/2/",
+    "mirrorFile": "category/net-zero-energy-homes/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:47.783Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/site-landscape/page/2/",
+    "mirrorFile": "category/site-landscape/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:49.169Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/site-landscape/page/4/",
+    "mirrorFile": "category/site-landscape/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:32:50.531Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/smart-growth/page/2/",
+    "mirrorFile": "category/smart-growth/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:51.992Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/smart-growth/page/5/",
+    "mirrorFile": "category/smart-growth/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:32:53.330Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/sustainable-building-materials/page/2/",
+    "mirrorFile": "category/sustainable-building-materials/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:54.736Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/sustainable-building-materials/page/4/",
+    "mirrorFile": "category/sustainable-building-materials/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:32:56.249Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/technical-checklists/page/2/",
+    "mirrorFile": "category/technical-checklists/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:32:57.635Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/technical-checklists/page/3/",
+    "mirrorFile": "category/technical-checklists/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:32:58.958Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/water-efficiency/page/2/",
+    "mirrorFile": "category/water-efficiency/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:33:00.465Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/water-efficiency/page/3/",
+    "mirrorFile": "category/water-efficiency/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:33:01.845Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/donate/",
+    "mirrorFile": "donate/index.html",
+    "fetchedAt": "2026-03-20T21:33:04.902Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/energysaversnetwork/",
+    "mirrorFile": "energysaversnetwork/index.html",
+    "fetchedAt": "2026-03-20T21:33:06.301Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/energysaversnetwork/volunteer/",
+    "mirrorFile": "energysaversnetwork/volunteer/index.html",
+    "fetchedAt": "2026-03-20T21:33:07.830Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/energysaversnetwork/volunteer/preparation/",
+    "mirrorFile": "energysaversnetwork/volunteer/preparation/index.html",
+    "fetchedAt": "2026-03-20T21:33:08.379Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2023-11-01/",
+    "mirrorFile": "event/bhp-community-council/2023-11-01/index.html",
+    "fetchedAt": "2026-03-20T21:33:10.196Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2023-12-06/",
+    "mirrorFile": "event/bhp-community-council/2023-12-06/index.html",
+    "fetchedAt": "2026-03-20T21:33:11.942Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-01-03/",
+    "mirrorFile": "event/bhp-community-council/2024-01-03/index.html",
+    "fetchedAt": "2026-03-20T21:33:13.809Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-02-07/",
+    "mirrorFile": "event/bhp-community-council/2024-02-07/index.html",
+    "fetchedAt": "2026-03-20T21:33:15.487Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-03-06/",
+    "mirrorFile": "event/bhp-community-council/2024-03-06/index.html",
+    "fetchedAt": "2026-03-20T21:33:17.127Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-04-03/",
+    "mirrorFile": "event/bhp-community-council/2024-04-03/index.html",
+    "fetchedAt": "2026-03-20T21:33:18.838Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-05-01/",
+    "mirrorFile": "event/bhp-community-council/2024-05-01/index.html",
+    "fetchedAt": "2026-03-20T21:33:20.463Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-06-05/",
+    "mirrorFile": "event/bhp-community-council/2024-06-05/index.html",
+    "fetchedAt": "2026-03-20T21:33:22.158Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-07-03/",
+    "mirrorFile": "event/bhp-community-council/2024-07-03/index.html",
+    "fetchedAt": "2026-03-20T21:33:23.949Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-08-07/",
+    "mirrorFile": "event/bhp-community-council/2024-08-07/index.html",
+    "fetchedAt": "2026-03-20T21:33:25.560Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-09-04/",
+    "mirrorFile": "event/bhp-community-council/2024-09-04/index.html",
+    "fetchedAt": "2026-03-20T21:33:27.205Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-10-02/",
+    "mirrorFile": "event/bhp-community-council/2024-10-02/index.html",
+    "fetchedAt": "2026-03-20T21:33:29.026Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2025-02-05/",
+    "mirrorFile": "event/bhp-community-council/2025-02-05/index.html",
+    "fetchedAt": "2026-03-20T21:33:31.033Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2023-08-23/",
+    "mirrorFile": "event/bhp-community-engagement/2023-08-23/index.html",
+    "fetchedAt": "2026-03-20T21:33:32.841Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2023-10-25/",
+    "mirrorFile": "event/bhp-community-engagement/2023-10-25/index.html",
+    "fetchedAt": "2026-03-20T21:33:34.830Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2023-11-22/",
+    "mirrorFile": "event/bhp-community-engagement/2023-11-22/index.html",
+    "fetchedAt": "2026-03-20T21:33:36.466Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2023-12-27/",
+    "mirrorFile": "event/bhp-community-engagement/2023-12-27/index.html",
+    "fetchedAt": "2026-03-20T21:33:38.144Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-01-24/",
+    "mirrorFile": "event/bhp-community-engagement/2024-01-24/index.html",
+    "fetchedAt": "2026-03-20T21:33:39.781Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-02-28/",
+    "mirrorFile": "event/bhp-community-engagement/2024-02-28/index.html",
+    "fetchedAt": "2026-03-20T21:33:41.374Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-03-27/",
+    "mirrorFile": "event/bhp-community-engagement/2024-03-27/index.html",
+    "fetchedAt": "2026-03-20T21:33:43.060Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-04-24/",
+    "mirrorFile": "event/bhp-community-engagement/2024-04-24/index.html",
+    "fetchedAt": "2026-03-20T21:33:44.650Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-05-22/",
+    "mirrorFile": "event/bhp-community-engagement/2024-05-22/index.html",
+    "fetchedAt": "2026-03-20T21:33:46.236Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-06-26/",
+    "mirrorFile": "event/bhp-community-engagement/2024-06-26/index.html",
+    "fetchedAt": "2026-03-20T21:33:47.902Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-07-24/",
+    "mirrorFile": "event/bhp-community-engagement/2024-07-24/index.html",
+    "fetchedAt": "2026-03-20T21:33:49.465Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-08-28/",
+    "mirrorFile": "event/bhp-community-engagement/2024-08-28/index.html",
+    "fetchedAt": "2026-03-20T21:33:51.095Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-09-25/",
+    "mirrorFile": "event/bhp-community-engagement/2024-09-25/index.html",
+    "fetchedAt": "2026-03-20T21:33:52.665Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-10-23/",
+    "mirrorFile": "event/bhp-community-engagement/2024-10-23/index.html",
+    "fetchedAt": "2026-03-20T21:33:54.293Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/2/",
+    "mirrorFile": "green-building-news/page/2/index.html",
+    "fetchedAt": "2026-03-20T21:33:57.149Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/57/",
+    "mirrorFile": "green-building-news/page/57/index.html",
+    "fetchedAt": "2026-03-20T21:33:58.634Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-built-homes/green-built-certifications/",
+    "mirrorFile": "green-built-homes/green-built-certifications/index.html",
+    "fetchedAt": "2026-03-20T21:34:01.903Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/map/",
+    "mirrorFile": "map/index.html",
+    "fetchedAt": "2026-03-20T21:34:03.860Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/my-account/lost-password/",
+    "mirrorFile": "my-account/lost-password/index.html",
+    "fetchedAt": "2026-03-20T21:34:05.857Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/programs/continuing-education/",
+    "mirrorFile": "programs/continuing-education/index.html",
+    "fetchedAt": "2026-03-20T21:34:08.384Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/programs/continuing-education/current-class-schedule/",
+    "mirrorFile": "programs/continuing-education/current-class-schedule/index.html",
+    "fetchedAt": "2026-03-20T21:34:09.799Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/programs/continuing-education/regenerative-professional-accreditation/",
+    "mirrorFile": "programs/continuing-education/regenerative-professional-accreditation/index.html",
+    "fetchedAt": "2026-03-20T21:34:11.089Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/programs/green-built-homes/",
+    "mirrorFile": "programs/green-built-homes/index.html",
+    "fetchedAt": "2026-03-20T21:34:13.844Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/reduceandelectrify/",
+    "mirrorFile": "reduceandelectrify/index.html",
+    "fetchedAt": "2026-03-20T21:34:17.322Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/regenerative-certification/",
+    "mirrorFile": "regenerative-certification/index.html",
+    "fetchedAt": "2026-03-20T21:34:18.453Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/resources/",
+    "mirrorFile": "resources/index.html",
+    "fetchedAt": "2026-03-20T21:34:19.893Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/resources/alternative-renewable-energy/",
+    "mirrorFile": "resources/alternative-renewable-energy/index.html",
+    "fetchedAt": "2026-03-20T21:34:21.340Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/resources/homeowner/",
+    "mirrorFile": "resources/homeowner/index.html",
+    "fetchedAt": "2026-03-20T21:34:21.868Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/resources/videos/",
+    "mirrorFile": "resources/videos/index.html",
+    "fetchedAt": "2026-03-20T21:34:23.387Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/series/bhpcc-community-engagement-subcommittee-2/",
+    "mirrorFile": "series/bhpcc-community-engagement-subcommittee-2/index.html",
+    "fetchedAt": "2026-03-20T21:34:24.909Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/series/bhpcc-initiatives-subcommittee/",
+    "mirrorFile": "series/bhpcc-initiatives-subcommittee/index.html",
+    "fetchedAt": "2026-03-20T21:34:26.335Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/series/blue-horizons-project-community-council-2/",
+    "mirrorFile": "series/blue-horizons-project-community-council-2/index.html",
+    "fetchedAt": "2026-03-20T21:34:27.831Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/series/blue-horizons-project-community-council/",
+    "mirrorFile": "series/blue-horizons-project-community-council/index.html",
+    "fetchedAt": "2026-03-20T21:34:29.254Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/series/happy-hour-meetup-2/",
+    "mirrorFile": "series/happy-hour-meetup-2/index.html",
+    "fetchedAt": "2026-03-20T21:34:30.648Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/series/happy-hour-meetup/",
+    "mirrorFile": "series/happy-hour-meetup/index.html",
+    "fetchedAt": "2026-03-20T21:34:32.094Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/12-baskets-cafe/",
+    "mirrorFile": "venue/12-baskets-cafe/index.html",
+    "fetchedAt": "2026-03-20T21:34:34.420Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/arden-nc-28704/",
+    "mirrorFile": "venue/arden-nc-28704/index.html",
+    "fetchedAt": "2026-03-20T21:34:35.847Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/asheville-nc-28803/",
+    "mirrorFile": "venue/asheville-nc-28803/index.html",
+    "fetchedAt": "2026-03-20T21:34:37.296Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/candler-nc/",
+    "mirrorFile": "venue/candler-nc/index.html",
+    "fetchedAt": "2026-03-20T21:34:38.802Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/carrier-park/",
+    "mirrorFile": "venue/carrier-park/index.html",
+    "fetchedAt": "2026-03-20T21:34:40.235Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/fairview-nc-28730/",
+    "mirrorFile": "venue/fairview-nc-28730/index.html",
+    "fetchedAt": "2026-03-20T21:34:41.664Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/hi-wire-brewing-rad-beer-garden/",
+    "mirrorFile": "venue/hi-wire-brewing-rad-beer-garden/index.html",
+    "fetchedAt": "2026-03-20T21:34:43.035Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/mccormick-field/",
+    "mirrorFile": "venue/mccormick-field/index.html",
+    "fetchedAt": "2026-03-20T21:34:44.408Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/new-belgium-brewing/",
+    "mirrorFile": "venue/new-belgium-brewing/index.html",
+    "fetchedAt": "2026-03-20T21:34:45.846Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/rad-brewing-company/",
+    "mirrorFile": "venue/rad-brewing-company/index.html",
+    "fetchedAt": "2026-03-20T21:34:47.307Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/swannanoa-nc-28778/",
+    "mirrorFile": "venue/swannanoa-nc-28778/index.html",
+    "fetchedAt": "2026-03-20T21:34:48.857Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/weaverville-nc-28787/",
+    "mirrorFile": "venue/weaverville-nc-28787/index.html",
+    "fetchedAt": "2026-03-20T21:34:50.294Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/venue/wedge-brewery-at-foundation/",
+    "mirrorFile": "venue/wedge-brewery-at-foundation/index.html",
+    "fetchedAt": "2026-03-20T21:34:51.699Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/volunteer/",
+    "mirrorFile": "volunteer/index.html",
+    "fetchedAt": "2026-03-20T21:34:52.420Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/calendar/summary/",
+    "mirrorFile": "calendar/summary/index.html",
+    "fetchedAt": "2026-03-20T21:35:18.610Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/alternative-renewable-energy/page/3/",
+    "mirrorFile": "category/alternative-renewable-energy/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:20.683Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/alternative-renewable-energy/page/5/",
+    "mirrorFile": "category/alternative-renewable-energy/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:35:22.108Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/3/",
+    "mirrorFile": "category/articles/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:23.587Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/35/",
+    "mirrorFile": "category/articles/page/35/index.html",
+    "fetchedAt": "2026-03-20T21:35:25.140Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/case-studies/page/3/",
+    "mirrorFile": "category/case-studies/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:26.658Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/case-studies/page/8/",
+    "mirrorFile": "category/case-studies/page/8/index.html",
+    "fetchedAt": "2026-03-20T21:35:28.035Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-efficiency-air-sealing/page/3/",
+    "mirrorFile": "category/energy-efficiency-air-sealing/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:29.559Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-efficiency-air-sealing/page/8/",
+    "mirrorFile": "category/energy-efficiency-air-sealing/page/8/index.html",
+    "fetchedAt": "2026-03-20T21:35:31.335Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/equity-the-green-economy/page/3/",
+    "mirrorFile": "category/equity-the-green-economy/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:32.908Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/14/",
+    "mirrorFile": "category/green-building/page/14/index.html",
+    "fetchedAt": "2026-03-20T21:35:34.346Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/3/",
+    "mirrorFile": "category/green-building/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:35.895Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/16/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/16/index.html",
+    "fetchedAt": "2026-03-20T21:35:37.325Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/3/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:38.778Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/20/",
+    "mirrorFile": "category/green-built-alliance-news/page/20/index.html",
+    "fetchedAt": "2026-03-20T21:35:40.171Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/3/",
+    "mirrorFile": "category/green-built-alliance-news/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:41.602Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-homes/page/3/",
+    "mirrorFile": "category/green-built-homes/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:43.151Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-homes/page/5/",
+    "mirrorFile": "category/green-built-homes/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:35:44.591Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/site-landscape/page/3/",
+    "mirrorFile": "category/site-landscape/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:45.962Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/smart-growth/page/3/",
+    "mirrorFile": "category/smart-growth/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:47.413Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/smart-growth/page/4/",
+    "mirrorFile": "category/smart-growth/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:35:49.043Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/sustainable-building-materials/page/3/",
+    "mirrorFile": "category/sustainable-building-materials/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:50.461Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-11-06/",
+    "mirrorFile": "event/bhp-community-council/2024-11-06/index.html",
+    "fetchedAt": "2026-03-20T21:35:55.410Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2025-01-22/",
+    "mirrorFile": "event/bhp-community-engagement/2025-01-22/index.html",
+    "fetchedAt": "2026-03-20T21:35:56.999Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/3/",
+    "mirrorFile": "green-building-news/page/3/index.html",
+    "fetchedAt": "2026-03-20T21:35:59.669Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/56/",
+    "mirrorFile": "green-building-news/page/56/index.html",
+    "fetchedAt": "2026-03-20T21:36:01.152Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/series/bhpcc-community-engagement-subcommittee/",
+    "mirrorFile": "series/bhpcc-community-engagement-subcommittee/index.html",
+    "fetchedAt": "2026-03-20T21:36:08.430Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/voluntario/",
+    "mirrorFile": "voluntario/index.html",
+    "fetchedAt": "2026-03-20T21:36:11.467Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/volunteer-signup-form/",
+    "mirrorFile": "volunteer-signup-form/index.html",
+    "fetchedAt": "2026-03-20T21:36:11.998Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/alternative-renewable-energy/page/4/",
+    "mirrorFile": "category/alternative-renewable-energy/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:36:37.966Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/34/",
+    "mirrorFile": "category/articles/page/34/index.html",
+    "fetchedAt": "2026-03-20T21:36:39.820Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/4/",
+    "mirrorFile": "category/articles/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:36:41.340Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/case-studies/page/4/",
+    "mirrorFile": "category/case-studies/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:36:42.798Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/case-studies/page/7/",
+    "mirrorFile": "category/case-studies/page/7/index.html",
+    "fetchedAt": "2026-03-20T21:36:44.173Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-efficiency-air-sealing/page/4/",
+    "mirrorFile": "category/energy-efficiency-air-sealing/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:36:45.560Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-efficiency-air-sealing/page/7/",
+    "mirrorFile": "category/energy-efficiency-air-sealing/page/7/index.html",
+    "fetchedAt": "2026-03-20T21:36:46.942Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/13/",
+    "mirrorFile": "category/green-building/page/13/index.html",
+    "fetchedAt": "2026-03-20T21:36:48.380Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/4/",
+    "mirrorFile": "category/green-building/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:36:49.851Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/15/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/15/index.html",
+    "fetchedAt": "2026-03-20T21:36:51.239Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/4/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:36:52.661Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/19/",
+    "mirrorFile": "category/green-built-alliance-news/page/19/index.html",
+    "fetchedAt": "2026-03-20T21:36:54.069Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/4/",
+    "mirrorFile": "category/green-built-alliance-news/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:36:55.432Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-homes/page/4/",
+    "mirrorFile": "category/green-built-homes/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:36:56.942Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2025-01-01/",
+    "mirrorFile": "event/bhp-community-council/2025-01-01/index.html",
+    "fetchedAt": "2026-03-20T21:37:01.919Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-11-27/",
+    "mirrorFile": "event/bhp-community-engagement/2024-11-27/index.html",
+    "fetchedAt": "2026-03-20T21:37:03.692Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/4/",
+    "mirrorFile": "green-building-news/page/4/index.html",
+    "fetchedAt": "2026-03-20T21:37:06.490Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/55/",
+    "mirrorFile": "green-building-news/page/55/index.html",
+    "fetchedAt": "2026-03-20T21:37:07.943Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/33/",
+    "mirrorFile": "category/articles/page/33/index.html",
+    "fetchedAt": "2026-03-20T21:37:43.489Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/5/",
+    "mirrorFile": "category/articles/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:37:44.997Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/case-studies/page/5/",
+    "mirrorFile": "category/case-studies/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:37:46.418Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/case-studies/page/6/",
+    "mirrorFile": "category/case-studies/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:37:47.822Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-efficiency-air-sealing/page/5/",
+    "mirrorFile": "category/energy-efficiency-air-sealing/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:37:49.467Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/energy-efficiency-air-sealing/page/6/",
+    "mirrorFile": "category/energy-efficiency-air-sealing/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:37:50.889Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/12/",
+    "mirrorFile": "category/green-building/page/12/index.html",
+    "fetchedAt": "2026-03-20T21:37:52.307Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/5/",
+    "mirrorFile": "category/green-building/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:37:53.942Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/14/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/14/index.html",
+    "fetchedAt": "2026-03-20T21:37:55.401Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/5/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:37:56.939Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/18/",
+    "mirrorFile": "category/green-built-alliance-news/page/18/index.html",
+    "fetchedAt": "2026-03-20T21:37:58.422Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/5/",
+    "mirrorFile": "category/green-built-alliance-news/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:37:59.898Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-council/2024-12-04/",
+    "mirrorFile": "event/bhp-community-council/2024-12-04/index.html",
+    "fetchedAt": "2026-03-20T21:38:05.244Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/event/bhp-community-engagement/2024-12-25/",
+    "mirrorFile": "event/bhp-community-engagement/2024-12-25/index.html",
+    "fetchedAt": "2026-03-20T21:38:06.924Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/5/",
+    "mirrorFile": "green-building-news/page/5/index.html",
+    "fetchedAt": "2026-03-20T21:38:10.076Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/54/",
+    "mirrorFile": "green-building-news/page/54/index.html",
+    "fetchedAt": "2026-03-20T21:38:11.610Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/32/",
+    "mirrorFile": "category/articles/page/32/index.html",
+    "fetchedAt": "2026-03-20T21:38:46.559Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/6/",
+    "mirrorFile": "category/articles/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:38:48.360Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/11/",
+    "mirrorFile": "category/green-building/page/11/index.html",
+    "fetchedAt": "2026-03-20T21:38:50.093Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/6/",
+    "mirrorFile": "category/green-building/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:38:51.619Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/13/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/13/index.html",
+    "fetchedAt": "2026-03-20T21:38:53.029Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/6/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:38:54.540Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/17/",
+    "mirrorFile": "category/green-built-alliance-news/page/17/index.html",
+    "fetchedAt": "2026-03-20T21:38:55.965Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/6/",
+    "mirrorFile": "category/green-built-alliance-news/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:38:57.453Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/53/",
+    "mirrorFile": "green-building-news/page/53/index.html",
+    "fetchedAt": "2026-03-20T21:39:04.781Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/6/",
+    "mirrorFile": "green-building-news/page/6/index.html",
+    "fetchedAt": "2026-03-20T21:39:06.376Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/31/",
+    "mirrorFile": "category/articles/page/31/index.html",
+    "fetchedAt": "2026-03-20T21:39:36.881Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/articles/page/7/",
+    "mirrorFile": "category/articles/page/7/index.html",
+    "fetchedAt": "2026-03-20T21:39:38.349Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/10/",
+    "mirrorFile": "category/green-building/page/10/index.html",
+    "fetchedAt": "2026-03-20T21:39:39.920Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-building/page/7/",
+    "mirrorFile": "category/green-building/page/7/index.html",
+    "fetchedAt": "2026-03-20T21:39:41.346Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/12/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/12/index.html",
+    "fetchedAt": "2026-03-20T21:39:42.845Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/member-news/page/7/",
+    "mirrorFile": "category/green-built-alliance-news/member-news/page/7/index.html",
+    "fetchedAt": "2026-03-20T21:39:44.227Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/16/",
+    "mirrorFile": "category/green-built-alliance-news/page/16/index.html",
+    "fetchedAt": "2026-03-20T21:39:45.613Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/category/green-built-alliance-news/page/7/",
+    "mirrorFile": "category/green-built-alliance-news/page/7/index.html",
+    "fetchedAt": "2026-03-20T21:39:46.999Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/52/",
+    "mirrorFile": "green-building-news/page/52/index.html",
+    "fetchedAt": "2026-03-20T21:39:52.756Z",
+    "status": 200
+  },
+  {
+    "sourceUrl": "https://www.greenbuilt.org/green-building-news/page/7/",
+    "mirrorFile": "green-building-news/page/7/index.html",
+    "fetchedAt": "2026-03-20T21:39:54.247Z",
+    "status": 200
   }
 ]
