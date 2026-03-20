@@ -1,4 +1,22 @@
-Started 2026-03-20T21:40:26.354Z
-FAIL 404 https://www.greenbuilt.org/Users/groutta/AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.Outlook/1J0Z2SME/regulations.gov/
+Started 2026-03-20T22:02:49.543Z
 FAIL 404 https://www.greenbuilt.org/category/
-OK https://www.greenbuilt.org/category/articles/page/30/
+FAIL 404 https://www.greenbuilt.org/coulda-woulda-shoulda-flawed-reasons-why-people-dont-use-green-building-certifications/
+FAIL 404 https://www.greenbuilt.org/directory/directory-archives/
+FAIL 404 https://www.greenbuilt.org/earthday5k/
+FAIL 404 https://www.greenbuilt.org/energy-efficiency-upgrade-services/
+FAIL 404 https://www.greenbuilt.org/energysaversnetwork/energy-efficiency-apprenticeship/
+FAIL 404 https://www.greenbuilt.org/green-buiding-classes/
+FAIL 404 https://www.greenbuilt.org/green-building-magazine/
+FAIL 404 https://www.greenbuilt.org/green-building-resources/financial-incentives/
+FAIL 404 https://www.greenbuilt.org/home-repairs/
+FAIL 404 https://www.greenbuilt.org/organizer/
+FAIL 404 https://www.greenbuilt.org/preparacion/
+FAIL 404 https://www.greenbuilt.org/programs/
+FAIL 404 https://www.greenbuilt.org/programs/energy-innovation-task-force/
+FAIL 404 https://www.greenbuilt.org/programs/green-built-homes/checklist-program-documents/
+FAIL 429 https://www.greenbuilt.org/programs/green-built-homes/green-built-participants/
+FAIL 429 https://www.greenbuilt.org/programs/green-built-homes/register-green-built-nc-homes/
+FAIL 429 https://www.greenbuilt.org/programs/green-gauge/
+FAIL 429 https://www.greenbuilt.org/programs/living-building-challenge/
+FAIL 429 https://www.greenbuilt.org/testimonials/
+FAIL 429 https://www.greenbuilt.org/venue/

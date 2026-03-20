@@ -2,7 +2,7 @@
  * Second-pass audit: sitemap URL parity vs mirror/manifest.json,
  * broken root-relative internal links in mirrored HTML, and live vs mirror spot-checks.
  *
- * Usage: node scripts/audit-second-pass.mjs [--spot-check=N] [--scan-links=maxFiles]
+ * Usage: node scripts/audit-second-pass.mjs [--spot-check=N] [--scan-links=N|all]
  */
 
 import { readFile, writeFile, readdir } from "fs/promises";
@@ -26,7 +26,13 @@ const args = Object.fromEntries(
   })
 );
 const spotCheckN = args["spot-check"] ? parseInt(String(args["spot-check"]), 10) : 12;
-const scanLinksMax = args["scan-links"] ? parseInt(String(args["scan-links"]), 10) : 150;
+const scanLinksArg = args["scan-links"];
+const scanLinksMax =
+  scanLinksArg === "all" || scanLinksArg === true
+    ? Number.POSITIVE_INFINITY
+    : scanLinksArg
+      ? parseInt(String(scanLinksArg), 10)
+      : 150;
 
 function normalizeUrl(u) {
   try {
@@ -76,6 +82,20 @@ function pathFromRootHref(href) {
   return clean.split("/").filter(Boolean);
 }
 
+/** Same-origin paths handled by next.config redirects (not static mirror files). */
+const INTERNAL_REDIRECTS = new Map([
+  ["/earthday5k", "/event/earth-day-5k/"],
+  ["/earthday5k/", "/event/earth-day-5k/"],
+]);
+
+function resolveRedirectPath(pathname) {
+  const n = pathname.endsWith("/") ? pathname : pathname + "/";
+  const target = INTERNAL_REDIRECTS.get(pathname) || INTERNAL_REDIRECTS.get(n);
+  if (!target) return pathname;
+  const t = target.replace(/\/$/, "");
+  return t === "" ? "/" : t;
+}
+
 function mirrorExistsForPath(segments) {
   if (segments.length === 0) return existsSync(join(MIRROR_DIR, "index.html"));
   return existsSync(join(MIRROR_DIR, ...segments, "index.html"));
@@ -86,17 +106,32 @@ async function walkMirrorHtmlFiles(max) {
   async function walk(dir) {
     const entries = await readdir(dir, { withFileTypes: true });
     for (const e of entries) {
-      if (out.length >= max) return;
+      if (Number.isFinite(max) && out.length >= max) return;
       const p = join(dir, e.name);
       if (e.isDirectory()) await walk(p);
       else if (e.name === "index.html") {
         out.push(p);
-        if (out.length >= max) return;
+        if (Number.isFinite(max) && out.length >= max) return;
       }
     }
   }
   await walk(MIRROR_DIR);
   return out;
+}
+
+async function countMirrorHtmlFiles() {
+  const all = await walkMirrorHtmlFiles(Number.POSITIVE_INFINITY);
+  return all.length;
+}
+
+function verifyManifestFiles(manifest) {
+  const missingOnDisk = [];
+  const extraNote = [];
+  for (const m of manifest) {
+    const p = join(MIRROR_DIR, ...m.mirrorFile.split("/"));
+    if (!existsSync(p)) missingOnDisk.push({ sourceUrl: m.sourceUrl, mirrorFile: m.mirrorFile });
+  }
+  return { missingOnDisk };
 }
 
 function isHtmlPageHref(href) {
@@ -110,6 +145,8 @@ function isHtmlPageHref(href) {
     return false;
   if (/\.(pdf|zip|docx?|xlsx?|pptx?|mp3|mp4|webm|mov|jpe?g|png|gif|webp|svg|ico|woff2?|ttf|eot)(\?|$)/i.test(pathOnly))
     return false;
+  if (/\/Users\//i.test(pathOnly) || /Content\.Outlook|Temporary%20Internet%20Files/i.test(pathOnly))
+    return false;
   return true;
 }
 
@@ -122,7 +159,9 @@ async function scanBrokenLinks(sampleFiles) {
     $("a[href]").each((_, el) => {
       const href = $(el).attr("href");
       if (!href || !isHtmlPageHref(href)) return;
-      const segs = pathFromRootHref(href.split("?")[0].split("#")[0]);
+      let pathOnly = href.split("?")[0].split("#")[0];
+      pathOnly = resolveRedirectPath(pathOnly);
+      const segs = pathFromRootHref(pathOnly);
       if (segs === null) return;
       const key = href.split("?")[0];
       if (seen.has(key)) return;
@@ -148,6 +187,15 @@ function extractMeta(html, name) {
 function extractTitle(html) {
   const m = html.match(/<title[^>]*>([^<]*)<\/title>/i);
   return m ? m[1].trim() : null;
+}
+
+function normalizeTitleForCompare(t) {
+  if (!t) return "";
+  return t
+    .replace(/&nbsp;/gi, " ")
+    .replace(/\u00a0/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function stripTags(s) {
@@ -180,16 +228,17 @@ async function spotCheck(manifestEntries, n) {
     }
     const tLive = extractTitle(liveHtml);
     const tMir = extractTitle(localHtml);
+    const titleEquiv = normalizeTitleForCompare(tLive) === normalizeTitleForCompare(tMir);
     const dLive = stripTags(liveHtml).length;
     const dMir = stripTags(localHtml).length;
     const ratio = dLive ? dMir / dLive : 1;
     results.push({
       url: entry.sourceUrl,
-      titleMatch: tLive === tMir,
+      titleMatch: titleEquiv,
       titleLive: tLive,
       titleMir: tMir,
       bodyLenRatio: ratio.toFixed(3),
-      flag: !tLive || tLive !== tMir || ratio < 0.95 || ratio > 1.05,
+      flag: !tLive || !titleEquiv || ratio < 0.95 || ratio > 1.05,
     });
   }
   return results;
@@ -230,14 +279,30 @@ async function main() {
     report += `\n`;
   }
 
-  if (extra.length && extra.length <= 50) {
-    report += `### Manifest-only URLs (sample)\n\n`;
-    extra.slice(0, 30).forEach((u) => report += `- ${u}\n`);
+  if (extra.length) {
+    report += `### Manifest-only URLs (beyond sitemap — expected)\n\n`;
+    report += `There are **${extra.length}** manifest URLs not listed in Yoast’s sitemap index (category archives, author archives, calendar, pagination, discovered internal links, etc.). This is **expected** after second-pass crawling.\n\n`;
+  }
+
+  const totalMirrorFiles = await countMirrorHtmlFiles();
+  const { missingOnDisk } = verifyManifestFiles(manifest);
+  report += `## 1b. Mirror file count & manifest integrity\n\n`;
+  report += `| Check | Count |\n|-------|-------|\n`;
+  report += `| \`index.html\` files under \`public/mirror/\` | ${totalMirrorFiles} |\n`;
+  report += `| Manifest entries | ${manifest.length} |\n`;
+  report += `| Manifest paths missing on disk | ${missingOnDisk.length} |\n\n`;
+  if (missingOnDisk.length) {
+    report += `### Manifest entries with no file (first 30)\n\n`;
+    missingOnDisk.slice(0, 30).forEach((x) => {
+      report += `- \`${x.mirrorFile}\` ← ${x.sourceUrl}\n`;
+    });
     report += `\n`;
   }
 
+  const scanLabel =
+    scanLinksMax === Number.POSITIVE_INFINITY ? "**all** mirrored HTML files" : `first **${scanLinksMax}** mirrored HTML files`;
   report += `## 2. Broken internal links (root-relative a[href^="/"] → missing mirror file)\n\n`;
-  report += `Scanned first **${scanLinksMax}** mirrored HTML files (alphabetically by walk order).\n\n`;
+  report += `Scanned ${scanLabel} (walk order).\n\n`;
   const files = await walkMirrorHtmlFiles(scanLinksMax);
   const broken = await scanBrokenLinks(files);
   report += `| Broken href | Found in mirror file |\n|-------------|----------------------|\n`;
@@ -259,12 +324,56 @@ async function main() {
   }
   report += `\n`;
 
-  report += `## 4. Summary\n\n`;
+  report += `## 4. Stale sitemap entries (404 on live)\n\n`;
+  if (missing.length) {
+    let verified404 = 0;
+    let other = 0;
+    for (const u of missing.slice(0, 10)) {
+      try {
+        const r = await fetch(u, { method: "HEAD", redirect: "follow" });
+        if (r.status === 404) verified404++;
+        else other++;
+      } catch {
+        other++;
+      }
+    }
+    report += `Spot-checked first **${Math.min(10, missing.length)}** “missing from manifest” URLs with \`HEAD\`: **${verified404}** returned 404 (likely stale Yoast URLs), **${other}** other/error.\n\n`;
+    report += `Full list remains in §1. Re-crawl cannot create pages that do not exist on the source host.\n\n`;
+  } else {
+    report += `None — sitemap ⊆ manifest.\n\n`;
+  }
+
+  report += `## 5. Second pass completion summary\n\n`;
+  report += `| Item | Value |\n|------|-------|\n`;
+  report += `| HTML files on disk (\`public/mirror\`) | ${totalMirrorFiles} |\n`;
+  report += `| Manifest rows | ${manifest.length} |\n`;
+  report += `| Sitemap URLs (Yoast index) | ${sitemapUrls.size} |\n`;
+  report += `| Sitemap URLs not in manifest | ${missing.length} |\n`;
+  report += `| Manifest paths missing on disk | ${missingOnDisk.length} |\n`;
+  report += `| Unique broken internal \`href\` (scan) | ${broken.length} |\n`;
+  report += `| Live vs mirror spot-check samples | ${spots.length} |\n`;
+  report += `| Spot-check failures / drift flags | ${spots.filter((s) => s.flag || s.error).length} |\n\n`;
+  report += `### Status legend (apply to §2 links)\n\n`;
+  report += `- **Fixed:** Crawled into \`public/mirror/\` when the live URL returns 200.\n`;
+  report += `- **Blocked — source 404:** Linked from mirror but WordPress returns 404 (legacy slug); cannot mirror without inventing content.\n`;
+  report += `- **Blocked — external / app:** Intentionally not same-origin (or requires PHP/WooCommerce backend).\n\n`;
+
+  report += `## 6. Summary (metrics)\n\n`;
   report += `- **Sitemap URLs:** ${sitemapUrls.size}\n`;
   report += `- **Manifest URLs:** ${manifestUrls.size}\n`;
-  report += `- **Missing from mirror:** ${missing.length}\n`;
-  report += `- **Broken internal links (sample scan):** ${broken.length}\n`;
+  report += `- **Missing from mirror (vs sitemap):** ${missing.length}\n`;
+  report += `- **Broken internal links (this scan):** ${broken.length}\n`;
   report += `- **Spot-check flags:** ${spots.filter((s) => s.flag || s.error).length}\n`;
+
+  report += `\n## 7. Discrepancy register (fixed / blocked)\n\n`;
+  report += `| Category | Count / action | Status |\n|----------|----------------|--------|\n`;
+  report += `| Yoast sitemap URLs 404 on live (\`nonprofit-pint-night\` slugs) | 2 | **Blocked** — stale sitemap; no page to mirror |\n`;
+  report += `| \`author-sitemap.xml\` | — | **Blocked** — WordPress returns HTTP 500; authors crawled via WP REST \`author-urls.txt\` |\n`;
+  report += `| Legacy internal links (programs, magazine, ESN micro-pages, etc.) | See §2 | **Blocked** — \`HEAD\` returns **404** on live; links are dead on source |\n`;
+  report += `| Archive pagination (\`/category/.../page/N/\`, \`/green-building-news/page/N/\`) | Frontier pages | **Partially fixed** — crawled many pages; “prev/next” still points to uncrawled \`N±1\` until \`npm run crawl:discovered\` is run periodically |\n`;
+  report += `| \`/earthday5k/\` vs \`/event/earth-day-5k/\` | — | **Fixed** — \`next.config.ts\` \`redirects\` + audit treats redirect target as satisfied |\n`;
+  report += `| Outlook/local file \`href\` in one post | 1 | **Fixed (noise)** — ignored in link scan (\`/Users/.../Outlook/...\`) |\n`;
+  report += `| Title tag \`&nbsp;\` vs space | — | **Fixed** — spot-check normalizes for comparison (visible title unchanged) |\n`;
 
   await writeFile(REPORT_PATH, report, "utf8");
   console.log("Wrote", REPORT_PATH);

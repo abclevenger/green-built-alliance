@@ -12,7 +12,11 @@
     "crawl:posts": "node scripts/crawl.mjs --url-list=post-urls.txt --skip-existing",
     "crawl:events": "node scripts/crawl.mjs --url-list=event-urls.txt --skip-existing",
     "route-map": "node scripts/generate-route-map.mjs",
-    "asset-inventory": "node scripts/asset-inventory.mjs"
+    "asset-inventory": "node scripts/asset-inventory.mjs",
+    "audit:second-pass": "node scripts/audit-second-pass.mjs --scan-links=all --spot-check=40",
+    "crawl:discovered": "node scripts/crawl-all-discovered.mjs --rounds=12 --max-per-round=500",
+    "authors:generate": "node scripts/generate-author-urls.mjs",
+    "patch:home-perf": "node scripts/patch-homepage-performance.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

@@ -35,6 +35,8 @@ function isHtmlPageHref(href) {
     return false;
   if (/\.(pdf|zip|docx?|xlsx?|pptx?|mp3|mp4|webm|mov|jpe?g|png|gif|webp|svg|ico|woff2?|ttf|eot)(\?|$)/i.test(pathOnly))
     return false;
+  if (/\/Users\//i.test(pathOnly) || /Content\.Outlook|Temporary%20Internet%20Files/i.test(pathOnly))
+    return false;
   return true;
 }
 

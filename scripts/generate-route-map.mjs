@@ -19,7 +19,9 @@ const lists = [
 ];
 
 let md = `# Route map — greenbuilt.org → Next.js\n\n`;
-md += `This project serves **full HTML mirrors** from \`public/mirror/<path>/index.html\` via \`app/[[...slug]]/route.ts\`.\n\n`;
+md += `Mirrored HTML lives under \`public/mirror/<path>/index.html\`. **Routing:** \`next.config.ts\` \`rewrites()\` maps \`/\` → \`/mirror/index.html\` and \`/:path*/\` → \`/mirror/:path*/index.html\` (static files; no catch-all Route Handler — avoids Vercel’s 250 MB serverless bundle limit).\n\n`;
+md += `**Redirects:** \`/earthday5k\` and \`/earthday5k/\` → \`/event/earth-day-5k/\` (legacy slug).\n\n`;
+md += `The tables below list **seed** URL lists used for the original crawl; many additional routes exist only in \`mirror/manifest.json\` (pagination, discovered links). **Authoritative route count:** count \`index.html\` under \`public/mirror/\` or manifest rows.\n\n`;
 md += `| Source URL (trailing slash) | Next.js behavior |\n`;
 md += `|-----------------------------|------------------|\n`;
 

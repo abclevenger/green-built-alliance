@@ -8,6 +8,13 @@ const nextConfig: NextConfig = {
    * A catch-all route that used fs.readFile on public/mirror caused Vercel to trace
    * the entire mirror into the serverless function (>250 MB unzipped limit).
    */
+  async redirects() {
+    return [
+      /* Live site uses /event/earth-day-5k/; legacy marketing slug still linked as /earthday5k/ */
+      { source: "/earthday5k", destination: "/event/earth-day-5k/", permanent: true },
+      { source: "/earthday5k/", destination: "/event/earth-day-5k/", permanent: true },
+    ];
+  },
   async rewrites() {
     return {
       beforeFiles: [

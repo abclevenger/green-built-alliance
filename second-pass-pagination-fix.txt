@@ -1,0 +1,5 @@
+# Second-pass: mirror neighbors linked from prev/next but missing locally (all 200 on live)
+https://www.greenbuilt.org/category/articles/page/15/
+https://www.greenbuilt.org/category/articles/page/23/
+https://www.greenbuilt.org/green-building-news/page/15/
+https://www.greenbuilt.org/green-building-news/page/44/
