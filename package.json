@@ -6,9 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "crawl": "node scripts/crawl.mjs",
+    "crawl:pages": "node scripts/crawl.mjs --url-list=page-urls.txt",
+    "crawl:posts": "node scripts/crawl.mjs --url-list=post-urls.txt --skip-existing",
+    "crawl:events": "node scripts/crawl.mjs --url-list=event-urls.txt --skip-existing",
+    "route-map": "node scripts/generate-route-map.mjs",
+    "asset-inventory": "node scripts/asset-inventory.mjs"
   },
   "dependencies": {
+    "cheerio": "^1.2.0",
     "next": "16.2.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"

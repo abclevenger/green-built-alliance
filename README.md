@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Green Built Alliance — static mirror (Next.js)
 
-## Getting Started
+Production Next.js 16 + TypeScript + App Router project that serves **byte-faithful HTML mirrors** of [greenbuilt.org](https://www.greenbuilt.org/) so layout, copy, scripts, and `<head>` metadata match the live WordPress site.
 
-First, run the development server:
+## Quick start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000/](http://localhost:3000/) (trailing slash enabled).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How it works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Piece | Role |
+|-------|------|
+| `public/mirror/**/index.html` | Full page HTML saved from the live site |
+| `src/app/[[...slug]]/route.ts` | `GET` handler reads the matching `index.html` and returns it |
+| `mirror/manifest.json` | Crawl manifest (source URL → file path) |
+| `src/app/sitemap.ts` | Lists mirrored URLs for search engines |
+| `src/app/robots.ts` | Robots rules aligned with production |
 
-## Learn More
+Mirrored pages load **styles, scripts, and media from `https://www.greenbuilt.org/...`** (see `ASSET_INVENTORY.md`). Offline/air-gapped hosting requires an additional asset download pass into `public/`.
 
-To learn more about Next.js, take a look at the following resources:
+## Populate / refresh mirrors
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+URL lists come from Yoast + Events Calendar sitemaps (`page-urls.txt`, `post-urls.txt`, `event-urls.txt`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# All lists (respect robots crawl-delay unless you pass --delay=0)
+npm run crawl
 
-## Deploy on Vercel
+# Or stepwise
+npm run crawl:pages
+npm run crawl:posts
+npm run crawl:events
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Options (see `scripts/crawl.mjs`):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `--max=N` — limit fetches
+- `--delay=ms` — delay between requests (default 10000 ms)
+- `--skip-existing` — skip URLs that already have `public/mirror/.../index.html`
+- `--url-list=relative-path.txt` — single list file
+
+## Environment
+
+| Variable | Purpose |
+|----------|---------|
+| `NEXT_PUBLIC_SITE_URL` | Public site URL for `sitemap.xml` and `robots.txt` (default: `https://www.greenbuilt.org`) |
+| `CANONICAL_BASE` | If set, `<link rel="canonical">` in saved HTML is rewritten to this origin during crawl |
+
+## Documentation
+
+- `MIGRATION_REPORT.md` — approach, limitations, WordPress-dependent features
+- `ROUTE_MAP.md` — URL → mirror file mapping
+- `ASSET_INVENTORY.md` — referenced asset paths (from HTML scan)
+- `SEO_PRESERVATION_CHECKLIST.md` — SEO parity strategy
+- `QA_CHECKLIST.md` — manual QA against production
+
+## Tech note: `next/link` and `next/image`
+
+This migration prioritizes **identical rendered output** from saved HTML. Internal navigation uses normal `<a href>` tags from the mirror, not React `Link`. Images keep original `<img>` / `srcset` from WordPress. That matches the requirement to avoid changing layout or loading behavior.
