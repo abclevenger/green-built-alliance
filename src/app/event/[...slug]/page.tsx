@@ -1,4 +1,5 @@
 import { EventDetailView } from "@/components/events/EventDetailView";
+import { EventJsonLd } from "@/components/seo/EventJsonLd";
 import { fetchEventDetail } from "@/lib/tribe-events";
 import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
@@ -41,5 +42,11 @@ export default async function EventSinglePage({ params }: Props) {
   const { slug } = await params;
   const detail = await fetchEventDetail(slug);
   if (!detail) notFound();
-  return <EventDetailView detail={detail} />;
+  const path = eventPathFromSlugParts(slug);
+  return (
+    <>
+      <EventJsonLd detail={detail} path={path} />
+      <EventDetailView detail={detail} />
+    </>
+  );
 }

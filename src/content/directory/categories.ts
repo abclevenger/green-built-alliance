@@ -45,6 +45,8 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         summary: "Small team specializing in healthy, creative in-town homes with lower environmental impact.",
         href: nativeDirectoryMemberProfilePath("401"),
         badges: ["Certified builder"],
+        recommended: true,
+        listingPriority: 2,
       },
       {
         name: "Evergreen Construct Inc.",

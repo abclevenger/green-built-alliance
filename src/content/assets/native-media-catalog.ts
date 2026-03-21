@@ -6,10 +6,25 @@ export type NativeMediaCatalogEntry = NativeMediaRef & { usedBy: string[] };
 /**
  * Central registry for native-route media. Add entries here instead of scattering `wp-content` URLs.
  *
+ * **Inventory elsewhere:** Magazine edition PDFs + covers (many files) live in
+ * `magazine-edition-media.ts` — same resolver, grouped by product.
+ *
+ * **Remaining WordPress coupling (by design):**
+ * - Event card/detail `imageUrl` from Tribe REST (dynamic).
+ * - WordPress HTML fallbacks in `[...slug]` (not catalogued here).
+ * - `WpLegacyStyles` theme CSS URL (stylesheet, not an image).
+ *
  * To detach from WordPress: copy the file to `public` + `localPublicPath`, then set
  * `NEXT_PUBLIC_USE_LOCAL_SITE_MEDIA=true` at build/runtime.
  */
 export const nativeMediaCatalog = {
+  /** Official vertical logo (300×216) — canonical file under `public/media/og/` from brand kit */
+  ogGbaLogoVertical: {
+    id: "og-gba-logo-vertical",
+    legacyPath: "/wp-content/uploads/2022/11/gba-logo-vertical.png",
+    localPublicPath: "/media/og/gba-logo-vertical.png",
+    usedBy: ["/ (homepage OG)", "SiteJsonLd logo", "header mark"],
+  },
   ogGbhNetZeroLogo: {
     id: "og-gbh-net-zero-logo",
     legacyPath: "/wp-content/uploads/2023/04/GBH-Net-Zero-logo.png",
@@ -55,7 +70,7 @@ export const nativeMediaCatalog = {
     id: "magazine-cover-2024-25",
     legacyPath: "/wp-content/uploads/2025/03/Green-Built-24-25.jpg",
     localPublicPath: "/media/magazine/2024-25/cover.jpg",
-    usedBy: ["/magazine/ OG image"],
+    usedBy: ["/magazine/ OG image", "same file as magazine-edition-media 2024–25 cover"],
   },
 } as const satisfies Record<string, NativeMediaCatalogEntry>;
 

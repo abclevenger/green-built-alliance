@@ -1,4 +1,5 @@
 import { FunnelLeadCapture } from "@/components/marketing/funnel/FunnelLeadCapture";
+import { ArticleJsonLd } from "@/components/seo/ArticleJsonLd";
 import { PostMidActionStrip } from "@/components/posts/PostMidActionStrip";
 import { PostStickyCtaBar } from "@/components/posts/PostStickyCtaBar";
 import { defaultPostFooterLeadCapture } from "@/content/site/post-conversion-defaults";
@@ -48,6 +49,7 @@ export function NativePostView({ post }: { post: NativePost }) {
 
   return (
     <article className="native-post-article relative bg-white pb-20 md:pb-0">
+      <ArticleJsonLd post={post} />
       <header className="border-b border-neutral-100 bg-gradient-to-b from-[#f8faf3] to-white px-4 py-12 md:py-16">
         <div className="mx-auto max-w-3xl">
           {post.categories?.length ? (
@@ -114,37 +116,49 @@ export function NativePostView({ post }: { post: NativePost }) {
           ))}
         </div>
 
-        <section className="mt-16 rounded-2xl border border-neutral-200 bg-neutral-50/80 px-6 py-10">
-          <h2 className="text-center text-lg font-bold text-neutral-900">What’s your next step?</h2>
-          <p className="mx-auto mt-2 max-w-xl text-center text-sm text-neutral-600">
-            Move from reading to action—match with pros, explore certification, or save energy with local guidance.
+        <section className="mt-16 rounded-2xl border border-[color:var(--gb-border)] bg-[color:var(--gb-surface-muted)]/80 px-6 py-10 sm:px-10">
+          <h2 className="text-center font-serif text-xl font-semibold text-[color:var(--gb-text)] md:text-2xl">
+            Turn this article into your next move
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-sm text-[color:var(--gb-text-muted)]">
+            Match with pros by intent, open verified directory profiles, or continue through programs and education —
+            pick the lane that fits where you are today.
           </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Link
-              href="/find-a-pro/"
-              className="inline-flex rounded-full bg-[#96c11f] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#5a7c00]"
-            >
-              Get matched with a pro
-            </Link>
-            <Link
-              href="/directory/"
-              className="inline-flex rounded-full border-2 border-neutral-300 bg-white px-5 py-2.5 text-sm font-bold text-neutral-800 hover:border-[#96c11f]"
-            >
-              Browse directory
-            </Link>
-            <Link
-              href="/green-built-homes/"
-              className="inline-flex rounded-full border-2 border-neutral-300 bg-white px-5 py-2.5 text-sm font-bold text-neutral-800 hover:border-[#96c11f]"
-            >
-              Green Built Homes
-            </Link>
-            <Link
-              href="/energysaversnetwork/"
-              className="inline-flex rounded-full border-2 border-transparent px-5 py-2.5 text-sm font-bold text-[#5a7c00] underline-offset-2 hover:underline"
-            >
-              Energy Savers Network
-            </Link>
-          </div>
+          <ul className="mx-auto mt-8 grid max-w-4xl gap-3 sm:grid-cols-2">
+            {[
+              { href: "/find-a-pro/", label: "Start guided match", sub: "Project questions → suggested categories", primary: true },
+              { href: "/directory/", label: "Browse the directory", sub: "Filter by trade and specialty" },
+              { href: "/green-built-homes/", label: "Green Built Homes", sub: "Certification and builder pathways" },
+              { href: "/energysaversnetwork/", label: "Energy Savers Network", sub: "Programs that lower bills" },
+              { href: "/events/continuing-education-courses/", label: "Continuing education", sub: "Contractor trainings & CE" },
+              { href: "/support-our-work/", label: "Support the Alliance", sub: "Membership, giving, partnership" },
+            ].map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={
+                    item.primary
+                      ? "flex h-full min-h-[4.5rem] flex-col justify-center rounded-2xl border-2 border-[color:var(--gb-accent)] bg-[color:var(--gb-surface)] px-4 py-4 text-center shadow-sm transition hover:bg-[#f8faf3] sm:text-left"
+                      : "flex h-full min-h-[4.5rem] flex-col justify-center rounded-2xl border border-[color:var(--gb-border)] bg-[color:var(--gb-surface)] px-4 py-4 text-center transition hover:border-[color:var(--gb-accent)]/60 sm:text-left"
+                  }
+                >
+                  <span className="text-sm font-bold text-[color:var(--gb-text)]">{item.label}</span>
+                  <span className="mt-1 text-xs text-[color:var(--gb-text-muted)]">{item.sub}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-8 text-center text-xs text-[color:var(--gb-text-muted)]">
+            More context?{" "}
+            <Link href="/green-building-news/" className="font-semibold text-[color:var(--gb-accent-deep)] underline-offset-2 hover:underline">
+              Green Building News
+            </Link>{" "}
+            and{" "}
+            <Link href="/news/" className="font-semibold text-[color:var(--gb-accent-deep)] underline-offset-2 hover:underline">
+              News
+            </Link>{" "}
+            hubs collect related guides.
+          </p>
         </section>
 
         <div className="mt-12">
@@ -156,7 +170,7 @@ export function NativePostView({ post }: { post: NativePost }) {
         href={stickyPrimary.href}
         label={stickyPrimary.label}
         secondaryHref="/directory/"
-        secondaryLabel="Directory"
+        secondaryLabel="Browse pros"
       />
     </article>
   );

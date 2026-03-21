@@ -40,11 +40,14 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
 
   if (resolved.kind === "native-post") {
     const { post } = resolved;
+    const authorNames = post.author?.name ? [post.author.name] : undefined;
     return pageMetadata(post.seo, {
       path,
       openGraphType: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt ?? post.publishedAt,
+      authors: authorNames,
+      keywords: post.tags,
     });
   }
 
@@ -56,11 +59,13 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
     return pageMetadata(resolved.profile.seo, { path: resolved.profile.path });
   }
 
-  return {
-    title: resolved.doc.title,
-    description: `${resolved.doc.title} — Green Built Alliance`,
-    alternates: { canonical: path },
-  };
+  return pageMetadata(
+    {
+      title: `${resolved.doc.title} | Green Built Alliance`,
+      description: `Article and resources from Green Built Alliance: ${resolved.doc.title}.`,
+    },
+    { path }
+  );
 }
 
 export default async function CatchAllPage({ params, searchParams }: Props) {

@@ -26,6 +26,7 @@ export const siteSettings: SiteSettings = {
       "Resources, certification, and education for green building in Western North Carolina.",
     links: [
       { href: "/directory/", label: "Find a professional" },
+      { href: "/faq/", label: "FAQ" },
       { href: "/support-our-work/", label: "Donate" },
       { href: "/search/", label: "Search" },
       { href: "/about-green-built-alliance/", label: "Contact" },

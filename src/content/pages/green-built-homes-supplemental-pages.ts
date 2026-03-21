@@ -25,46 +25,53 @@ export const greenBuiltHomesFaqPage: NativeMarketingPage = {
         "Quick answers about how the program works for homeowners, buyers, and building professionals.",
     },
     {
-      type: "prose",
-      heading: "What is Green Built Homes?",
-      paragraphs: [
-        "Green Built Homes is a regional certification program that verifies healthier, more efficient, and more sustainable new and existing homes. It goes beyond slogans by using clear checklists and third-party verification so performance is documented.",
+      type: "faq",
+      heading: "Basics",
+      items: [
+        {
+          question: "What is Green Built Homes?",
+          answer:
+            "Green Built Homes is a regional certification program that verifies healthier, more efficient, and more sustainable new and existing homes. It uses clear checklists and third-party verification so performance is documented—not just claimed.",
+        },
+        {
+          question: "How is it different from a marketing “green home” label?",
+          answer:
+            "Certified homes meet published requirements across areas such as energy, water, materials, indoor environmental quality, and site impacts, depending on the pathway. A third-party verifier helps confirm that key details are built as designed—not only marketed that way.",
+        },
+        {
+          question: "Who is Green Built Homes for?",
+          answer:
+            "Homeowners and buyers who want documented performance, builders and designers delivering high-quality projects, and raters or verifiers coordinating testing and paperwork. The program is built to align field work with clear expectations.",
+        },
       ],
     },
     {
-      type: "prose",
-      heading: "How is it different from a marketing “green home” label?",
-      paragraphs: [
-        "Certified homes meet program requirements that cover energy, water, materials, indoor environmental quality, and site impacts—depending on the pathway. A third-party verifier helps ensure key details are implemented, not just advertised.",
-      ],
-    },
-    {
-      type: "prose",
-      heading: "Can I certify a remodel or addition?",
-      paragraphs: [
-        "Program options evolve over time. If you have a specific project, talk with a participating builder or rater early so they can map the right pathway and documentation for your scope.",
-      ],
-    },
-    {
-      type: "prose",
-      heading: "How do I find a builder or professional?",
-      paragraphs: [
-        "Start with the member directory and the main Green Built Homes overview. Many teams list program experience in their profiles; ask directly how they approach testing, documentation, and handoff for homeowners.",
-      ],
-    },
-    {
-      type: "prose",
-      heading: "Where do Net Zero and Net Zero Ready fit in?",
-      paragraphs: [
-        "These are structured pathways within Green Built NC for top-tier efficiency and renewable readiness. See our native articles on net zero and net zero ready homes for plain-language explanations.",
+      type: "faq",
+      heading: "Projects & pathways",
+      items: [
+        {
+          question: "Can I certify a remodel or addition?",
+          answer:
+            "Program options evolve over time. Share your scope early with a participating builder or rater so they can map the right pathway and documentation before details harden.",
+        },
+        {
+          question: "Where do Net Zero and Net Zero Ready fit in?",
+          answer:
+            "These are structured pathways within Green Built NC for top-tier efficiency and renewable readiness. Read our native articles on net zero and net zero ready homes for plain-language explanations, then confirm current requirements with your project team.",
+        },
+        {
+          question: "How do I find a builder or professional?",
+          answer:
+            "Start with the member directory and the main Green Built Homes overview. Ask how teams schedule testing, track punch items, and hand off documentation to homeowners. Guided match on /find-a-pro/ can also suggest categories if you are unsure where to begin.",
+        },
       ],
     },
     {
       type: "cta",
       title: "Go deeper",
-      body: "Explore the program overview, certification steps, and directory listings.",
+      body: "Explore the program overview, certification steps, site-wide FAQs, and directory listings.",
       primary: { href: "/green-built-homes/", label: "Green Built Homes home" },
-      secondary: { href: "/directory/", label: "Member directory" },
+      secondary: { href: "/faq/", label: "All FAQs" },
     },
   ],
 };

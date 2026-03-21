@@ -1,4 +1,5 @@
 import { EditorialHubView } from "@/components/news/EditorialHubView";
+import { editorialHubImpactStats } from "@/content/site/editorial-hub-trust";
 import { greenBuildingNewsLeadCapture } from "@/content/site/green-building-news-hub";
 import type { NativePostHubModel } from "@/content/site/native-post-hub-model";
 import Link from "next/link";
@@ -9,6 +10,7 @@ export function GreenBuildingNewsHubView({ model }: { model: NativePostHubModel 
       model={model}
       leadCapture={greenBuildingNewsLeadCapture}
       leadSectionId="green-building-news-alerts"
+      impactStrip={editorialHubImpactStats}
       eyebrow="Green Building News"
       headline="Ideas, guides & perspectives"
       intro="This is the native Green Building News archive—the same migrated articles as our shorter /news/ entry, organized for discovery by topic. Legacy pagination and thousands of historical URLs still fall back to WordPress until those posts are moved into the registry."

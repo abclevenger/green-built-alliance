@@ -27,11 +27,11 @@ export function NativePostCard({
     <article
       className={
         isFeatured
-          ? "flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-sm transition hover:border-[#96c11f]/60 hover:shadow-md"
-          : "flex h-full flex-col rounded-xl border border-neutral-200 bg-white p-5 shadow-sm transition hover:border-[#96c11f]/50"
+          ? "flex h-full flex-col overflow-hidden rounded-2xl border border-[color:var(--gb-border)] bg-[color:var(--gb-surface)] shadow-sm ring-1 ring-black/[0.03] transition hover:border-[color:var(--gb-accent)]/70 hover:shadow-md"
+          : "flex h-full flex-col rounded-xl border border-[color:var(--gb-border)] bg-[color:var(--gb-surface)] p-5 shadow-sm transition hover:border-[color:var(--gb-accent)]/50"
       }
     >
-      <div className={isFeatured ? "flex flex-1 flex-col p-6 md:p-7" : "flex flex-1 flex-col"}>
+      <div className={isFeatured ? "flex flex-1 flex-col p-6 md:p-8" : "flex flex-1 flex-col"}>
         <time className="text-xs font-semibold uppercase tracking-wide text-[#5a7c00]">
           {formatPublished(post.publishedAt)}
         </time>
@@ -50,30 +50,45 @@ export function NativePostCard({
         <h2
           className={
             isFeatured
-              ? "mt-4 text-xl font-extrabold leading-snug text-neutral-900 md:text-2xl"
-              : "mt-3 text-lg font-bold leading-snug text-neutral-900"
+              ? "mt-4 font-serif text-xl font-semibold leading-snug text-[color:var(--gb-text)] md:text-2xl"
+              : "mt-3 text-lg font-bold leading-snug text-[color:var(--gb-text)]"
           }
         >
-          <Link href={post.path} className="hover:text-[#5a7c00] hover:underline">
+          <Link href={post.path} className="hover:text-[color:var(--gb-accent-deep)] hover:underline">
             {post.title}
           </Link>
         </h2>
         <p
           className={
             isFeatured
-              ? "mt-3 line-clamp-4 text-base leading-relaxed text-neutral-600"
-              : "mt-2 line-clamp-3 text-sm text-neutral-600"
+              ? "mt-3 line-clamp-4 text-base leading-relaxed text-[color:var(--gb-text-muted)]"
+              : "mt-2 line-clamp-3 text-sm text-[color:var(--gb-text-muted)]"
           }
         >
           {post.excerpt}
         </p>
-        <div className="mt-5 flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap items-center gap-2">
           <Link
             href={post.path}
-            className="inline-flex rounded-full bg-[#96c11f] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#5a7c00]"
+            className="inline-flex rounded-full bg-[color:var(--gb-accent)] px-4 py-2 text-xs font-bold text-white transition hover:bg-[color:var(--gb-accent-deep)]"
           >
-            Read article
+            Read the story
           </Link>
+          {isFeatured ? (
+            <Link
+              href="/find-a-pro/"
+              className="inline-flex rounded-full border-2 border-[color:var(--gb-border)] bg-[color:var(--gb-surface)] px-4 py-2 text-xs font-bold text-[color:var(--gb-accent-deep)] transition hover:border-[color:var(--gb-accent)]"
+            >
+              Get project help
+            </Link>
+          ) : (
+            <Link
+              href="/find-a-pro/"
+              className="text-xs font-semibold text-[color:var(--gb-accent-deep)] underline-offset-2 hover:underline"
+            >
+              Need a pro for this?
+            </Link>
+          )}
         </div>
       </div>
     </article>
@@ -93,7 +108,7 @@ export function NativePostGrid({
 
   const grid =
     variant === "featured"
-      ? "grid gap-8 sm:grid-cols-2 lg:grid-cols-2"
+      ? "grid gap-8 sm:grid-cols-2"
       : "grid gap-6 sm:grid-cols-2 lg:grid-cols-3";
 
   return (

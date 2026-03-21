@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { buildDefaultMetadata } from "@/lib/seo";
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="flex min-h-screen flex-col bg-white text-neutral-800 antialiased">
+        <SiteJsonLd />
         <a className="skip-to-main" href="#main">
           Skip to content
         </a>

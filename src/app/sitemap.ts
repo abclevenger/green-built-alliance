@@ -18,6 +18,19 @@ function normalizePath(path: string): string {
   return withSlash.endsWith("/") ? withSlash : `${withSlash}/`;
 }
 
+/** Higher crawl priority for conversion and program entry points */
+const SITEMAP_PRIORITY_HIGH = new Set<string>([
+  "/",
+  "/find-a-pro/",
+  "/directory/",
+  "/green-built-homes/",
+  "/energysaversnetwork/",
+  "/events/continuing-education-courses/",
+  "/events/",
+  "/news/",
+  "/green-building-news/",
+]);
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = SITE.replace(/\/$/, "");
   const now = new Date();
@@ -44,8 +57,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return Array.from(nativePaths).map((path) => ({
       url: base + path,
       lastModified: now,
-      changeFrequency: path === "/" ? ("weekly" as const) : ("monthly" as const),
-      priority: path === "/" ? 1 : 0.75,
+      changeFrequency:
+        path === "/" || SITEMAP_PRIORITY_HIGH.has(path) ? ("weekly" as const) : ("monthly" as const),
+      priority: path === "/" ? 1 : SITEMAP_PRIORITY_HIGH.has(path) ? 0.9 : 0.65,
     }));
   }
   const raw = await readFile(manifestPath, "utf8");
@@ -59,7 +73,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return Array.from(nativePaths).map((path) => ({
     url: base + path,
     lastModified: now,
-    changeFrequency: path === "/" ? ("weekly" as const) : ("monthly" as const),
-    priority: path === "/" ? 1 : 0.7,
+    changeFrequency:
+      path === "/" || SITEMAP_PRIORITY_HIGH.has(path) ? ("weekly" as const) : ("monthly" as const),
+    priority: path === "/" ? 1 : SITEMAP_PRIORITY_HIGH.has(path) ? 0.9 : 0.65,
   }));
 }

@@ -1,4 +1,5 @@
 import { EditorialHubView } from "@/components/news/EditorialHubView";
+import { editorialHubImpactStats } from "@/content/site/editorial-hub-trust";
 import { newsIndexLeadCapture } from "@/content/site/news-hub";
 import type { NewsHubModel } from "@/content/site/news-hub";
 import Link from "next/link";
@@ -9,6 +10,7 @@ export function NewsHubView({ model }: { model: NewsHubModel }) {
       model={model}
       leadCapture={newsIndexLeadCapture}
       leadSectionId="news-alerts"
+      impactStrip={editorialHubImpactStats}
       eyebrow="News"
       headline="Articles & program explainers"
       intro="Native articles from Green Built Alliance—net zero homes, air sealing, stormwater, certification, and building science in Western North Carolina. More legacy blog URLs still resolve through the site shell until they are migrated into this registry."

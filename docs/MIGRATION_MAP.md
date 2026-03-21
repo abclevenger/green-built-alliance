@@ -13,7 +13,7 @@
 | Dynamic `[...slug]` | REST pages/posts (content tail) | Local registry first → `resolveWordPressRoute` fallback | P1 | **Local-first** — [`WORDPRESS_FALLBACK_AUDIT.md`](./WORDPRESS_FALLBACK_AUDIT.md), [`WORDPRESS_ENDGAME.md`](./WORDPRESS_ENDGAME.md) (plugin vs content), `wordpress-fallback-registry.ts` |
 | Native marketing pages | — | `src/content/pages/marketing.ts` (+ per-page modules) | P1 | **About (sections)** + **GBH / Energy Savers (composable `blocks[]`)** |
 | Blog posts | REST `posts` | `src/content/posts/*.ts` registry + `NativePost` model | P2 | **Partial** — registry paths resolve before WP; **`/news/`** + **`/green-building-news/`** hubs native |
-| Magazine / annual directory | WP page | `src/content/site/magazine-hub.ts` + `app/magazine/page.tsx` | P2 | **Native hub** — PDFs/covers centralized in `magazineEditionSources` + `resolveNativeMediaUrl` (legacy host until files land in `public/media/`) |
+| Magazine / annual directory | WP page | `magazine-edition-media.ts` + `magazine-hub.ts` + `app/magazine/page.tsx` | P2 | **Native hub** — PDFs/covers in `magazineEditionMediaDefinitions` + `resolveNativeMediaUrl`; files under `public/media/magazine/` |
 | Events | Tribe REST | `tribe-events.ts` + `/events/`, `/event/...` | P2 | **Native hub + singles** (registration still legacy TEC URLs) |
 | Sitemap | `mirror/manifest.json` | Manifest ∪ native marketing + native posts + `/` | P3 | **Merged** |
 | Yoast / JSON-LD | WP HTML | `generateMetadata` + `jsonLd` per route | P3 | Partial |

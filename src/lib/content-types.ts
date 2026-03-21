@@ -45,6 +45,30 @@ export type HomePillar = {
   href: string;
   title: string;
   description: string;
+  /** e.g. "For homeowners" — sets journey context above the title */
+  audienceLabel?: string;
+  /** Card footer CTA text (default: generic arrow in view) */
+  ctaLabel?: string;
+};
+
+/** PLACEHOLDER: swap for approved partner names / logos when agreements allow */
+export type HomePartnerPlaceholder = {
+  label: string;
+  /** If true, UI shows “placeholder” styling — remove when real logo assets ship */
+  isPlaceholder?: boolean;
+};
+
+export type HomeTestimonial = {
+  quote: string;
+  attribution: string;
+  /** PLACEHOLDER — set false when quote is contractually approved */
+  isPlaceholder?: boolean;
+};
+
+export type HomeEcosystemLink = {
+  href: string;
+  label: string;
+  description: string;
 };
 
 export type HomeProgramCard = {
@@ -54,7 +78,13 @@ export type HomeProgramCard = {
   external?: boolean;
 };
 
-export type HomeStat = { label: string; value: string };
+export type HomeStat = {
+  label: string;
+  value: string;
+  detail?: string;
+  /** Set true until the stat is verified for external marketing */
+  isPlaceholder?: boolean;
+};
 
 /** Shared CTA control (homepage hero, funnels, etc.) */
 export type PageCta = { href: string; label: string };
@@ -65,28 +95,55 @@ export type HomeContent = {
     eyebrow: string;
     title: string;
     description: string;
+    /** One-line value lock-up under the title (optional) */
+    valueLine?: string;
     primaryCta: PageCta;
     secondaryCta: PageCta;
+    tertiaryCta?: PageCta;
     /** Short credibility bullets shown under hero CTAs */
     trustBullets: string[];
   };
-  /** Heading for the three pathway cards below the hero */
+  /** Heading for the pathway section */
   pillarsSectionTitle: string;
+  /** Short intro under the pillars heading */
+  pillarsSectionIntro?: string;
   pillars: HomePillar[];
   programsSection: {
     title: string;
     description: string;
     cards: HomeProgramCard[];
   };
-  /** Optional proof strip */
+  /** Impact / credibility metrics — PLACEHOLDER: verify numbers with staff before external use */
   stats?: HomeStat[];
+  /** Optional social proof quote */
+  testimonial?: HomeTestimonial;
+  /** PLACEHOLDER partner row — replace labels + isPlaceholder when logos are ready */
+  partnerStrip?: {
+    headline: string;
+    partners: HomePartnerPlaceholder[];
+  };
   midCta?: {
     title: string;
     description?: string;
     primary: { href: string; label: string };
     secondary?: { href: string; label: string };
   };
+  /** Cross-links so the homepage never feels like a dead end */
+  ecosystemSection?: {
+    title: string;
+    description: string;
+    links: HomeEcosystemLink[];
+  };
+  /** Short FAQ block — no FAQPage JSON-LD on home (use `/faq/` for rich results). */
+  faqSection?: {
+    title: string;
+    intro?: string;
+    items: { question: string; answer: string }[];
+  };
 };
+
+/** Q&A pair for marketing `faq` sections and shared FAQ UI */
+export type MarketingFaqItem = { question: string; answer: string };
 
 /** Native marketing page built from sections (no raw WP blob). */
 export type MarketingSection =
@@ -99,7 +156,8 @@ export type MarketingSection =
       primary: { href: string; label: string };
       secondary?: { href: string; label: string };
     }
-  | { type: "bulletList"; title?: string; items: string[] };
+  | { type: "bulletList"; title?: string; items: string[] }
+  | { type: "faq"; heading?: string; intro?: string; items: MarketingFaqItem[] };
 
 /** High-conversion funnel layout (reusable for future program pages). */
 export type FunnelHero = {
@@ -262,6 +320,13 @@ export type DirectorySpotlightListing = {
   href: string;
   /** Paid / priority placement hook — sort spotlights with `featured` first in UI */
   featured?: boolean;
+  /**
+   * Staff- or algorithm-picked recommendations — UI lane for “recommended pros”
+   * (monetization-ready; can pair with featured or stand alone).
+   */
+  recommended?: boolean;
+  /** Lower sorts earlier among peers when wired to API sort */
+  listingPriority?: number;
   /** Small labels, e.g. “Certified”, “Featured” */
   badges?: readonly string[];
 };

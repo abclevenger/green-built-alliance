@@ -1,5 +1,42 @@
 @import "tailwindcss";
 
+/*
+ * Brand tokens — aligned to official Green Built Alliance vertical logo (GREEN / BUILT / ALLIANCE mark).
+ * Primary green & gray sampled from logo art: ~#82BC00, #616365; light leaf tone: #C6E0B4.
+ * Legacy lime CTAs (#96c11f / #5a7c00) remain in many components; migrate incrementally to vars.
+ */
+:root {
+  --gb-text: #262626;
+  --gb-text-muted: #616365;
+  --gb-border: #e7e5e4;
+  --gb-surface: #ffffff;
+  --gb-surface-muted: #fafaf9;
+  --gb-brand-sage: #c6e0b4;
+  --gb-accent: #82bc00;
+  --gb-accent-deep: #5f8f00;
+}
+
+/* Comfortable keyboard focus — brand primary green */
+:focus-visible {
+  outline: 2px solid var(--gb-accent-deep);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Native long-form: balanced lines, comfortable section anchors */
 .prose-post :where(p) {
   text-wrap: pretty;
@@ -42,13 +79,16 @@
   top: 0;
   z-index: 9999;
   padding: 0.75rem 1.25rem;
-  background: #5a7c00;
+  background: var(--gb-accent-deep);
   color: #fff;
   font-weight: 600;
   text-decoration: none;
 }
 
-.skip-to-main:focus {
+.skip-to-main:focus,
+.skip-to-main:focus-visible {
   left: 1rem;
   top: 1rem;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }

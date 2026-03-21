@@ -4,6 +4,7 @@ import { continuingEducationCoursesPage } from "@/content/pages/continuing-educa
 import { contentTailMarketingPages } from "@/content/pages/content-tail-marketing-pages";
 import { directoryLandingPage } from "@/content/pages/directory-landing";
 import { energySaversNetworkPage } from "@/content/pages/energy-savers-network";
+import { siteFaqPage } from "@/content/pages/faq-page";
 import { greenBuiltHomesSupplementalPages } from "@/content/pages/green-built-homes-supplemental-pages";
 import { greenBuildingResourcesPages } from "@/content/pages/green-building-resources-pages";
 import { greenBuiltHomesFunnelPage } from "@/content/pages/green-built-homes";
@@ -17,6 +18,7 @@ import { supportOurWorkPage } from "@/content/pages/support-our-work";
  * Add entries here; conversion funnels can live in dedicated files and be imported.
  */
 export const nativeMarketingPages: NativeMarketingPage[] = [
+  siteFaqPage,
   ...legalUtilityPages,
   ...aboutMissionPages,
   ...greenBuiltHomesSupplementalPages,

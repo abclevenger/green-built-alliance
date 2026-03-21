@@ -14,7 +14,7 @@ import {
 } from "@/lib/matchmaking";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type Step = 1 | 2 | 3;
 
@@ -44,6 +44,21 @@ export function MatchmakingWizard() {
   const [budget, setBudget] = useState<string>("");
   const [timeline, setTimeline] = useState<string>("");
 
+  const stepContentRef = useRef<HTMLDivElement>(null);
+  const prevStepRef = useRef<Step | null>(null);
+
+  useEffect(() => {
+    if (prevStepRef.current === null) {
+      prevStepRef.current = step;
+      return;
+    }
+    if (prevStepRef.current === step) return;
+    prevStepRef.current = step;
+    const reduce =
+      typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    stepContentRef.current?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+  }, [step]);
+
   const recommended = useMemo(() => getRecommendedMembersForIntent(intent).map(toMatchmakingMemberCard), [intent]);
   const categories = useMemo(() => getCategoryLinksForIntent(intent), [intent]);
   const programs = useMemo(() => getProgramCtasForIntent(intent), [intent]);
@@ -60,17 +75,31 @@ export function MatchmakingWizard() {
             Answer a few questions—we’ll suggest member profiles and categories that fit. You stay in control of who
             you contact.
           </p>
-          <div className="mt-6 flex justify-center gap-2 text-xs font-semibold text-neutral-500">
-            <span className={step >= 1 ? "text-[#5a7c00]" : ""}>1. Goal</span>
-            <span aria-hidden>→</span>
-            <span className={step >= 2 ? "text-[#5a7c00]" : ""}>2. Details</span>
-            <span aria-hidden>→</span>
-            <span className={step >= 3 ? "text-[#5a7c00]" : ""}>3. Matches</span>
-          </div>
+          <ol className="mt-6 flex list-none flex-wrap justify-center gap-x-2 gap-y-1 text-xs font-semibold text-neutral-500">
+            <li className={step === 1 ? "text-[#5a7c00]" : step > 1 ? "text-neutral-700" : ""} aria-current={step === 1 ? "step" : undefined}>
+              <span className="sr-only">Step 1 of 3: </span>Goal
+            </li>
+            <li aria-hidden className="text-neutral-400">
+              →
+            </li>
+            <li className={step === 2 ? "text-[#5a7c00]" : step > 2 ? "text-neutral-700" : ""} aria-current={step === 2 ? "step" : undefined}>
+              <span className="sr-only">Step 2 of 3: </span>Details
+            </li>
+            <li aria-hidden className="text-neutral-400">
+              →
+            </li>
+            <li className={step === 3 ? "text-[#5a7c00]" : ""} aria-current={step === 3 ? "step" : undefined}>
+              <span className="sr-only">Step 3 of 3: </span>Matches
+            </li>
+          </ol>
         </div>
       </section>
 
-      <div className="mx-auto max-w-3xl px-4 py-12 md:py-16">
+      <div
+        ref={stepContentRef}
+        tabIndex={-1}
+        className="mx-auto max-w-3xl scroll-mt-24 px-4 py-12 md:py-16 focus:outline-none"
+      >
         {step === 1 ? (
           <div className="space-y-4">
             <h2 className="text-xl font-bold text-neutral-900">What are you trying to do?</h2>
@@ -83,7 +112,7 @@ export function MatchmakingWizard() {
                       setIntent(opt.id);
                       setStep(2);
                     }}
-                    className="flex h-full w-full flex-col rounded-2xl border-2 border-neutral-200 bg-white p-4 text-left transition hover:border-[#96c11f] hover:shadow-sm"
+                    className="flex min-h-[4.5rem] w-full flex-col rounded-2xl border-2 border-neutral-200 bg-white p-4 text-left transition hover:border-[#96c11f] hover:shadow-sm focus-visible:ring-2 focus-visible:ring-[#96c11f] focus-visible:ring-offset-2"
                   >
                     <span className="font-bold text-neutral-900">{opt.title}</span>
                     <span className="mt-2 text-sm text-neutral-600">{opt.description}</span>
@@ -100,9 +129,9 @@ export function MatchmakingWizard() {
               <button
                 type="button"
                 onClick={() => setStep(1)}
-                className="text-sm font-semibold text-[#5a7c00] hover:underline"
+                className="rounded-md text-sm font-semibold text-[#5a7c00] hover:underline"
               >
-                ← Change goal
+                <span aria-hidden>← </span>Change goal
               </button>
               <h2 className="mt-4 text-xl font-bold text-neutral-900">A few details (optional)</h2>
               <p className="mt-2 text-sm text-neutral-600">
@@ -116,7 +145,7 @@ export function MatchmakingWizard() {
                 value={locationHint}
                 onChange={(e) => setLocationHint(e.target.value)}
                 placeholder="e.g. Asheville, Buncombe County"
-                className="mt-2 w-full rounded-xl border border-neutral-300 px-4 py-3 text-neutral-900 shadow-sm outline-none focus:border-[#96c11f] focus:ring-2 focus:ring-[#96c11f]/30"
+                className="mt-2 min-h-11 w-full rounded-xl border border-neutral-300 px-4 py-3 text-neutral-900 shadow-sm outline-none focus:border-[#96c11f] focus:ring-2 focus:ring-[#96c11f]/30"
               />
             </label>
             <label className="block">
@@ -124,7 +153,7 @@ export function MatchmakingWizard() {
               <select
                 value={budget}
                 onChange={(e) => setBudget(e.target.value)}
-                className="mt-2 w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 text-neutral-900 shadow-sm outline-none focus:border-[#96c11f]"
+                className="mt-2 min-h-11 w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 text-neutral-900 shadow-sm outline-none focus:border-[#96c11f] focus:ring-2 focus:ring-[#96c11f]/30"
               >
                 <option value="">Prefer not to say</option>
                 <option value="under-50k">Under $50k project scope</option>
@@ -138,7 +167,7 @@ export function MatchmakingWizard() {
               <select
                 value={timeline}
                 onChange={(e) => setTimeline(e.target.value)}
-                className="mt-2 w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 text-neutral-900 shadow-sm outline-none focus:border-[#96c11f]"
+                className="mt-2 min-h-11 w-full rounded-xl border border-neutral-300 bg-white px-4 py-3 text-neutral-900 shadow-sm outline-none focus:border-[#96c11f] focus:ring-2 focus:ring-[#96c11f]/30"
               >
                 <option value="">Flexible</option>
                 <option value="0-6">Next 6 months</option>
@@ -149,7 +178,7 @@ export function MatchmakingWizard() {
             <button
               type="button"
               onClick={() => setStep(3)}
-              className="w-full rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00] sm:w-auto"
+              className="min-h-11 w-full rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00] sm:w-auto"
             >
               See my matches
             </button>
@@ -162,9 +191,9 @@ export function MatchmakingWizard() {
               <button
                 type="button"
                 onClick={() => setStep(2)}
-                className="text-sm font-semibold text-[#5a7c00] hover:underline"
+                className="rounded-md text-sm font-semibold text-[#5a7c00] hover:underline"
               >
-                ← Edit details
+                <span aria-hidden>← </span>Edit details
               </button>
               <h2 className="mt-4 text-xl font-bold text-neutral-900">Recommended professionals</h2>
               <p className="mt-2 text-sm text-neutral-600">
@@ -263,7 +292,7 @@ function MemberResultCard({ member }: { member: MatchmakingMemberCard }) {
         {member.location ? <p className="mt-2 text-xs text-neutral-500">{member.location}</p> : null}
         <Link
           href={member.path}
-          className="mt-4 inline-flex w-fit rounded-full bg-[#96c11f] px-4 py-2 text-xs font-bold text-white hover:bg-[#5a7c00]"
+          className="mt-4 inline-flex min-h-9 min-w-[7.5rem] items-center justify-center rounded-full bg-[#96c11f] px-4 py-2 text-xs font-bold text-white hover:bg-[#5a7c00]"
         >
           View profile
         </Link>

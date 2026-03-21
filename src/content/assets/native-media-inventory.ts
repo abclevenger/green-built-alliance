@@ -1,10 +1,10 @@
+import { magazineEditionMediaDefinitions } from "@/content/assets/magazine-edition-media";
 import { nativeMediaCatalog, type NativeMediaCatalogKey } from "@/content/assets/native-media-catalog";
-import { magazineEditionSources } from "@/content/site/magazine-hub";
 
 /**
  * Typed inventory of native-route media for shutdown planning.
  * - **Catalog entries** — see `nativeMediaCatalog` (OG, support hero, select post images).
- * - **Magazine archive** — edition rows in `magazineEditionSources` (`magazine-hub.ts`).
+ * - **Magazine archive** — edition rows in `magazine-edition-media.ts` (resolved in `magazine-hub.ts`).
  * - **Tribe events** — `og:image` may still be remote URLs from the calendar feed (`event/[...slug]`).
  */
 export type CatalogMediaInventoryRow = {
@@ -28,6 +28,6 @@ export function listCatalogMediaInventory(): CatalogMediaInventoryRow[] {
 
 export const MAGAZINE_ARCHIVE_MEDIA = {
   note:
-    "Each magazineEditionSources row defines legacy paths + required pdfLocalPublicPath/coverLocalPublicPath under public/media/magazine/{year}/; resolved in magazine-hub via resolveNativeMediaUrl.",
-  editionCount: magazineEditionSources.length,
+    "Each `magazineEditionMediaDefinitions` row defines legacy paths + local targets under `public/media/magazine/{year}/`; resolved in magazine-hub via resolveNativeMediaUrl.",
+  editionCount: magazineEditionMediaDefinitions.length,
 } as const;
