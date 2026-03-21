@@ -4,9 +4,8 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
   /*
-   * Serve crawled HTML as static files from public/mirror (no Route Handler).
-   * A catch-all route that used fs.readFile on public/mirror caused Vercel to trace
-   * the entire mirror into the serverless function (>250 MB unzipped limit).
+   * Pages render via the App Router; content comes from WordPress REST.
+   * `public/mirror/` is optional crawl output (not served as the site by default).
    */
   async redirects() {
     return [
@@ -15,13 +14,14 @@ const nextConfig: NextConfig = {
       { source: "/earthday5k/", destination: "/event/earth-day-5k/", permanent: true },
     ];
   },
-  async rewrites() {
-    return {
-      beforeFiles: [
-        { source: "/", destination: "/mirror/index.html" },
-        { source: "/:path*/", destination: "/mirror/:path*/index.html" },
-      ],
-    };
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.greenbuilt.org",
+        pathname: "/wp-content/**",
+      },
+    ],
   },
   turbopack: {
     root: process.cwd(),

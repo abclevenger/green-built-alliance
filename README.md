@@ -1,6 +1,8 @@
-# Green Built Alliance — static mirror (Next.js)
+# Green Built Alliance — Next.js + WordPress (headless)
 
-Production Next.js 16 + TypeScript + App Router project that serves **byte-faithful HTML mirrors** of [greenbuilt.org](https://www.greenbuilt.org/) so layout, copy, scripts, and `<head>` metadata match the live WordPress site.
+Production **Next.js 16** + **TypeScript** + **App Router** frontend. Public pages are **React** (`layout`, `page`, `[...slug]`). **Body content** is loaded from the **WordPress REST API** at build/runtime, sanitized, and rendered inside a shared shell (header/footer + legacy block CSS from WordPress).
+
+The old **static HTML mirror** under `public/mirror/` is **optional** (crawl output for reference or audits); it is **not** used to serve the site unless you restore `rewrites()` in `next.config.ts`.
 
 ## Quick start
 
@@ -9,56 +11,48 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000/](http://localhost:3000/) (trailing slash enabled).
+Open [http://localhost:3000/](http://localhost:3000/) (`trailingSlash: true`).
 
-## How it works
+**Build** calls WordPress for the homepage prerender; CI needs network access to `WORDPRESS_ORIGIN` (default `https://www.greenbuilt.org`).
+
+## Architecture
 
 | Piece | Role |
 |-------|------|
-| `public/mirror/**/index.html` | Full page HTML saved from the live site |
-| `next.config.ts` → `rewrites()` | Maps `/` and `/:path*/` to static files under `/mirror/.../index.html` (no Serverless Function; safe for **Vercel 250 MB** function limit) |
-| `mirror/manifest.json` | Crawl manifest (source URL → file path) |
-| `src/app/sitemap.ts` | Lists mirrored URLs for search engines |
-| `src/app/robots.ts` | Robots rules aligned with production |
-
-Mirrored pages load **styles, scripts, and media from `https://www.greenbuilt.org/...`** (see `ASSET_INVENTORY.md`). Offline/air-gapped hosting requires an additional asset download pass into `public/`.
-
-## Populate / refresh mirrors
-
-URL lists come from Yoast + Events Calendar sitemaps (`page-urls.txt`, `post-urls.txt`, `event-urls.txt`).
-
-```bash
-# All lists (respect robots crawl-delay unless you pass --delay=0)
-npm run crawl
-
-# Or stepwise
-npm run crawl:pages
-npm run crawl:posts
-npm run crawl:events
-```
-
-Options (see `scripts/crawl.mjs`):
-
-- `--max=N` — limit fetches
-- `--delay=ms` — delay between requests (default 10000 ms)
-- `--skip-existing` — skip URLs that already have `public/mirror/.../index.html`
-- `--url-list=relative-path.txt` — single list file
+| `src/app/page.tsx` | Home: `GET /wp-json/wp/v2/pages/{id}` (default page `2114`) |
+| `src/app/[...slug]/page.tsx` | Resolves **pages**, **posts**, and **Tribe events** (`/event/{slug}/`) via REST |
+| `src/lib/wordpress.ts` | Fetch + match logic (path must match WP `link`) |
+| `src/lib/wp-html.ts` | Rewrites internal links to path-only + **DOMPurify** |
+| `src/components/WpLegacyStyles.tsx` | Block library + Astra CSS from WordPress (layout parity, not pixel-perfect) |
+| `src/app/sitemap.ts` | Still driven by `mirror/manifest.json` URL list (same paths as before) |
 
 ## Environment
 
 | Variable | Purpose |
 |----------|---------|
-| `NEXT_PUBLIC_SITE_URL` | Public site URL for `sitemap.xml` and `robots.txt` (default: `https://www.greenbuilt.org`) |
-| `CANONICAL_BASE` | If set, `<link rel="canonical">` in saved HTML is rewritten to this origin during crawl |
+| `NEXT_PUBLIC_SITE_URL` | Canonical host for `sitemap.xml` / `robots.txt` |
+| `WORDPRESS_ORIGIN` | WordPress base URL (default `https://www.greenbuilt.org`) |
+| `WORDPRESS_HOME_PAGE_ID` | REST page ID for `/` (default `2114`) |
 
-## Documentation
+## Optional: refresh HTML mirrors (audits only)
 
-- `MIGRATION_REPORT.md` — approach, limitations, WordPress-dependent features
-- `ROUTE_MAP.md` — URL → mirror file mapping
-- `ASSET_INVENTORY.md` — referenced asset paths (from HTML scan)
-- `SEO_PRESERVATION_CHECKLIST.md` — SEO parity strategy
-- `QA_CHECKLIST.md` — manual QA against production
+```bash
+npm run crawl
+npm run patch:home-perf   # only if you still use mirror HTML for something
+```
 
-## Tech note: `next/link` and `next/image`
+## Limitations
 
-This migration prioritizes **identical rendered output** from saved HTML. Internal navigation uses normal `<a href>` tags from the mirror, not React `Link`. Images keep original `<img>` / `srcset` from WordPress. That matches the requirement to avoid changing layout or loading behavior.
+- **Custom post types** not exposed as `pages` or `posts` may **404** until you extend `resolveWordPressRoute`.
+- **Yoast JSON-LD** from mirrored HTML is **not** replicated; add `generateMetadata` / `jsonLd` later if needed.
+- **Plugin-specific CSS** (Spectra, WooCommerce, etc.) may be missing on some routes—extend `WpLegacyStyles` or move to `next/font` + Tailwind over time.
+- **Forms / checkout** that POST to WordPress still target `greenbuilt.org` if embedded HTML keeps absolute actions.
+
+See **`HEADLESS.md`** for details.
+
+## Docs
+
+- `HEADLESS.md` — headless model, gaps, next steps  
+- `MIGRATION_REPORT.md` — historical mirror approach  
+- `PERFORMANCE_HOME.md` — homepage performance notes (partly superseded)  
+- `CX_PLAYBOOK.md` — CX checklist  

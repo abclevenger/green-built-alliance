@@ -1,10 +1,10 @@
 # Homepage performance (mirrored HTML)
 
-## Render path
+## Render path (updated)
 
-1. Request `GET /` (or `/` with trailing slash via `trailingSlash: true`).
-2. `next.config.ts` **`beforeFiles` rewrite** serves `public/mirror/index.html` as the response body.
-3. **`src/app/page.tsx` does not exist** — the homepage is not a React Server Component, so **`next/image`**, root layout fonts, and App Router code do not run for `/`.
+1. Request `GET /`.
+2. **`src/app/page.tsx`** fetches WordPress REST and renders HTML inside **`layout.tsx`** (header/footer + legacy CSS links).
+3. The notes below about **mirror-only** behavior apply only if you **re-enable** `rewrites()` to `public/mirror/index.html`.
 
 ## Likely LCP element (mobile)
 

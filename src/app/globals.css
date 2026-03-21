@@ -1,6 +1,30 @@
-/* Minimal reset; mirrored pages ship their own styles from the saved HTML. */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@import "tailwindcss";
+
+/* WordPress block HTML: prevent overflow */
+.wordpress-content img,
+.wordpress-content video {
+  max-width: 100%;
+  height: auto;
+}
+
+.wordpress-content iframe {
+  max-width: 100%;
+}
+
+/* Skip link: visually hidden until keyboard focus */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 9999;
+  padding: 0.75rem 1.25rem;
+  background: #5a7c00;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-to-main:focus {
+  left: 1rem;
+  top: 1rem;
 }

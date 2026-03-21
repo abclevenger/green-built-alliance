@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+import { buildDefaultMetadata } from "@/lib/seo";
+import { getSiteSettings } from "@/lib/site-config";
 
-/** Root layout applies to `/sitemap.xml`, `/robots.txt`, and `_not-found` only. The homepage is static HTML at `public/mirror/index.html` (see `next.config.ts` rewrites). */
+const settings = getSiteSettings();
+
 export const metadata: Metadata = {
-  title: "Green Built Alliance",
-  description: "Mirrored from greenbuilt.org",
+  ...buildDefaultMetadata(settings.organizationShort),
+  title: {
+    default: settings.defaultSeo.title,
+    template: `%s | ${settings.organizationShort}`,
+  },
+  description: settings.defaultSeo.description,
 };
 
 export default function RootLayout({
@@ -14,7 +23,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="flex min-h-screen flex-col bg-white text-neutral-800 antialiased">
+        <a className="skip-to-main" href="#main">
+          Skip to content
+        </a>
+        <SiteHeader />
+        <main id="main" className="flex-1">
+          {children}
+        </main>
+        <SiteFooter />
+      </body>
     </html>
   );
 }
