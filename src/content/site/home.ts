@@ -6,35 +6,43 @@ import type { HomeContent } from "@/lib/content-types";
  */
 export const homeContent: HomeContent = {
   seo: {
-    title: "Green Built Alliance — Resources, certification, and education for green building",
+    title:
+      "Green Built Alliance — Build, Buy, or Upgrade a Truly Green Home in Western North Carolina",
     description:
-      "Green Built Alliance works to advance sustainability, grow green building, and provide climate justice through community education, inspired action, and collaborative partnerships in Western North Carolina and beyond.",
+      "Trusted builders, proven programs, and real energy-saving solutions across Western North Carolina. Green Built Alliance connects homeowners and professionals without the guesswork.",
   },
   hero: {
-    eyebrow: "Inspired Action for Sustainable Communities",
-    title:
-      "Advancing sustainable living, green building, and climate resiliency.",
+    eyebrow: "Western North Carolina",
+    title: "Build, Buy, or Upgrade a Truly Green Home — Without the Guesswork",
     description:
-      "Since 2001, we have worked to advance sustainability, grow green building efforts, and provide climate justice through community education, inspired action, and collaborative partnerships in Western North Carolina and beyond.",
+      "We connect you with trusted builders, proven programs, and real energy-saving solutions across Western North Carolina.",
+    primaryCta: { href: "/green-built-homes/", label: "Find a Green Built Home" },
+    secondaryCta: { href: "#programs", label: "Explore Programs" },
+    trustBullets: [
+      "Trusted since 2001",
+      "Serving Western North Carolina",
+      "Thousands of homes and families supported",
+    ],
   },
+  pillarsSectionTitle: "How can we help you?",
   pillars: [
     {
-      href: "/build-green/",
-      title: "Build Green",
+      href: "/green-built-homes/",
+      title: "Build or Buy a Green Home",
       description:
-        "Find green building resources and classes, search our member listings, learn about Green Built Home certifications, and more.",
+        "Explore the Green Built Homes program, connect with certified builders, and find a healthier, high-performance home you can trust.",
     },
     {
-      href: "/save-energy/",
-      title: "Save Energy",
+      href: "/energysaversnetwork/",
+      title: "Save Energy & Lower Bills",
       description:
-        "Discover energy-saving ideas and programs for residents, businesses, and organizations to save money and restore the climate.",
+        "Practical guidance, trusted partners, and programs that help you cut waste and save money—without sorting through noise alone.",
     },
     {
-      href: "/support-clean-energy/",
-      title: "Support Clean Energy",
+      href: "/support-our-work/",
+      title: "Get Involved or Support",
       description:
-        "Support our community with your voice, hands, or dollars through outreach, volunteering, or donations.",
+        "Volunteer, donate, or amplify our work—join neighbors and partners building a cleaner, more resilient region.",
     },
   ],
   programsSection: {
@@ -77,7 +85,7 @@ export const homeContent: HomeContent = {
   midCta: {
     title: "How can we support your green building or sustainability goals?",
     description:
-      "Search the site, explore the directory, or get in touch—we’re here to help.",
+      "Search the site, explore the directory, or browse continuing education for pros—we’re here to help.",
     primary: { href: "/search/", label: "Search our website" },
     secondary: { href: "/directory/", label: "Find a professional" },
   },

@@ -1,3 +1,7 @@
+/**
+ * WordPress REST resolution for unmigrated catch-all routes.
+ * @see `src/content/wordpress-fallback-registry.ts` — inventory + shutdown classification.
+ */
 import { cache } from "react";
 import { WORDPRESS_ORIGIN } from "@/lib/env";
 
@@ -14,15 +18,8 @@ type WpContentEntity = {
   content: { rendered: string };
 };
 
-type TribeEventBySlug = {
-  slug: string;
-  title: string;
-  description: string;
-  url: string;
-};
-
 export type ResolvedDocument = {
-  kind: "page" | "post" | "event";
+  kind: "page" | "post";
   title: string;
   html: string;
 };
@@ -53,39 +50,12 @@ export function segmentsToPath(segments: string[]): string {
   return normalizePath(segments.join("/"));
 }
 
-function eventPathMatches(requestPath: string, eventUrl: string): boolean {
-  const base = pathFromWpLink(eventUrl).replace(/\/$/, "");
-  const req = normalizePath(requestPath).replace(/\/$/, "");
-  if (req === base) return true;
-  return req.startsWith(`${base}/`);
-}
-
 /** WordPress route resolution only — homepage is native (see content-source / home.ts). */
 export const resolveWordPressRoute = cache(
   async (segments: string[]): Promise<ResolvedDocument | null> => {
     const path = segmentsToPath(segments);
 
-    if (segments[0] === "event") {
-      if (!segments[1]) return null;
-      const eventSlug = decodeURIComponent(segments[1]);
-      const res = await fetch(
-        `${REST}/tribe/events/v1/events/by-slug/${encodeURIComponent(eventSlug)}`,
-        FETCH_OPTS
-      );
-      if (res.ok) {
-        const data = (await res.json()) as TribeEventBySlug;
-        if (data?.slug && typeof data.description === "string") {
-          if (eventPathMatches(path, data.url)) {
-            return {
-              kind: "event",
-              title: data.title,
-              html: data.description,
-            };
-          }
-        }
-      }
-      return null;
-    }
+    // Single events: native `app/event/[...slug]/page.tsx` (Tribe REST headless). Not resolved here.
 
     const leaf = segments[segments.length - 1];
     if (!leaf) return null;
@@ -109,6 +79,7 @@ export const resolveWordPressRoute = cache(
       }
     }
 
+    // TODO:WP_FALLBACK — Native posts resolve in content-source first; this only runs when no native post matches `path`.
     const postsRes = await fetch(
       `${REST}/wp/v2/posts?slug=${encodeURIComponent(slug)}&per_page=100`,
       FETCH_OPTS

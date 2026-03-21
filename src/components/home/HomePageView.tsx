@@ -1,6 +1,10 @@
 import type { HomeContent } from "@/lib/content-types";
 import Link from "next/link";
 
+function isHashHref(href: string) {
+  return href.startsWith("#");
+}
+
 export function HomePageView({ content }: { content: HomeContent }) {
   return (
     <div className="bg-white">
@@ -15,28 +19,82 @@ export function HomePageView({ content }: { content: HomeContent }) {
           <p className="mx-auto mt-6 max-w-3xl text-lg text-neutral-600">
             {content.hero.description}
           </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Link
+              href={content.hero.primaryCta.href}
+              className="inline-flex min-h-[44px] min-w-[10rem] items-center justify-center rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a7c00]"
+            >
+              {content.hero.primaryCta.label}
+            </Link>
+            {isHashHref(content.hero.secondaryCta.href) ? (
+              <a
+                href={content.hero.secondaryCta.href}
+                className="inline-flex min-h-[44px] min-w-[10rem] items-center justify-center rounded-full border-2 border-neutral-300 bg-white px-6 py-3 text-sm font-bold text-neutral-800 transition hover:border-[#96c11f] hover:text-[#5a7c00] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a7c00]"
+              >
+                {content.hero.secondaryCta.label}
+              </a>
+            ) : (
+              <Link
+                href={content.hero.secondaryCta.href}
+                className="inline-flex min-h-[44px] min-w-[10rem] items-center justify-center rounded-full border-2 border-neutral-300 bg-white px-6 py-3 text-sm font-bold text-neutral-800 transition hover:border-[#96c11f] hover:text-[#5a7c00] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a7c00]"
+              >
+                {content.hero.secondaryCta.label}
+              </Link>
+            )}
+          </div>
+          <ul className="mx-auto mt-8 flex max-w-xl flex-col gap-2 text-left text-sm text-neutral-600 sm:mx-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-8 sm:gap-y-1 sm:text-center">
+            {content.hero.trustBullets.map((line) => (
+              <li key={line} className="flex items-start gap-2 sm:inline-flex sm:items-center">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#96c11f] sm:mt-0" aria-hidden />
+                <span>{line}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14">
-        <div className="grid gap-6 md:grid-cols-3">
-          {content.pillars.map((p) => (
-            <Link
-              key={p.href}
-              href={p.href}
-              className="group flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:border-[#96c11f] hover:shadow-md"
-            >
-              <h2 className="text-xl font-bold text-neutral-900 group-hover:text-[#5a7c00]">
-                {p.title}
-              </h2>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600">
-                {p.description}
-              </p>
-              <span className="mt-4 text-sm font-semibold text-[#e34d0c]">
-                Learn more →
-              </span>
-            </Link>
-          ))}
+      <section className="mx-auto max-w-6xl px-4 py-14" aria-labelledby="home-pillars-heading">
+        <h2
+          id="home-pillars-heading"
+          className="text-center text-2xl font-extrabold text-neutral-900 md:text-3xl"
+        >
+          {content.pillarsSectionTitle}
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3 md:items-stretch">
+          {content.pillars.map((p, index) => {
+            const isPrimary = index === 0;
+            return (
+              <Link
+                key={p.href}
+                href={p.href}
+                className={
+                  isPrimary
+                    ? "group relative flex flex-col rounded-2xl border-2 border-[#96c11f] bg-gradient-to-b from-[#f4f8ea] to-white p-7 shadow-md transition hover:border-[#5a7c00] hover:shadow-lg md:z-[1] md:scale-[1.02]"
+                    : "group flex flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:border-[#96c11f] hover:shadow-md"
+                }
+              >
+                <h3
+                  className={
+                    isPrimary
+                      ? "text-xl font-bold text-neutral-900 group-hover:text-[#5a7c00] md:text-[1.35rem]"
+                      : "text-xl font-bold text-neutral-900 group-hover:text-[#5a7c00]"
+                  }
+                >
+                  {p.title}
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600">{p.description}</p>
+                <span
+                  className={
+                    isPrimary
+                      ? "mt-5 inline-flex items-center rounded-full bg-[#e34d0c] px-4 py-2 text-sm font-bold text-white transition group-hover:bg-[#c4410a]"
+                      : "mt-4 text-sm font-semibold text-[#e34d0c]"
+                  }
+                >
+                  {isPrimary ? "Find a Green Built Home →" : "Learn more →"}
+                </span>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
@@ -53,7 +111,7 @@ export function HomePageView({ content }: { content: HomeContent }) {
         </section>
       ) : null}
 
-      <section className="mx-auto max-w-6xl px-4 py-16">
+      <section id="programs" className="mx-auto max-w-6xl scroll-mt-24 px-4 py-16">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-extrabold text-neutral-900 md:text-3xl">
             {content.programsSection.title}

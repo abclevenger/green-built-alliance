@@ -1,3 +1,4 @@
+import { mediaUrl } from "@/content/assets/native-media-catalog";
 import type { FunnelBlock, NativeMarketingPage } from "@/lib/content-types";
 
 /**
@@ -165,8 +166,8 @@ const greenBuiltHomesBlocks: FunnelBlock[] = [
         label: "Get Started",
       },
       secondaryCta: {
-        href: "/about-green-built-alliance/",
-        label: "Talk to an Expert",
+        href: "/events/continuing-education-courses/",
+        label: "Continuing education",
       },
     },
   },
@@ -179,6 +180,7 @@ export const greenBuiltHomesFunnelPage: NativeMarketingPage = {
     title: "Green Built Homes | Certified Sustainable Homes and Builders",
     description:
       "Find or build a verified green home with trusted builders, healthier materials, and proven energy performance through Green Built Homes.",
+    ogImage: mediaUrl("ogGbhNetZeroLogo"),
   },
   blocks: greenBuiltHomesBlocks,
 };

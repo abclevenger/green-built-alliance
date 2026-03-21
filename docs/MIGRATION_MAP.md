@@ -10,14 +10,15 @@
 | Global nav / footer / defaults | Hardcoded in components | `src/content/site/settings.ts` + `site-config.ts` | P0 | **Native** |
 | Root layout metadata | Static in `layout.tsx` | `settings.defaultSeo` + `buildDefaultMetadata()` | P0 | **Native** |
 | Global WP CSS | Was in `layout` | `WpLegacyStyles` inside `WordPressArticle` only | P1 | **Done** |
-| Dynamic `[...slug]` | REST pages/posts + Tribe | Local registry first → `resolveWordPressRoute` fallback | P1 | **Local-first** |
+| Dynamic `[...slug]` | REST pages/posts + Tribe | Local registry first → `resolveWordPressRoute` fallback | P1 | **Local-first** — inventory: [`WORDPRESS_FALLBACK_AUDIT.md`](./WORDPRESS_FALLBACK_AUDIT.md), `src/content/wordpress-fallback-registry.ts` |
 | Native marketing pages | — | `src/content/pages/marketing.ts` (+ per-page modules) | P1 | **About (sections)** + **GBH / Energy Savers (composable `blocks[]`)** |
-| Blog posts | REST `posts` | CMS/MDX/local index (TBD) | P2 | WP fallback |
-| Events | Tribe REST | Local events store or ICS (TBD) | P2 | WP fallback |
-| Sitemap | `mirror/manifest.json` | Manifest + native path list merge | P3 | Planned |
+| Blog posts | REST `posts` | `src/content/posts/*.ts` registry + `NativePost` model | P2 | **Partial** — registry paths resolve before WP; **`/news/`** + **`/green-building-news/`** hubs native |
+| Magazine / annual directory | WP page | `src/content/site/magazine-hub.ts` + `app/magazine/page.tsx` | P2 | **Native hub** — PDFs/covers centralized in `magazineEditionSources` + `resolveNativeMediaUrl` (legacy host until files land in `public/media/`) |
+| Events | Tribe REST | `tribe-events.ts` + `/events/`, `/event/...` | P2 | **Native hub + singles** (registration still legacy TEC URLs) |
+| Sitemap | `mirror/manifest.json` | Manifest ∪ native marketing + native posts + `/` | P3 | **Merged** |
 | Yoast / JSON-LD | WP HTML | `generateMetadata` + `jsonLd` per route | P3 | Partial |
 | Forms / WooCommerce | POST to WP | Rebuild or embed (TBD) | P4 | Blocker for full shutdown |
-| Media | `wp-content` URLs | Self-host `public/` or CDN | P4 | Blocker for offline |
+| Media | `wp-content` URLs | `src/lib/native-media.ts` + `native-media-catalog.ts`; `NEXT_PUBLIC_USE_LOCAL_SITE_MEDIA` | P4 | **Staged** — hubs/posts OG + magazine use resolver; copy files to `public/media/` to cut runtime WP dependency |
 
 ## Code touchpoints (WordPress at runtime)
 
@@ -25,12 +26,19 @@
 |------|------|
 | `src/lib/wordpress.ts` | `resolveWordPressRoute` — **fallback only** |
 | `src/lib/content-source.ts` | Chooses native vs WP |
+| `src/content/wordpress-fallback-registry.ts` | Typed fallback categories + next-batch hints |
+| `src/content/site/plugin-hosted-paths.ts` | Commerce/account/login prefixes (planning; not wired into routing) |
 | `src/components/WordPressArticle.tsx` | Renders WP HTML + legacy CSS |
 | `src/lib/env.ts` | `WORDPRESS_ORIGIN` (fallback); `WORDPRESS_HOME_PAGE_ID` **unused** by app |
+| `src/lib/native-media.ts` | `LEGACY_MEDIA_ORIGIN`, `resolveNativeMediaUrl` — swap to `public/media/` via env |
+| `src/content/assets/native-media-catalog.ts` | Typed keys + `mediaUrl()` for OG/marketing/post images |
+| `src/content/assets/native-media-inventory.ts` | Shutdown checklist: catalog rows + magazine edition count |
 
 ## TODO: remove fallback
 
 Search codebase for `TODO:WP_FALLBACK` — remove `resolveWordPressRoute` calls when all routes have native sources.
+
+**Fallback deep-dive:** [`WORDPRESS_FALLBACK_AUDIT.md`](./WORDPRESS_FALLBACK_AUDIT.md).
 
 ## Phase 8 snapshot (latest wiring)
 
@@ -42,6 +50,17 @@ Search codebase for `TODO:WP_FALLBACK` — remove `resolveWordPressRoute` calls 
 - `/about-green-built-alliance/` — `kind: "sections"` in `marketing.ts`.
 - `/green-built-homes/` — `conversion-funnel` with ordered `blocks[]` in `green-built-homes.ts` → `MarketingFunnelView` / `FunnelBlockRenderer`.
 - `/energysaversnetwork/` — same pattern in `energy-savers-network.ts` (includes `leadCapture` block + placeholder server action).
+- `/support-our-work/` — `support-our-work.ts` funnel; donations link out to GiveWP (`legacy-checkout-urls.ts`).
+- `/membership/` — `membership.ts` funnel; checkout remains MemberPress on `/account/` etc.
+- `/directory/` — `directory-landing.ts` native intro.
+- **Whitelisted `/directory/{slug}/` hubs** — `content/directory/categories.ts` + `DirectoryCategoryView`.
+- **Native member profiles** — `/directory/member-profile/?member-id={id}` when `id` is in `content/directory/members/registry.ts` → `DirectoryMemberProfileView` (query read in `[...slug]/page.tsx` → `resolveCatchAllRoute`). Unknown IDs and bare `member-profile` without query still hit WordPress.
+- `/events/continuing-education-courses/` — `continuing-education-courses.ts` native funnel.
+- `/events/` — `app/events/page.tsx` + `EventsIndexView` + `tribe-events.ts` (headless TEC read).
+- `/event/...` — `app/event/[...slug]/page.tsx` + `EventDetailView` (Tribe by-slug + sanitized body); registration still legacy TEC URL.
+- `/news/` — `app/news/page.tsx` + `NewsHubView` + `buildNewsHubModel()` (`news-hub.ts` → `native-post-hub-model.ts`).
+- `/green-building-news/` — `app/green-building-news/page.tsx` + `GreenBuildingNewsHubView` + `buildGreenBuildingNewsHubModel()` (`green-building-news-hub.ts`). **Editorial vs product:** GBN + `/news/` use `NativePost`; **`/magazine/`** is the annual *Green Home & Living Guide* hub (`magazine-hub.ts` + `MagazineHubView`), not the blog registry.
+- `/magazine/` — `app/magazine/page.tsx` + `MagazineHubView`; hybrid PDF links to legacy media. **`/magazine/*` child paths** (if any) still WP until migrated.
 
 ### Still requires WordPress (fallback)
 
@@ -50,15 +69,15 @@ Search codebase for `TODO:WP_FALLBACK` — remove `resolveWordPressRoute` calls 
 
 ### Content abstraction entry points
 
-- `getHomePage()` / `getNativeHome()`, `getPageBySlug()`, `getPostBySlug()` (stub), `getEventBySlug()` (stub), `resolveCatchAllRoute()` — `src/lib/content-source.ts`.
+- `getHomePage()` / `getNativeHome()`, `getPageBySlug()`, `getPostBySlug()` (path + leaf slug), `getEventBySlug()` (stub), `resolveCatchAllRoute()` — `src/lib/content-source.ts`.
 
 ### Recommended next batch
 
-1. Add more paths to `nativeMarketingPages` (high-traffic marketing URLs).
-2. Native post model + index (or MDX) and branch in `resolveCatchAllRoute` before WP.
-3. Events (Tribe parity) or static event pages for CE courses.
-4. Merge native paths into `sitemap.xml` generation; plan redirects from old WP permalinks.
-5. Replace `wp-content` hotlinks for migrated pages.
+1. **Directory API** — native full grids, search, and `/directory/member-profile/` (MemberPress parity).
+2. **Magazine assets** — copy edition PDFs/covers into `public/media/magazine/...` per `magazine-hub.ts` `*LocalPublicPath`; set `NEXT_PUBLIC_USE_LOCAL_SITE_MEDIA=true`. **`/magazine/*`** subpages if required.
+3. Expand `src/content/posts/registry.ts` for additional post permalinks still on WP fallback.
+4. Whitelist more `/directory/*` category slugs from `manifest.json` as needed.
+5. Add catalog entries for any remaining native-route `wp-content` hotlinks (HTML bodies, extra marketing heroes).
 
 ### Biggest blockers to full shutdown
 

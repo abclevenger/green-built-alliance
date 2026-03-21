@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+/* Native long-form: balanced lines, comfortable section anchors */
+.prose-post :where(p) {
+  text-wrap: pretty;
+}
+
+.prose-post :where(h2, h3, h4) {
+  scroll-margin-top: 5rem;
+}
+
+.native-post-article {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
 /* WordPress block HTML: prevent overflow */
 .wordpress-content img,
 .wordpress-content video {
@@ -8,6 +21,17 @@
 }
 
 .wordpress-content iframe {
+  max-width: 100%;
+}
+
+/* Native event detail (sanitized TEC HTML fragment) */
+.event-detail-body img,
+.event-detail-body video {
+  max-width: 100%;
+  height: auto;
+}
+
+.event-detail-body iframe {
   max-width: 100%;
 }
 

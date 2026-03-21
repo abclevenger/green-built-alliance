@@ -3,6 +3,7 @@ import { WORDPRESS_ORIGIN } from "@/lib/env";
 /**
  * Loads core WordPress block + Astra CSS from the live CMS so mirrored block markup
  * renders closer to production. Plugin-specific CSS may still be missing per page.
+ * **Scope:** only mounted from `WordPressArticle` (WP HTML fallback). See `docs/WORDPRESS_FALLBACK_AUDIT.md`.
  */
 export function WpLegacyStyles() {
   const o = WORDPRESS_ORIGIN;

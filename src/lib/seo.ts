@@ -7,7 +7,14 @@ import { SITE_URL } from "@/lib/env";
  */
 export function pageMetadata(
   seo: SeoFields,
-  options?: { path?: string; noIndex?: boolean }
+  options?: {
+    path?: string;
+    noIndex?: boolean;
+    openGraphType?: "website" | "article";
+    /** ISO 8601 — used when `openGraphType` is `article` */
+    publishedTime?: string;
+    modifiedTime?: string;
+  }
 ): Metadata {
   const base = SITE_URL.replace(/\/$/, "");
   const canonical =
@@ -19,6 +26,8 @@ export function pageMetadata(
     ? [{ url: seo.ogImage.startsWith("http") ? seo.ogImage : `${base}${seo.ogImage}` }]
     : undefined;
 
+  const ogType = options?.openGraphType ?? "website";
+
   return {
     title: seo.title,
     description: seo.description,
@@ -27,13 +36,16 @@ export function pageMetadata(
       title: seo.title,
       description: seo.description,
       url: canonical,
-      type: "website",
+      type: ogType,
       ...(images ? { images } : {}),
+      ...(options?.publishedTime ? { publishedTime: options.publishedTime } : {}),
+      ...(options?.modifiedTime ? { modifiedTime: options.modifiedTime } : {}),
     },
     twitter: {
       card: "summary_large_image",
       title: seo.title,
       description: seo.description,
+      ...(images?.[0]?.url ? { images: [images[0].url] } : {}),
     },
     robots: options?.noIndex ? { index: false, follow: false } : undefined,
   };

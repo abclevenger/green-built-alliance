@@ -56,13 +56,22 @@ export type HomeProgramCard = {
 
 export type HomeStat = { label: string; value: string };
 
+/** Shared CTA control (homepage hero, funnels, etc.) */
+export type PageCta = { href: string; label: string };
+
 export type HomeContent = {
   seo: SeoFields;
   hero: {
     eyebrow: string;
     title: string;
     description: string;
+    primaryCta: PageCta;
+    secondaryCta: PageCta;
+    /** Short credibility bullets shown under hero CTAs */
+    trustBullets: string[];
   };
+  /** Heading for the three pathway cards below the hero */
+  pillarsSectionTitle: string;
   pillars: HomePillar[];
   programsSection: {
     title: string;
@@ -92,9 +101,6 @@ export type MarketingSection =
     }
   | { type: "bulletList"; title?: string; items: string[] };
 
-/** Shared CTA control */
-export type PageCta = { href: string; label: string };
-
 /** High-conversion funnel layout (reusable for future program pages). */
 export type FunnelHero = {
   headline: string;
@@ -103,6 +109,10 @@ export type FunnelHero = {
   secondaryCta: PageCta;
   /** Short line beside the visual column (trust / program name) */
   visualTagline?: string;
+  /** Optional hero photo — use `mediaUrl(...)` from the native media catalog */
+  visualImageUrl?: string;
+  /** Alt for `visualImageUrl` (empty string if decorative) */
+  visualImageAlt?: string;
 };
 
 export type FunnelProblemSection = {
@@ -213,14 +223,104 @@ export type NativeMarketingPage =
       blocks: FunnelBlock[];
     };
 
-/** Future: full blog post model (local or MDX). */
-export type NativePost = {
+/** Optional byline */
+export type NativePostAuthor = {
+  name: string;
+  url?: string;
+};
+
+/**
+ * Structured article body — extend with new `type` variants as needed.
+ * Prefer this over raw HTML for native posts.
+ */
+export type NativePostBlock =
+  | { type: "prose"; heading?: string; paragraphs: string[] }
+  | { type: "heading"; level: 2 | 3 | 4; text: string }
+  | { type: "bulletList"; title?: string; items: string[] }
+  | { type: "callout"; variant?: "tip" | "note"; title?: string; body: string }
+  | {
+      type: "cta";
+      title: string;
+      body?: string;
+      primary: PageCta;
+      secondary?: PageCta;
+    };
+
+/**
+ * Curated row on a native directory category hub.
+ * TODO:DIR_API — Replace roster with headless directory query; keep href pattern or map to native profiles.
+ */
+export type DirectorySpotlightListing = {
+  name: string;
+  organization?: string;
+  locationHint?: string;
+  summary?: string;
+  /** Often `/directory/member-profile/?member-id=` until profiles are native */
+  href: string;
+};
+
+/**
+ * Native directory category hub (e.g. `/directory/builders/`).
+ * Full grids, search, and sorting stay TODO; this model carries hero copy + transitional spotlights.
+ */
+export type NativeDirectoryCategory = {
   slug: string;
-  publishedAt: string;
+  path: string;
+  title: string;
+  heroEyebrow: string;
+  heroHeadline: string;
+  heroIntro: string;
+  valueBullets: string[];
+  seo: SeoFields;
+  spotlightListings: DirectorySpotlightListing[];
+  /** Optional cross-links into `NativePost` paths */
+  relatedNativePostPaths?: string[];
+};
+
+/**
+ * Native directory member profile (legacy URL: `/directory/member-profile/?member-id=`).
+ * TODO:DIR_API — Replace static rows with MemberPress/CRM sync; add slug-based URLs when API supports it.
+ */
+export type NativeDirectoryMemberProfile = {
+  /** Legacy public id (query param) */
+  legacyMemberId: string;
+  /** Canonical path + query for metadata and links */
+  path: string;
+  organizationName: string;
+  /** Short line under the name, e.g. “Green home builder” */
+  roleLabel: string;
+  memberLevel?: string;
+  summary: string;
+  specialties: string[];
+  location?: string;
+  phone?: string;
+  email?: string;
+  website?: { href: string; label?: string };
+  /** Keys matching `NativeDirectoryCategory.slug` for cross-links */
+  directoryCategorySlugs: string[];
+  relatedNativePostPaths?: string[];
+  seo: SeoFields;
+};
+
+/** Native blog/article — resolved before WordPress in catch-all. */
+export type NativePost = {
+  /** Canonical path with trailing slash (matches `segmentsToPath`) */
+  path: string;
+  /** Leaf slug (identification / future sitemap) */
+  slug: string;
   title: string;
   excerpt: string;
-  bodyHtml?: string;
-  /** MDX component key, etc. */
+  publishedAt: string;
+  updatedAt?: string;
+  author?: NativePostAuthor;
+  categories?: string[];
+  tags?: string[];
+  seo: SeoFields;
+  blocks: NativePostBlock[];
+  /** Client lead form immediately after excerpt (before first body block) */
+  introLeadCapture?: LeadCaptureBlock;
+  /** Client lead form after all blocks */
+  footerLeadCapture?: LeadCaptureBlock;
 };
 
 /** Future: event model for calendar shutdown. */

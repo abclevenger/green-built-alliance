@@ -10,8 +10,10 @@ export const siteSettings: SiteSettings = {
     "Resources, certification, and education for green building in Western North Carolina.",
   organizationShort: "Green Built Alliance",
   nav: [
-    { href: "/directory/", label: "Directory" },
     { href: "/green-built-homes/", label: "Green Built Homes" },
+    { href: "/#programs", label: "Programs" },
+    { href: "/directory/", label: "Directory" },
+    { href: "/events/", label: "Events" },
     { href: "/events/continuing-education-courses/", label: "Classes" },
     { href: "/magazine/", label: "Magazine" },
     { href: "/membership/", label: "Membership" },

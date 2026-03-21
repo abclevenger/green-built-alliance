@@ -17,7 +17,14 @@ function defaultFormName(block: LeadCaptureBlock): string {
   return block.formName?.trim() || block.sourceSlug?.trim() || "native-funnel-lead";
 }
 
-export function FunnelLeadCapture({ block }: { block: LeadCaptureBlock }) {
+export function FunnelLeadCapture({
+  block,
+  sectionId = "lead",
+}: {
+  block: LeadCaptureBlock;
+  /** Unique id when multiple capture sections exist on one page (e.g. native posts). */
+  sectionId?: string;
+}) {
   const [state, formAction, isPending] = useActionState(
     submitLeadInquiryPlaceholder,
     leadInquiryInitialState
@@ -28,7 +35,7 @@ export function FunnelLeadCapture({ block }: { block: LeadCaptureBlock }) {
 
   return (
     <section
-      id="lead"
+      id={sectionId}
       className="border-y border-[#96c11f]/30 bg-[#f8faf3] px-4 py-16 md:py-20"
     >
       <div className="mx-auto max-w-xl text-center">

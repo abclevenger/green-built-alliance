@@ -97,12 +97,12 @@ const energySaversBlocks: FunnelBlock[] = [
     data: {
       headline: "Want to Go Faster? Talk to a Human.",
       subheadline:
-        "Explore classes, the member directory, or reach out—whichever fits your project.",
+        "Pros can stack CE with membership; homeowners can pair tips with the member directory.",
       primaryCta: {
         href: "/events/continuing-education-courses/",
         label: "See Upcoming Classes",
       },
-      secondaryCta: { href: "/directory/", label: "Find a Professional" },
+      secondaryCta: { href: "/membership/", label: "Membership" },
     },
   },
 ];
