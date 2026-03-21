@@ -54,7 +54,7 @@ export const postIndoorAirPlusCertification: NativePost = {
     {
       type: "cta",
       title: "Connect with pros who build for health and performance",
-      body: "Explore Green Built Homes and the member directory for teams used to layered programs.",
+      body: "See Green Built Homes and the member directory for teams used to layered programs.",
       primary: { href: "/find-a-pro/?intent=rate-verify", label: "Get matched with a rater" },
       secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
     },

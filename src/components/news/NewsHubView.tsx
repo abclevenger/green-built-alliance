@@ -13,18 +13,18 @@ export function NewsHubView({ model }: { model: NewsHubModel }) {
       impactStrip={editorialHubImpactStats}
       eyebrow="News"
       headline="Articles & program explainers"
-      intro="Native articles from Green Built Alliance—net zero homes, air sealing, stormwater, certification, and building science in Western North Carolina. More legacy blog URLs still resolve through the site shell until they are migrated into this registry."
+      intro="Short, practical reads from Green Built Alliance—net zero and high-performance homes, air sealing, stormwater, certification, and building science in Western North Carolina."
       footnote={
         <>
-          For the full legacy blog index path, see{" "}
+          Want the broader archive and topic layout? Open{" "}
           <Link href="/green-building-news/" className="font-semibold text-[#e34d0c] underline-offset-2 hover:underline">
             Green Building News
           </Link>
-          .           Looking for the annual directory publication? The{" "}
+          . For the annual print directory and PDF editions, visit the{" "}
           <Link href="/magazine/" className="font-semibold text-[#e34d0c] underline-offset-2 hover:underline">
             Magazine
           </Link>{" "}
-          hub covers the Green Home & Living Guide and PDF archives; these pages focus on readable articles and guides.
+          hub.
         </>
       }
     />

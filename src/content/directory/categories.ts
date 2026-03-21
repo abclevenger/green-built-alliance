@@ -151,7 +151,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
     seo: {
       title: "Green Building Education & Training | Green Built Alliance Directory",
       description:
-        "Explore Green Built Alliance member education partners for construction, sustainability, and trades training in WNC.",
+        "Find Green Built Alliance member education partners for construction, sustainability, and trades training in WNC.",
       ogImage: mediaUrl("ogGbhNetZeroReadyLogo"),
     },
     spotlightListings: [
@@ -186,7 +186,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
     seo: {
       title: "Green Building Consultants | Green Built Alliance Directory",
       description:
-        "Explore Green Built Alliance member consultants and professional services across Western North Carolina.",
+        "Find Green Built Alliance member consultants and professional services across Western North Carolina.",
     },
     spotlightListings: [
       {
@@ -241,7 +241,8 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
       {
         name: "Sure Foot Builders Inc.",
         locationHint: "Asheville area",
-        summary: "Green home building company—also appears across multiple directory categories on the legacy grid.",
+        summary:
+          "Green home building company—also appears in multiple directory categories; confirm scope when you inquire.",
         href: nativeDirectoryMemberProfilePath("726"),
       },
     ],
@@ -286,7 +287,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
       {
         name: "Sure Foot Builders Inc.",
         locationHint: "Asheville area",
-        summary: "Listed on the legacy multi-category grid—verify HVAC scope directly with the team.",
+        summary: "Appears in more than one category—verify HVAC scope directly with the team.",
         href: nativeDirectoryMemberProfilePath("726"),
       },
     ],
@@ -315,7 +316,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         name: "Sure Foot Builders Inc.",
         locationHint: "Asheville area",
         summary:
-          "Snapshot from the legacy category grid—this category has fewer public listings; TODO:DIR_API to sync full roster.",
+          "Snapshot listing—this category has fewer public profiles; the roster grows as members are added.",
         href: nativeDirectoryMemberProfilePath("726"),
         featured: true,
       },
@@ -409,7 +410,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
     seo: {
       title: "Green Realtors | Green Built Alliance Directory",
       description:
-        "Explore Green Built Alliance member realtors serving buyers and sellers of efficient homes in WNC.",
+        "Find Green Built Alliance member realtors serving buyers and sellers of efficient homes in WNC.",
       ogImage: mediaUrl("ogGbhNetZeroLogo"),
     },
     spotlightListings: [
@@ -552,7 +553,8 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
       {
         name: "Sure Foot Builders Inc.",
         locationHint: "Asheville area",
-        summary: "Listed on the legacy appraisers grid as a builder—verify appraisal scope before engaging.",
+        summary:
+          "Listed under appraisers as well as builder-related categories—verify appraisal scope before engaging.",
         href: nativeDirectoryMemberProfilePath("726"),
       },
     ],
@@ -619,7 +621,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
     seo: {
       title: "Green Developers & Communities WNC | Green Built Alliance Directory",
       description:
-        "Explore Green Built Alliance members developing residential communities and infill projects in Western North Carolina.",
+        "Find Green Built Alliance members developing residential communities and infill projects in Western North Carolina.",
       ogImage: mediaUrl("ogGbhNetZeroLogo"),
     },
     spotlightListings: [
@@ -687,7 +689,8 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
       {
         name: "Sure Foot Builders Inc.",
         locationHint: "Asheville area",
-        summary: "Listed on legacy plumber grid as builder—confirm licensed plumbing scope with the team.",
+        summary:
+          "Also listed under plumbing-related categories—confirm licensed plumbing scope with the team.",
         href: nativeDirectoryMemberProfilePath("726"),
       },
     ],
@@ -717,7 +720,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         name: "Sure Foot Builders Inc.",
         locationHint: "Asheville area",
         summary:
-          "Green builder listed in legacy roofing categories—confirm roofing scope and trade partners when you inquire.",
+          "Green builder also listed under roofing-related categories—confirm roofing scope and trade partners when you inquire.",
         href: nativeDirectoryMemberProfilePath("726"),
         featured: true,
       },

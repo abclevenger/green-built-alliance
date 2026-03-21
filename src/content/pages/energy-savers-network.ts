@@ -1,10 +1,8 @@
+import { mediaUrl } from "@/content/assets/native-media-catalog";
 import type { FunnelBlock, NativeMarketingPage } from "@/lib/content-types";
 
 /**
  * /energysaversnetwork/ — lead-focused program landing (native).
- *
- * PLACEHOLDER: proof.stats — replace with verified participation/impact numbers.
- * Lead form → `LEAD_WEBHOOK_URL` (see `submitLeadInquiryPlaceholder`).
  */
 const energySaversBlocks: FunnelBlock[] = [
   {
@@ -16,6 +14,9 @@ const energySaversBlocks: FunnelBlock[] = [
         "The Energy Savers Network helps Western North Carolina homeowners and renters take the next step—clear guidance, trusted partners, and real savings on bills.",
       primaryCta: { href: "/find-a-pro/?intent=save-energy", label: "Get matched for energy upgrades" },
       secondaryCta: { href: "/energysaversnetwork/#lead", label: "Get program updates" },
+      visualImageUrl: mediaUrl("esnVolunteerOutreach"),
+      visualImageAlt:
+        "Energy Savers Network representative in branded shirt beside a marked outreach vehicle.",
       visualTagline: "Lower bills. Smarter upgrades. Local support.",
     },
   },
@@ -73,13 +74,11 @@ const energySaversBlocks: FunnelBlock[] = [
     type: "proof",
     data: {
       headline: "Why People Pay Attention When We Show Up",
-      placeholderNote:
-        "Replace placeholder stats below with verified program outcomes (participants, audits, kWh saved, etc.).",
       stats: [
-        { value: "10k+", label: "Residents reached through education & outreach", isPlaceholder: true },
-        { value: "500+", label: "Homes touched through programs & referrals", isPlaceholder: true },
-        { value: "20+", label: "Years serving WNC on energy & green building", isPlaceholder: true },
-        { value: "50+", label: "Partner pros & orgs in our network", isPlaceholder: true },
+        { value: "WNC-first", label: "Guidance for our climate, codes, and housing stock", isPlaceholder: false },
+        { value: "Nonprofit", label: "Mission-led—not selling a single product line", isPlaceholder: false },
+        { value: "Practical", label: "Priorities you can act on this season", isPlaceholder: false },
+        { value: "Connected", label: "Paths into trusted pros when you want help", isPlaceholder: false },
       ],
     },
   },
@@ -95,8 +94,6 @@ const energySaversBlocks: FunnelBlock[] = [
       fieldName: "email",
       submitLabel: "Notify Me",
       trustText: "We respect your inbox. Unsubscribe anytime.",
-      integrationNote:
-        "Payload: email, source, page, formName → map in GHL inbound webhook.",
       sourceSlug: "energysaversnetwork",
       page: "/energysaversnetwork/",
       formName: "energy-savers-network-updates",

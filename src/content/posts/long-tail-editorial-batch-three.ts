@@ -374,7 +374,7 @@ export const longTailEditorialPostsThree: NativePost[] = [
       },
       {
         type: "cta",
-        title: "Explore",
+        title: "Regional programs",
         primary: { href: "/green-built-nc-beyond-energy-star/", label: "Beyond Energy Star" },
         secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
       },

@@ -93,7 +93,7 @@ export const gbrHomeownerPage: NativeMarketingPage = {
     },
     {
       type: "cta",
-      title: "Explore",
+      title: "Programs & directory",
       primary: { href: "/green-built-homes/", label: "Green Built Homes" },
       secondary: { href: "/directory/", label: "Find a pro" },
     },
@@ -578,7 +578,7 @@ export const gbrAlternativeRenewableEnergyPage: NativeMarketingPage = {
     },
     {
       type: "cta",
-      title: "Explore",
+      title: "Directory & reading",
       primary: { href: "/directory/renewable-energy/", label: "Renewable energy directory" },
       secondary: { href: "/what-is-a-net-zero-energy-home/", label: "Net zero energy homes" },
     },

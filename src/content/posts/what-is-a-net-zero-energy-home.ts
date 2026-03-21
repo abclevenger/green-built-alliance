@@ -58,11 +58,11 @@ export const postWhatIsNetZeroEnergyHome: NativePost = {
       type: "callout",
       variant: "tip",
       title: "Shopping for a home?",
-      body: "Start with the Green Built Homes directory and program overview—so you can shortlist builders and listings aligned with verified green performance.",
+      body: "Start with the Green Built Homes directory and program overview—so you can shortlist builders and listings aligned with documented green performance.",
     },
     {
       type: "cta",
-      title: "Explore Green Built Homes",
+      title: "Green Built Homes",
       body: "See how certification works and connect with homes and professionals in our region.",
       primary: { href: "/green-built-homes/", label: "Green Built Homes" },
       secondary: { href: "/directory/", label: "Find a professional" },

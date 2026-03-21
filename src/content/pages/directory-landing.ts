@@ -1,3 +1,4 @@
+import { mediaUrl } from "@/content/assets/native-media-catalog";
 import type { FunnelBlock, NativeMarketingPage } from "@/lib/content-types";
 
 /**
@@ -16,6 +17,8 @@ const directoryLandingBlocks: FunnelBlock[] = [
         "The Green Built Alliance directory connects homeowners, developers, and partners with members who invest in education, visibility, and credible practice—not just a splashy landing page.",
       primaryCta: { href: "/find-a-pro/", label: "Get matched with a pro" },
       secondaryCta: { href: "/directory/builders/", label: "Browse builders" },
+      visualImageUrl: mediaUrl("directoryHeroForest"),
+      visualImageAlt: "Road through green forest in the mountains—regional context for WNC building.",
       visualTagline: "Jump to a category—or join the network.",
     },
   },
@@ -40,7 +43,7 @@ const directoryLandingBlocks: FunnelBlock[] = [
     data: {
       headline: "Why Start on This Page",
       subheadline:
-        "You’re on the native entry point for the directory experience. Featured category pages and spotlight member profiles are native; full legacy grids, unregistered member IDs, and search still use WordPress until the directory API is connected.",
+        "Start from featured categories and member profiles built for Western North Carolina. Use guided match if you are not sure which trade to open first—we narrow the list by your goal.",
       cards: [
         {
           title: "Mission-aligned listings",
@@ -91,12 +94,11 @@ const directoryLandingBlocks: FunnelBlock[] = [
     type: "proof",
     data: {
       headline: "A Regional Hub, Not a National Pay-to-Play List",
-      placeholderNote: "Update with verified directory size / member counts when ready.",
       stats: [
-        { value: "30+", label: "Directory categories & specialties", isPlaceholder: true },
+        { value: "By trade", label: "Architects, builders, raters, HVAC, inspectors & more", isPlaceholder: false },
         { value: "WNC", label: "Focused on Western North Carolina", isPlaceholder: false },
-        { value: "Member", label: "Backed by Alliance membership & ethics", isPlaceholder: false },
-        { value: "Native+", label: "Key category hubs + legacy profiles", isPlaceholder: false },
+        { value: "Member-backed", label: "Profiles tied to Alliance membership", isPlaceholder: false },
+        { value: "Guided match", label: "A short wizard when you are unsure where to start", isPlaceholder: false },
       ],
     },
   },
@@ -147,12 +149,12 @@ const directoryLandingBlocks: FunnelBlock[] = [
           cta: { href: "/directory/builders/", label: "Builders" },
         },
         {
-          title: "Explore everything else",
+          title: "More specialties",
           bullets: [
-            "Consultants, finishes, engineers, attorneys, and more",
-            "Native consultants hub plus legacy browse for long-tail categories",
+            "Consultants, engineers, attorneys, and other allied roles",
+            "Consultants hub first—then related categories as your project grows",
           ],
-          cta: { href: "/directory/consultants/", label: "Consultants" },
+          cta: { href: "/directory/consultants/", label: "Browse consultants" },
         },
       ],
     },

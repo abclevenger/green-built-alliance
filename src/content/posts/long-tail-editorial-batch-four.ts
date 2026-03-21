@@ -199,7 +199,7 @@ export const longTailEditorialPostsFour: NativePost[] = [
       },
       {
         type: "cta",
-        title: "Learn more",
+        title: "Net zero basics",
         primary: { href: "/what-is-a-net-zero-energy-home/", label: "What is net zero?" },
         secondary: { href: "/what-is-a-net-zero-ready-home/", label: "Net zero ready" },
       },

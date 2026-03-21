@@ -21,7 +21,7 @@ export const clientSatisfactionSurveyPage: NativeMarketingPage = {
       eyebrow: "Feedback",
       title: "We value your input",
       subtitle:
-        "Your experience with our programs, events, and staff helps us prioritize improvements—especially as we transition tools off legacy WordPress forms.",
+        "Your experience with our programs, events, and staff helps us prioritize improvements as we refresh how we collect feedback online.",
     },
     {
       type: "prose",

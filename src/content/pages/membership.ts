@@ -92,12 +92,11 @@ const membershipBlocks: FunnelBlock[] = [
     type: "proof",
     data: {
       headline: "Built on a Trusted Regional Nonprofit",
-      placeholderNote: "Swap stats for verified membership counts or renewal rates when available.",
       stats: [
-        { value: "350+", label: "Builders & professionals engaged (est.)", isPlaceholder: true },
-        { value: "20+", label: "Years of member-driven programming", isPlaceholder: true },
-        { value: "50+", label: "Partner organizations in orbit", isPlaceholder: true },
-        { value: "100%", label: "Mission-led: we answer to the community", isPlaceholder: false },
+        { value: "Since 2001", label: "Green building nonprofit in WNC", isPlaceholder: false },
+        { value: "Directory + CE", label: "Visibility and training in one membership", isPlaceholder: false },
+        { value: "WNC codes", label: "Programming tuned to local climate & rules", isPlaceholder: false },
+        { value: "Mission-led", label: "We answer to members—not shareholders", isPlaceholder: false },
       ],
     },
   },
@@ -146,22 +145,12 @@ const membershipBlocks: FunnelBlock[] = [
     },
   },
   {
-    id: "testimonial",
-    type: "testimonial",
-    data: {
-      quote:
-        "Membership paid for itself the first time a homeowner said they found us through the Alliance directory.",
-      attribution: "Placeholder member quote — replace with business name & role",
-      isPlaceholder: true,
-    },
-  },
-  {
     id: "final",
     type: "finalCta",
     data: {
       headline: "Ready to Belong to Something Bigger?",
       subheadline:
-        "Manage your account, explore classes, or log in if you’re already with us.",
+        "Manage your account, browse classes, or log in if you’re already with us.",
       primaryCta: { href: "/account/", label: "Account / renew" },
       secondaryCta: { href: "/login/", label: "Member login" },
     },

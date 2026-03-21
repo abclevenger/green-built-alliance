@@ -102,7 +102,6 @@ export function EventDetailView({ detail }: { detail: EventDetail }) {
           ) : null}
           {detail.ticketed.length ? (
             <p className="mt-2 text-xs text-neutral-500">
-              {/* TODO:WP_EVENTS — Tickets/RSVP still processed on legacy event URL. */}
               Registration type: {detail.ticketed.join(", ")}
             </p>
           ) : null}
@@ -111,8 +110,8 @@ export function EventDetailView({ detail }: { detail: EventDetail }) {
         <div className="mt-10 rounded-2xl border border-[#96c11f]/45 bg-linear-to-br from-[#f4f8ea] to-white p-8 text-center shadow-sm">
           <h2 className="text-xl font-bold text-neutral-900 md:text-2xl">Register or get tickets</h2>
           <p className="mt-3 text-sm text-neutral-600">
-            RSVP, WooCommerce tickets, and Give flows still run on the classic event page — we keep that path
-            intact.
+            Complete registration, tickets, or donations on the full event page for this session—all
+            in one place.
           </p>
           <a
             href={detail.legacyRegistrationUrl}

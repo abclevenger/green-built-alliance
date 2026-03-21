@@ -68,14 +68,14 @@ export const buildGreenLandingPage: NativeMarketingPage = {
       type: "bulletList",
       title: "Three entry points",
       items: [
-        "Certified homes & pathways — explore Green Built Homes and related programs",
+        "Certified homes and pathways — start with Green Built Homes and related programs",
         "Find a pro — search the member directory by trade and specialty",
         "Learn — workshops, CE, and resource hubs on energy, water, and materials",
       ],
     },
     {
       type: "cta",
-      title: "Dive in",
+      title: "Start here",
       primary: { href: "/green-built-homes/", label: "Green Built Homes" },
       secondary: { href: "/directory/", label: "Member directory" },
     },
@@ -130,7 +130,7 @@ export const saveEnergyLandingPage: NativeMarketingPage = {
     },
     {
       type: "cta",
-      title: "Go deeper",
+      title: "Related reads",
       primary: { href: "/air-sealing-the-devilish-details/", label: "Air sealing" },
       secondary: { href: "/are-the-energy-bills-in-my-new-house-too-high/", label: "High energy bills?" },
     },

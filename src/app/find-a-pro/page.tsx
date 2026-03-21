@@ -6,12 +6,22 @@ import { Suspense } from "react";
 
 export const metadata: Metadata = pageMetadata(
   {
-    title: "Find a Green Building Pro",
+    title: "Find a Vetted Green Building Pro in Western North Carolina",
     description:
-      "Get matched with trusted architects, builders, raters, and trades in Western North Carolina—guided steps based on your project goal.",
+      "Answer a few questions about your project—new build, retrofit, or energy savings—and we’ll point you to the right directory categories and Green Built Alliance members in WNC.",
     ogImage: mediaUrl("ogGbhNetZeroReadyLogo"),
   },
-  { path: "/find-a-pro/" }
+  {
+    path: "/find-a-pro/",
+    keywords: [
+      "find a builder WNC",
+      "green building professional",
+      "home energy rater",
+      "Green Built Alliance directory",
+      "Asheville green builder",
+      "sustainable building Western North Carolina",
+    ],
+  }
 );
 
 function WizardFallback() {

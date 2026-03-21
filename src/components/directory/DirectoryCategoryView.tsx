@@ -1,3 +1,4 @@
+import { DirectorySpotlightSection } from "@/components/directory/DirectorySpotlightSection";
 import { FunnelLeadCapture } from "@/components/marketing/funnel/FunnelLeadCapture";
 import { listNativeDirectoryCategories } from "@/content/directory/categories";
 import { suggestedIntentForDirectorySlug } from "@/lib/matchmaking";
@@ -125,72 +126,27 @@ export function DirectoryCategoryView({
               Member spotlights
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-[color:var(--gb-text-muted)]">
-              {/* TODO:DIR_API — Replace static spotlight roster with live directory data + pagination. */}
-              Sample of members in this category. Open a profile for full legacy details (contact, logos, and longer
-              bios) until native profiles ship.
+              Spotlight members in this category. Open a profile for contact options, services, and credentials—then
+              interview and verify fit like any hire.
             </p>
           </div>
           {spotlightRows.length === 0 ? (
             <div className="mt-10 rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 px-6 py-12 text-center text-neutral-700">
-              Listings will appear here after the directory API is connected.
+              <p className="font-semibold text-neutral-800">Spotlights for this category are not listed yet</p>
+              <p className="mt-2 text-sm text-neutral-600">
+                Use{" "}
+                <Link href="/find-a-pro/" className="font-semibold text-[color:var(--gb-accent-deep)] underline-offset-2 hover:underline">
+                  guided match
+                </Link>{" "}
+                or the{" "}
+                <Link href="/directory/" className="font-semibold text-[color:var(--gb-accent-deep)] underline-offset-2 hover:underline">
+                  full directory
+                </Link>{" "}
+                to find members while we expand spotlights.
+              </p>
             </div>
           ) : (
-            <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {spotlightRows.map((listing) => (
-                <li key={listing.href + listing.name}>
-                  <article
-                    className={`relative flex h-full flex-col rounded-2xl border bg-white p-6 shadow-sm transition hover:border-[#96c11f]/50 ${
-                      listing.featured ? "border-[#96c11f]/60 ring-1 ring-[#96c11f]/25" : "border-neutral-200"
-                    }`}
-                  >
-                    <div className="absolute right-4 top-4 flex flex-col items-end gap-1">
-                      {listing.featured ? (
-                        <p className="rounded-full bg-[#5a7c00] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
-                          Featured
-                        </p>
-                      ) : null}
-                      {listing.recommended ? (
-                        <p className="rounded-full border border-[#96c11f]/60 bg-white px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#5a7c00]">
-                          Recommended
-                        </p>
-                      ) : null}
-                    </div>
-                    <div className="flex flex-wrap gap-1.5 pr-16">
-                      {(listing.badges ?? []).map((b) => (
-                        <span
-                          key={b}
-                          className="rounded-full border border-[#96c11f]/40 bg-[#f8faf3] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#5a7c00]"
-                        >
-                          {b}
-                        </span>
-                      ))}
-                    </div>
-                    <h3 className="mt-3 text-lg font-bold text-neutral-900">
-                      <Link href={listing.href} className="hover:text-[#5a7c00] hover:underline">
-                        {listing.name}
-                      </Link>
-                    </h3>
-                    {listing.organization ? (
-                      <p className="mt-1 text-sm font-medium text-neutral-600">{listing.organization}</p>
-                    ) : null}
-                    {listing.locationHint ? (
-                      <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-[#5a7c00]">
-                        {listing.locationHint}
-                      </p>
-                    ) : null}
-                    {listing.summary ? (
-                      <p className="mt-3 flex-1 text-sm leading-relaxed text-neutral-600">{listing.summary}</p>
-                    ) : null}
-                    <Link
-                      href={listing.href}
-                      className="mt-5 inline-flex w-fit rounded-full bg-[color:var(--gb-accent)] px-4 py-2 text-xs font-bold text-white transition hover:bg-[color:var(--gb-accent-deep)]"
-                    >
-                      Open full profile
-                    </Link>
-                  </article>
-                </li>
-              ))}
-            </ul>
+            <DirectorySpotlightSection listings={spotlightRows} categorySlug={category.slug} />
           )}
         </div>
       </section>

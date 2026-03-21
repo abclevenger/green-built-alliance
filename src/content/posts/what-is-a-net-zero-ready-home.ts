@@ -77,7 +77,7 @@ export const postWhatIsNetZeroReadyHome: NativePost = {
       title: "What’s your next step?",
       body: "Homeowners can shortlist certified teams; builders and design leads can open the program hub and CE calendar.",
       primary: { href: "/find-a-pro/?intent=new-home", label: "Find a certified builder" },
-      secondary: { href: "/green-built-homes/", label: "Explore certification" },
+      secondary: { href: "/green-built-homes/", label: "Certification overview" },
     },
     {
       type: "callout",

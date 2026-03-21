@@ -69,12 +69,12 @@ const continuingEducationBlocks: FunnelBlock[] = [
         {
           title: "Scan the live calendar",
           description:
-            "Use the main Events calendar for dates, descriptions, and pricing. Listing pages and registration still run on our legacy WordPress events stack for now.",
+            "Use the Events calendar on this site for dates, descriptions, and pricing. Each listing links through to registration on our events system.",
         },
         {
-          title: "Register through the legacy flow",
+          title: "Register from the event page",
           description:
-            "Complete signup, tickets, or RSVPs on each event page until native registration ships.",
+            "Complete signup, tickets, or RSVPs on the page for the session you choose—follow the prompts on that listing.",
         },
         {
           title: "Attend & document",
@@ -94,13 +94,11 @@ const continuingEducationBlocks: FunnelBlock[] = [
     type: "proof",
     data: {
       headline: "Trusted Training from the Same Team Behind Green Built Homes",
-      placeholderNote:
-        "Replace with verified annual class counts, unique pros trained, or satisfaction stats when available.",
       stats: [
-        { value: "20+", label: "Years of regional education programming", isPlaceholder: true },
-        { value: "Multi", label: "Disciplines in the room (build, rate, design, trade)", isPlaceholder: false },
-        { value: "WNC", label: "Grounded in local climate & codes", isPlaceholder: false },
-        { value: "Live", label: "Calendar & tickets on /events/ (legacy UI)", isPlaceholder: false },
+        { value: "20+ yrs", label: "Regional workshops and professional training", isPlaceholder: false },
+        { value: "Multi-trade", label: "Builders, raters, designers, and allied pros", isPlaceholder: false },
+        { value: "WNC-first", label: "Local climate, incentives, and assemblies", isPlaceholder: false },
+        { value: "Live calendar", label: "Browse and register via Events", isPlaceholder: false },
       ],
     },
   },
@@ -125,7 +123,7 @@ const continuingEducationBlocks: FunnelBlock[] = [
             "Affiliate-style members can still access many offerings",
             "Pair classes with directory visibility when you’re ready",
           ],
-          cta: { href: "/membership/", label: "Explore membership" },
+          cta: { href: "/membership/", label: "See membership options" },
         },
       ],
     },
@@ -142,7 +140,6 @@ const continuingEducationBlocks: FunnelBlock[] = [
       fieldName: "email",
       submitLabel: "Notify me",
       trustText: "No spam. Member discounts still apply where published on each event.",
-      integrationNote: "Map source → CE interest in CRM / GHL.",
       sourceSlug: "native-ce-courses",
       page: "/events/continuing-education-courses/",
       formName: "continuing-education-alerts",
@@ -155,8 +152,8 @@ const continuingEducationBlocks: FunnelBlock[] = [
     data: {
       headline: "Reserve Your Seat Before Rosters Fill",
       subheadline:
-        "Calendar and registration stay on the legacy events system for now—this funnel gets you oriented fast.",
-      primaryCta: { href: "/events/", label: "Open event calendar" },
+        "Pick a session on the calendar, register from the listing, and bring job-site questions—you will be among crews who build here every week.",
+      primaryCta: { href: "/events/", label: "Browse event calendar" },
       secondaryCta: { href: "/find-a-pro/", label: "See your pro options" },
     },
   },

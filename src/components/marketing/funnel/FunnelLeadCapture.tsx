@@ -5,6 +5,7 @@ import {
   leadInquiryInitialState,
   submitLeadInquiryPlaceholder,
 } from "@/app/actions/lead-inquiry";
+import Link from "next/link";
 import { useActionState, useEffect, useId, useRef } from "react";
 
 function defaultPageFromSlug(sourceSlug: string | undefined): string {
@@ -56,15 +57,35 @@ export function FunnelLeadCapture({
         ) : null}
 
         {state?.ok ? (
-          <p
-            ref={successRef}
-            tabIndex={-1}
-            role="status"
-            aria-live="polite"
-            className="mt-10 rounded-xl border border-[#96c11f]/40 bg-white px-6 py-8 text-lg font-medium text-[#5a7c00] outline-none focus-visible:ring-2 focus-visible:ring-[#96c11f]"
-          >
-            {state.message}
-          </p>
+          <div className="mt-10 space-y-6 text-left">
+            <p
+              ref={successRef}
+              tabIndex={-1}
+              role="status"
+              aria-live="polite"
+              className="rounded-xl border border-[#96c11f]/40 bg-white px-6 py-8 text-lg font-medium text-[#5a7c00] outline-none focus-visible:ring-2 focus-visible:ring-[#96c11f]"
+            >
+              {state.message}
+            </p>
+            <div className="rounded-xl border border-neutral-200 bg-white px-5 py-5 text-center">
+              <p className="text-sm font-semibold text-neutral-800">What you can do next</p>
+              <ul className="mt-3 flex flex-col gap-2 text-sm text-neutral-600 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4">
+                <li>
+                  <Link href="/directory/" className="font-semibold text-[#5a7c00] underline-offset-2 hover:underline">
+                    Browse the member directory
+                  </Link>
+                </li>
+                <li className="hidden text-neutral-300 sm:inline" aria-hidden>
+                  ·
+                </li>
+                <li>
+                  <Link href="/" className="font-semibold text-[#5a7c00] underline-offset-2 hover:underline">
+                    Back to home
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         ) : (
           <form action={formAction} className="mt-10 text-left" aria-busy={isPending}>
             <input type="hidden" name="source" value={block.sourceSlug ?? ""} />
@@ -99,17 +120,12 @@ export function FunnelLeadCapture({
             <button
               type="submit"
               disabled={isPending}
-              className="mt-6 min-h-11 w-full rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00] disabled:opacity-60 sm:w-auto"
+              className="mt-6 min-h-12 w-full rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00] disabled:opacity-60 sm:w-auto"
             >
               {isPending ? "Sending…" : block.submitLabel}
             </button>
             {block.trustText ? (
               <p className="mt-4 text-center text-xs text-neutral-500">{block.trustText}</p>
-            ) : null}
-            {block.integrationNote ? (
-              <p className="mt-6 border-t border-neutral-200 pt-4 text-center text-[10px] text-neutral-400">
-                {block.integrationNote}
-              </p>
             ) : null}
           </form>
         )}

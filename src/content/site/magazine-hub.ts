@@ -100,7 +100,7 @@ export const magazineHubContent: MagazineHubContent = {
   },
   archivesHeading: "Directory & magazine archives",
   archivesIntro:
-    "Download past editions as PDFs. URLs resolve through the native media layer (legacy WordPress host by default; flip `NEXT_PUBLIC_USE_LOCAL_SITE_MEDIA` after copying files to `public/media/`).",
+    "Download past editions as PDFs. If a link does not open, try again in a moment or contact us—we host files for reliable access year-round.",
   editions: magazineEditionMediaDefinitions.map(mapMagazineEdition),
   exploreLinks: [
     {

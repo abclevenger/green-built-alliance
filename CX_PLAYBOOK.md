@@ -20,6 +20,23 @@ The **live UX** is the **Next.js App Router** shell plus WordPress REST HTML (`s
 | **Global nav / footer** | `src/components/SiteHeader.tsx`, `SiteFooter.tsx` |
 | **Homepage performance** (mirror-era) | `public/mirror/index.html` + `npm run patch:home-perf` (only if you still use mirror rewrites) |
 
+### UX rollout — link Phase 2 (copy & trust language)
+
+Phase 2 extended the Phase 1 homepage/footer/event work with a **medium sweep**: fewer generic CTAs (“Explore” / “Discover”), no visitor-facing migration jargon, and neutral directory listing blurbs.
+
+| Area | Source files |
+|------|----------------|
+| Events hub meta | [src/content/site/events-hub.ts](src/content/site/events-hub.ts) |
+| Marketing page CTA copy | [src/content/pages/marketing.ts](src/content/pages/marketing.ts) |
+| Green Built Homes supplemental pages | [src/content/pages/green-built-homes-supplemental-pages.ts](src/content/pages/green-built-homes-supplemental-pages.ts) |
+| Green building resources CTAs | [src/content/pages/green-building-resources-pages.ts](src/content/pages/green-building-resources-pages.ts) |
+| Magazine archives intro | [src/content/site/magazine-hub.ts](src/content/site/magazine-hub.ts) |
+| Client satisfaction / feedback hero | [src/content/pages/content-tail-marketing-pages.ts](src/content/pages/content-tail-marketing-pages.ts) |
+| Editorial posts & long-tail batches | [src/content/posts/indoor-air-plus-certification.ts](src/content/posts/indoor-air-plus-certification.ts), [what-is-a-net-zero-energy-home.ts](src/content/posts/what-is-a-net-zero-energy-home.ts), [green-built-nc-beyond-energy-star.ts](src/content/posts/green-built-nc-beyond-energy-star.ts), [what-is-a-net-zero-ready-home.ts](src/content/posts/what-is-a-net-zero-ready-home.ts), [long-tail-editorial-batch-two.ts](src/content/posts/long-tail-editorial-batch-two.ts), [long-tail-editorial-batch-three.ts](src/content/posts/long-tail-editorial-batch-three.ts), [long-tail-editorial-batch-four.ts](src/content/posts/long-tail-editorial-batch-four.ts) |
+| Directory category SEO + spotlight summaries | [src/content/directory/categories.ts](src/content/directory/categories.ts) |
+
+**Related:** Phase 1 (hero/CTAs, credibility, collaborator strip, stats list, event/footer copy) lives mainly in [src/content/site/home.ts](src/content/site/home.ts), [src/components/home/HomePageView.tsx](src/components/home/HomePageView.tsx), [src/components/trust/CollaboratorStrip.tsx](src/components/trust/CollaboratorStrip.tsx), [src/components/trust/ImpactStatStrip.tsx](src/components/trust/ImpactStatStrip.tsx), [src/components/SiteFooter.tsx](src/components/SiteFooter.tsx), [src/components/events/EventDetailView.tsx](src/components/events/EventDetailView.tsx), [src/app/page.tsx](src/app/page.tsx). Phase 3 (interactive): [src/components/matchmaking/MatchmakingWizard.tsx](src/components/matchmaking/MatchmakingWizard.tsx), [src/components/directory/DirectorySpotlightSection.tsx](src/components/directory/DirectorySpotlightSection.tsx), [src/components/directory/DirectoryCategoryView.tsx](src/components/directory/DirectoryCategoryView.tsx), [src/components/home/HomePathSelector.tsx](src/components/home/HomePathSelector.tsx).
+
 ---
 
 ## Quick wins (same day)

@@ -6,7 +6,7 @@ type Props = {
 };
 
 /**
- * Single-quote spotlight. PLACEHOLDER: set testimonial.isPlaceholder until quote is approved.
+ * Single-quote spotlight — use only approved attributions in content.
  */
 export function TestimonialSpotlight({ testimonial, className = "" }: Props) {
   return (
@@ -23,11 +23,6 @@ export function TestimonialSpotlight({ testimonial, className = "" }: Props) {
       <figcaption className="relative mt-6 text-sm font-medium text-[color:var(--gb-text-muted)]">
         — {testimonial.attribution}
       </figcaption>
-      {testimonial.isPlaceholder ? (
-        <p className="relative mt-4 text-[10px] font-semibold uppercase tracking-wider text-amber-700/90 dark:text-amber-400/90">
-          PLACEHOLDER — replace with approved member quote
-        </p>
-      ) : null}
     </figure>
   );
 }

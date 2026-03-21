@@ -106,7 +106,6 @@ export function DirectoryMemberProfileView({
         </div>
       </section>
 
-      {/* Trust + monetization-ready lane — PLACEHOLDER: adjust copy when paid tiers launch */}
       <section className="border-b border-[color:var(--gb-border)] bg-[color:var(--gb-surface-muted)]/70 px-4 py-6 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div>
@@ -114,8 +113,8 @@ export function DirectoryMemberProfileView({
               Verified Green Built Alliance directory member
             </p>
             <p className="mt-1 max-w-2xl text-xs text-[color:var(--gb-text-muted)]">
-              Profiles sync from the member registry; confirm scope, insurance, and references before you contract.
-              Explore{" "}
+              Profiles come from our member registry—confirm scope, insurance, and references before you contract.
+              See{" "}
               <Link href="/green-built-homes/" className="font-semibold text-[color:var(--gb-accent-deep)] underline-offset-2 hover:underline">
                 Green Built Homes
               </Link>
@@ -123,17 +122,16 @@ export function DirectoryMemberProfileView({
               <Link href="/events/" className="font-semibold text-[color:var(--gb-accent-deep)] underline-offset-2 hover:underline">
                 workshops
               </Link>
-              , and{" "}
+              , or{" "}
               <Link href="/find-a-pro/" className="font-semibold text-[color:var(--gb-accent-deep)] underline-offset-2 hover:underline">
                 guided match
               </Link>{" "}
               if you want help shortlisting.
             </p>
           </div>
-          {showPriorityLane ? (
-            <p className="shrink-0 rounded-lg border border-dashed border-amber-600/40 bg-amber-50/80 px-3 py-2 text-[10px] font-semibold uppercase tracking-wide text-amber-900 dark:border-amber-500/40 dark:bg-amber-950/40 dark:text-amber-200">
-              Elevated visibility slot
-              {/* PLACEHOLDER: maps to featured / priority sort — wire to billing when monetization goes live */}
+          {showPriorityLane && !profile.featured ? (
+            <p className="shrink-0 max-w-xs text-xs font-medium text-[color:var(--gb-text-muted)] md:text-right">
+              Often listed near the top in category results.
             </p>
           ) : null}
         </div>
@@ -229,8 +227,8 @@ export function DirectoryMemberProfileView({
             </Link>
           </div>
           <p className="mt-8 text-xs text-neutral-500">
-            {/* TODO:DIR_API — Full profile sync, logos, and extended bios from MemberPress. */}
-            Profile data is maintained in the native migration registry; verify contact details before major decisions.
+            Members update their own profiles—confirm contact details, insurance, and scope in writing before you
+            commit to a contract or send a deposit.
           </p>
         </div>
       </section>

@@ -33,7 +33,7 @@ export function EditorialHubView({
   intro,
   footnote,
   featuredSectionTitle = "Featured",
-  featuredSectionSubtitle = "Curated picks from the native article set.",
+  featuredSectionSubtitle = "Hand-picked articles and guides from our team.",
   impactStrip,
   impactStripEyebrow = "Why this library matters",
 }: EditorialHubViewProps) {
@@ -210,7 +210,7 @@ export function EditorialHubView({
               href="/directory/"
               className="inline-flex min-h-[44px] items-center justify-center rounded-full border-2 border-[color:var(--gb-border)] bg-[color:var(--gb-surface)] px-6 py-3 text-sm font-bold text-[color:var(--gb-text)] hover:border-[color:var(--gb-accent)]"
             >
-              Explore the directory
+              Browse the member directory
             </Link>
           </div>
         </div>

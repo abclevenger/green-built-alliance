@@ -18,7 +18,7 @@ export type NativeMediaCatalogEntry = NativeMediaRef & { usedBy: string[] };
  * `NEXT_PUBLIC_USE_LOCAL_SITE_MEDIA=true` at build/runtime.
  */
 export const nativeMediaCatalog = {
-  /** Official vertical logo (300×216) — canonical file under `public/media/og/` from brand kit */
+  /** Official vertical logo (300×216) — file lives at `public/media/og/gba-logo-vertical.png` (bundled; not WP-dependent) */
   ogGbaLogoVertical: {
     id: "og-gba-logo-vertical",
     legacyPath: "/wp-content/uploads/2022/11/gba-logo-vertical.png",
@@ -72,11 +72,104 @@ export const nativeMediaCatalog = {
     localPublicPath: "/media/magazine/2024-25/cover.jpg",
     usedBy: ["/magazine/ OG image", "same file as magazine-edition-media 2024–25 cover"],
   },
+  /** Horizontal wordmark — `public/media/brand/gba-logo-horizontal.webp` */
+  gbaLogoHorizontalWebp: {
+    id: "gba-logo-horizontal-webp",
+    legacyPath: "/wp-content/uploads/2023/05/GreenBuiltAlliance-logo-horizontal.gif",
+    localPublicPath: "/media/brand/gba-logo-horizontal.webp",
+    usedBy: ["Site header brand mark"],
+  },
+  /** Homepage hero photo — `public/media/marketing/home-hero-asheville.jpg` */
+  homeHeroAsheville: {
+    id: "home-hero-asheville",
+    legacyPath: "/wp-content/uploads/2023/06/green-built-home-asheville-nc.jpg",
+    localPublicPath: "/media/marketing/home-hero-asheville.jpg",
+    usedBy: ["Homepage hero supporting image"],
+  },
+  /** Directory landing funnel hero — `public/media/photo-forest-path.png` */
+  directoryHeroForest: {
+    id: "directory-hero-forest",
+    legacyPath: "/wp-content/uploads/2023/06/road-in-green-forest.jpg",
+    localPublicPath: "/media/photo-forest-path.png",
+    usedBy: ["/directory/ funnel hero visual"],
+  },
+  /** Energy Savers / volunteer outreach — `public/media/marketing/esn-volunteer-appreciation.jpg` */
+  esnVolunteerOutreach: {
+    id: "esn-volunteer-outreach",
+    legacyPath: "/wp-content/uploads/2023/06/ESN-Volunteer-Appreciation-Staff.jpg",
+    localPublicPath: "/media/marketing/esn-volunteer-appreciation.jpg",
+    usedBy: ["/energysaversnetwork/ funnel hero visual"],
+  },
+  /** Solar installation on a WNC home — `public/media/photo-installing-solar.png` */
+  photoInstallingSolar: {
+    id: "photo-installing-solar",
+    legacyPath: "/wp-content/uploads/2023/06/installing-solar.jpg",
+    localPublicPath: "/media/photo-installing-solar.png",
+    usedBy: ["Homepage community imagery", "renewable / solar context"],
+  },
+  /** Natural building / team visit — `public/media/photo-team-tour.png` */
+  photoTeamTour: {
+    id: "photo-team-tour",
+    legacyPath: "/wp-content/uploads/2023/06/gba-team-tour.jpg",
+    localPublicPath: "/media/photo-team-tour.png",
+    usedBy: ["Homepage community imagery"],
+  },
+  /** Family outdoors in the mountains — `public/media/photo-green-home.png` */
+  photoGreenHome: {
+    id: "photo-green-home",
+    legacyPath: "/wp-content/uploads/2023/06/green-built-home-asheville-nc.jpg",
+    localPublicPath: "/media/photo-green-home.png",
+    usedBy: ["Homepage community imagery"],
+  },
+  /** Member portrait assets — use with staff-approved copy only — `public/media/testimonial-*.png` */
+  testimonialPortraitBowman: {
+    id: "testimonial-portrait-bowman",
+    legacyPath: "/wp-content/uploads/2023/05/Bowman-testimonial-150x150.jpg",
+    localPublicPath: "/media/testimonial-bowman.png",
+    usedBy: ["Optional member spotlight UI"],
+  },
+  testimonialPortraitChelseyHett: {
+    id: "testimonial-portrait-chelsey-hett",
+    legacyPath: "/wp-content/uploads/2023/05/Chelsey-Hett-testimonial-150x150.jpg",
+    localPublicPath: "/media/testimonial-chelsey-hett.png",
+    usedBy: ["Optional member spotlight UI"],
+  },
+  testimonialPortraitDougAger: {
+    id: "testimonial-portrait-doug-ager",
+    legacyPath: "/wp-content/uploads/2023/05/doug-ager-150x150.jpg",
+    localPublicPath: "/media/testimonial-doug-ager.png",
+    usedBy: ["Optional member spotlight UI"],
+  },
+  testimonialPortraitScottMcgehee: {
+    id: "testimonial-portrait-scott-mcgehee",
+    legacyPath: "/wp-content/uploads/2023/05/scott-mcgehee-150x150.webp",
+    localPublicPath: "/media/testimonial-scott-mcgehee.png",
+    usedBy: ["Optional member spotlight UI"],
+  },
 } as const satisfies Record<string, NativeMediaCatalogEntry>;
 
 export type NativeMediaCatalogKey = keyof typeof nativeMediaCatalog;
 
+/** Prefer bundled files under `public/media/` regardless of `NEXT_PUBLIC_USE_LOCAL_SITE_MEDIA`. */
+const ALWAYS_LOCAL_PUBLIC_PATH: Partial<Record<NativeMediaCatalogKey, true>> = {
+  ogGbaLogoVertical: true,
+  gbaLogoHorizontalWebp: true,
+  homeHeroAsheville: true,
+  directoryHeroForest: true,
+  esnVolunteerOutreach: true,
+  photoInstallingSolar: true,
+  photoTeamTour: true,
+  photoGreenHome: true,
+  testimonialPortraitBowman: true,
+  testimonialPortraitChelseyHett: true,
+  testimonialPortraitDougAger: true,
+  testimonialPortraitScottMcgehee: true,
+};
+
 export function mediaUrl(key: NativeMediaCatalogKey): string {
   const { legacyPath, localPublicPath } = nativeMediaCatalog[key];
+  if (ALWAYS_LOCAL_PUBLIC_PATH[key] && localPublicPath) {
+    return localPublicPath.startsWith("/") ? localPublicPath : `/${localPublicPath}`;
+  }
   return resolveNativeMediaUrl({ legacyPath, localPublicPath });
 }

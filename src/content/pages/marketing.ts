@@ -63,7 +63,7 @@ export const nativeMarketingPages: NativeMarketingPage[] = [
       {
         type: "cta",
         title: "Work with us",
-        body: "Explore membership, continuing education on the Events pages, or support our work.",
+        body: "See membership, continuing education on the Events pages, or support our work.",
         primary: { href: "/membership/", label: "Membership" },
         secondary: { href: "/support-our-work/", label: "Support our work" },
       },

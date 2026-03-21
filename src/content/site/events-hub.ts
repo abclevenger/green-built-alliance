@@ -5,7 +5,7 @@ import type { LeadCaptureBlock, SeoFields } from "@/lib/content-types";
 export const eventsIndexSeo: SeoFields = {
   title: "Events | Green Built Alliance",
   description:
-    "Discover workshops, community gatherings, and continuing education from Green Built Alliance in Western North Carolina. Browse upcoming events and register on each event page.",
+    "Browse workshops, community gatherings, and continuing education from Green Built Alliance in Western North Carolina. See upcoming dates and register on each event page.",
   ogImage: mediaUrl("ogGbhNetZeroReadyLogo"),
 };
 

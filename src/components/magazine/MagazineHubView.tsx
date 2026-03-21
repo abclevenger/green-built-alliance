@@ -110,8 +110,7 @@ export function MagazineHubView({ content }: { content: MagazineHubContent }) {
                   the full layout, ads, and listings as they appeared in publication.
                 </p>
                 <p className="mt-4 text-sm text-neutral-500">
-                  {/* TODO:MAG_ASSETS — Self-host PDFs and covers for offline WP shutdown. */}
-                  Digital file opens in a new tab (hosted on legacy media URLs until migrated).
+                  The PDF opens in a new tab. Large files may take a few seconds to load.
                 </p>
                 <a
                   href={current.pdfUrl}
@@ -209,7 +208,7 @@ export function MagazineHubView({ content }: { content: MagazineHubContent }) {
 
       <section className="border-t border-neutral-200 bg-neutral-50 px-4 py-14 md:py-16">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-2xl font-bold text-neutral-900">Explore related programs</h2>
+          <h2 className="text-2xl font-bold text-neutral-900">Related programs and articles</h2>
           <p className="mt-2 max-w-3xl text-sm text-neutral-600">
             Articles and blog posts live on{" "}
             <Link href="/green-building-news/" className="font-semibold text-[#e34d0c] underline-offset-2 hover:underline">

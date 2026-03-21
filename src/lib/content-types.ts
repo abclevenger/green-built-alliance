@@ -16,6 +16,33 @@ export type NavItem = {
   label: string;
 };
 
+/** Column within a mega-menu panel */
+export type MegaMenuColumn = {
+  heading: string;
+  items: NavItem[];
+};
+
+/** Optional featured CTA in a mega-menu panel (e.g. right rail) */
+export type MegaMenuFeatured = {
+  title: string;
+  description: string;
+  href: string;
+  ctaLabel: string;
+};
+
+/** Top-level mega-menu group */
+export type MegaMenuGroup = {
+  /** Stable id for `aria-controls` / state */
+  id: string;
+  label: string;
+  columns: MegaMenuColumn[];
+  featured?: MegaMenuFeatured;
+};
+
+export type MegaMenuSpec = {
+  groups: MegaMenuGroup[];
+};
+
 export type SocialLink = {
   platform: string;
   href: string;
@@ -26,10 +53,14 @@ export type SiteSettings = {
   tagline: string;
   /** Used in metadata template and OG site_name */
   organizationShort: string;
-  nav: NavItem[];
+  megaNav: MegaMenuSpec;
   footer: {
+    /** Short positioning line under the site name */
     blurb: string;
-    links: NavItem[];
+    /** Grouped footer navigation (programs, about, support, etc.) */
+    columns: { title: string; links: NavItem[] }[];
+    /** Shown at bottom — e.g. checkout / external tools disclaimer */
+    checkoutTrustNote: string;
   };
   contact: {
     email?: string;
@@ -45,23 +76,30 @@ export type HomePillar = {
   href: string;
   title: string;
   description: string;
-  /** e.g. "For homeowners" — sets journey context above the title */
+  /** e.g. "For homeowners" — audience context above the title */
   audienceLabel?: string;
   /** Card footer CTA text (default: generic arrow in view) */
   ctaLabel?: string;
+  /** Extra links shown in the interactive path panel (secondary CTAs) */
+  relatedLinks?: { href: string; label: string }[];
 };
 
-/** PLACEHOLDER: swap for approved partner names / logos when agreements allow */
+/** Partner row: text pill, or `logo` image (and optional `href`) */
 export type HomePartnerPlaceholder = {
   label: string;
-  /** If true, UI shows “placeholder” styling — remove when real logo assets ship */
+  /** Use dashed styling for TBD names; omit or false for published labels */
   isPlaceholder?: boolean;
+  /** When set, UI shows this image instead of the text pill */
+  logo?: { src: string; alt: string };
+  /** Optional destination (e.g. partner site); use with `external` for off-site links */
+  href?: string;
+  external?: boolean;
 };
 
 export type HomeTestimonial = {
   quote: string;
   attribution: string;
-  /** PLACEHOLDER — set false when quote is contractually approved */
+  /** Optional flag for staging content */
   isPlaceholder?: boolean;
 };
 
@@ -69,6 +107,8 @@ export type HomeEcosystemLink = {
   href: string;
   label: string;
   description: string;
+  /** Card footer action label (outcome-focused; falls back in UI if omitted) */
+  ctaLabel?: string;
 };
 
 export type HomeProgramCard = {
@@ -76,6 +116,8 @@ export type HomeProgramCard = {
   title: string;
   description: string;
   external?: boolean;
+  /** Card footer action label (outcome-focused; falls back in UI if omitted) */
+  ctaLabel?: string;
 };
 
 export type HomeStat = {
@@ -102,6 +144,15 @@ export type HomeContent = {
     tertiaryCta?: PageCta;
     /** Short credibility bullets shown under hero CTAs */
     trustBullets: string[];
+    /** Optional text link under CTAs (e.g. anchor to path section) */
+    belowCtaLink?: { href: string; label: string };
+    /** Optional supporting photo (path from `mediaUrl`, e.g. local `/media/...`) */
+    heroImage?: { src: string; alt: string };
+  };
+  /** Short mission / credibility copy (no testimonial required) */
+  credibilityBlock?: {
+    title: string;
+    body: string;
   };
   /** Heading for the pathway section */
   pillarsSectionTitle: string;
@@ -113,11 +164,21 @@ export type HomeContent = {
     description: string;
     cards: HomeProgramCard[];
   };
-  /** Impact / credibility metrics — PLACEHOLDER: verify numbers with staff before external use */
+  /** Optional kicker displayed above the stats strip */
+  statsEyebrow?: string;
+  /** Credibility metrics — use verified figures only; omit unverified counts */
   stats?: HomeStat[];
   /** Optional social proof quote */
   testimonial?: HomeTestimonial;
-  /** PLACEHOLDER partner row — replace labels + isPlaceholder when logos are ready */
+  /** Field photos + optional portrait row (no quoted testimonials unless staff-approved copy is set elsewhere) */
+  communityImagery?: {
+    title: string;
+    intro: string;
+    photos: { src: string; alt: string }[];
+    /** Small portraits — pair with real quotes in `testimonial` or staff-approved landing copy */
+    memberPortraits?: { src: string; alt: string }[];
+  };
+  /** Optional partner / collaborator row */
   partnerStrip?: {
     headline: string;
     partners: HomePartnerPlaceholder[];
@@ -139,6 +200,11 @@ export type HomeContent = {
     title: string;
     intro?: string;
     items: { question: string; answer: string }[];
+  };
+  /** “Not sure where to start?” widget — title and intro only; logic lives in UI */
+  startHelper?: {
+    title: string;
+    intro: string;
   };
 };
 
@@ -204,7 +270,7 @@ export type FunnelProofStat = {
 export type FunnelProofSection = {
   headline: string;
   stats: FunnelProofStat[];
-  /** Shown under stats when any stat is placeholder */
+  /** Optional internal note — not rendered in `FunnelStatsBar` */
   placeholderNote?: string;
 };
 
@@ -238,7 +304,7 @@ export type LeadCaptureBlock = {
   fieldName?: "email";
   submitLabel: string;
   trustText?: string;
-  /** Dev-facing note rendered in small type */
+  /** Internal / CRM note — not shown on the public form */
   integrationNote?: string;
   /** Campaign / segment id sent as `source` (hidden) */
   sourceSlug?: string;

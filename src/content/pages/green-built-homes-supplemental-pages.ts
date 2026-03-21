@@ -69,7 +69,7 @@ export const greenBuiltHomesFaqPage: NativeMarketingPage = {
     {
       type: "cta",
       title: "Go deeper",
-      body: "Explore the program overview, certification steps, site-wide FAQs, and directory listings.",
+      body: "See the program overview, certification steps, site-wide FAQs, and directory listings.",
       primary: { href: "/green-built-homes/", label: "Green Built Homes home" },
       secondary: { href: "/faq/", label: "All FAQs" },
     },
@@ -125,7 +125,7 @@ export const greenBuiltHomesMapPage: NativeMarketingPage = {
   seo: {
     title: "Map of Certified Green Built Homes | Green Built Alliance",
     description:
-      "Explore certified Green Built Homes across Western North Carolina—start with the directory and program overview while interactive maps are consolidated.",
+      "Find certified Green Built Homes across Western North Carolina—start with the directory and program overview while interactive maps are consolidated.",
     ogImage: og,
   },
   sections: [
@@ -134,7 +134,7 @@ export const greenBuiltHomesMapPage: NativeMarketingPage = {
       eyebrow: "Green Built Homes",
       title: "Certified homes map",
       subtitle:
-        "We are consolidating public-facing maps with the rest of the native site. Use the directory and program pages to explore certified projects and professionals.",
+        "We are consolidating public-facing maps with the rest of the native site. Use the directory and program pages to find certified projects and professionals.",
     },
     {
       type: "prose",
@@ -144,7 +144,7 @@ export const greenBuiltHomesMapPage: NativeMarketingPage = {
     },
     {
       type: "cta",
-      title: "Explore",
+      title: "Directory & overview",
       primary: { href: "/directory/", label: "Member directory" },
       secondary: { href: "/green-built-homes/", label: "Program overview" },
     },
@@ -186,7 +186,7 @@ export const greenBuiltHomesBuilderCertificationsPage: NativeMarketingPage = {
     },
     {
       type: "cta",
-      title: "Learn more",
+      title: "Program details",
       primary: { href: "/green-built-homes/", label: "Green Built Homes" },
       secondary: { href: "/green-built-nc-beyond-energy-star/", label: "Beyond Energy Star" },
     },
@@ -241,7 +241,7 @@ export const greenBuiltHomesRegisterPage: NativeMarketingPage = {
       eyebrow: "Professionals",
       title: "Register a project",
       subtitle:
-        "Registration workflows may still use legacy member tools while checkout experiences are modernized. Use the links below to reach the right entry points.",
+        "Some registration steps open secure member or partner tools. Use the links below to reach the right entry points.",
     },
     {
       type: "prose",
@@ -254,7 +254,7 @@ export const greenBuiltHomesRegisterPage: NativeMarketingPage = {
       type: "bulletList",
       title: "Where to go next",
       items: [
-        "Members: use account tools on the legacy site for forms tied to membership and program registration when directed by staff",
+        "Members: use your account tools on greenbuilt.org for forms tied to membership and program registration when directed by staff",
         "Not a member yet? Review membership benefits and join the network that powers the directory and education programs",
         "Need a human? Contact Green Built Alliance staff through the channels listed on the about page",
       ],
@@ -304,7 +304,7 @@ export const greenBuiltHomesCertificationsCurrentPage: NativeMarketingPage = {
     },
     {
       type: "cta",
-      title: "Explore",
+      title: "Next steps",
       primary: { href: "/green-built-homes/green-built-certification-levels/", label: "Certification levels" },
       secondary: { href: "/green-built-homes/faq/", label: "FAQ" },
     },

@@ -3,9 +3,6 @@ import type { FunnelBlock, NativeMarketingPage } from "@/lib/content-types";
 
 /**
  * /green-built-homes/ — composable conversion funnel (native only).
- *
- * PLACEHOLDER: proof.stats — replace when verified program metrics exist.
- * PLACEHOLDER: testimonial — replace with real homeowner quote + name/location.
  */
 const greenBuiltHomesBlocks: FunnelBlock[] = [
   {
@@ -88,29 +85,27 @@ const greenBuiltHomesBlocks: FunnelBlock[] = [
     id: "proof",
     type: "proof",
     data: {
-      headline: "Built on Real Homes, Real Builders, Real Impact",
-      placeholderNote:
-        "Figures below are placeholders until verified program totals are published—replace in green-built-homes.ts.",
+      headline: "Backed by a Regional Nonprofit, Not a Label Shop",
       stats: [
         {
-          value: "2,500+",
-          label: "Families served through programs & resources",
-          isPlaceholder: true,
+          value: "Since 2001",
+          label: "Green Built Alliance serving WNC",
+          isPlaceholder: false,
         },
         {
-          value: "800+",
-          label: "Certified green homes in the region",
-          isPlaceholder: true,
+          value: "Third-party",
+          label: "Verification—not self-declared “green”",
+          isPlaceholder: false,
         },
         {
-          value: "350+",
-          label: "Builders & professionals engaged",
-          isPlaceholder: true,
+          value: "Trained teams",
+          label: "Builders and raters working inside the program",
+          isPlaceholder: false,
         },
         {
-          value: "20+",
-          label: "Years of regional impact",
-          isPlaceholder: true,
+          value: "One place",
+          label: "Certification, classes, and directory together",
+          isPlaceholder: false,
         },
       ],
     },
@@ -127,7 +122,7 @@ const greenBuiltHomesBlocks: FunnelBlock[] = [
             "Lower utility bills over time",
             "Healthier indoor air and materials you can feel good about",
           ],
-          cta: { href: "/directory/", label: "Explore Green Homes" },
+          cta: { href: "/directory/", label: "Find builders & raters" },
         },
         {
           title: "For Builders & Professionals",
@@ -158,16 +153,6 @@ const greenBuiltHomesBlocks: FunnelBlock[] = [
       page: "/green-built-homes/",
       formName: "gbh-homeowner-plan",
       intent: "green-built-homes-plan",
-    },
-  },
-  {
-    id: "testimonial",
-    type: "testimonial",
-    data: {
-      quote:
-        "We wanted a home that was efficient and healthy, but didn’t know where to start. This program made the process much clearer.",
-      attribution: "Placeholder homeowner testimonial — replace with name & location",
-      isPlaceholder: true,
     },
   },
   {

@@ -125,12 +125,10 @@ export function EventsIndexView({ events }: { events: EventSummary[] }) {
             Workshops, CE &amp; Community Gatherings
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-600">
-            This is the native events hub for Green Built Alliance. Upcoming listings are loaded from our
-            existing calendar (The Events Calendar).{" "}
+            Upcoming workshops, CE, and community sessions for Green Built Alliance.{" "}
             <strong className="font-semibold text-neutral-800">
-              Open any event to register, RSVP, or buy tickets
-            </strong>{" "}
-            on the legacy event page—behavior there is unchanged.
+              Open any listing for full details—registration, RSVP, and tickets finish on that event’s page.
+            </strong>
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <Link
@@ -175,16 +173,15 @@ export function EventsIndexView({ events }: { events: EventSummary[] }) {
             {featured.length ? "Featured & upcoming" : "Upcoming on the calendar"}
           </h2>
           <p className="mt-2 text-sm text-neutral-500">
-            {/* TODO:WP_EVENTS — Swap `fetchUpcomingEventSummaries` source when events are native. */}
-            Data source: Tribe REST (headless read). Links open legacy event URLs.
+            Listings refresh as new dates are published. Each card links through to the full event page.
           </p>
 
           {primary.length === 0 ? (
             <div className="mt-10 rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 px-6 py-12 text-center">
               <p className="text-lg font-semibold text-neutral-800">No upcoming events in this feed</p>
               <p className="mt-2 text-sm text-neutral-600">
-                New dates will appear here after they are published. You can still explore continuing
-                education resources or sign up for alerts.
+                New dates will show here after they are published. Meanwhile, browse continuing education or sign up
+                for alerts.
               </p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
                 <Link

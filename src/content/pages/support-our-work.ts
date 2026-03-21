@@ -93,13 +93,11 @@ const supportOurWorkBlocks: FunnelBlock[] = [
     type: "proof",
     data: {
       headline: "Impact You Can Stand Behind",
-      placeholderNote:
-        "Replace with audited figures or annual report highlights when ready—numbers below are illustrative.",
       stats: [
-        { value: "20+", label: "Years serving Western North Carolina", isPlaceholder: true },
-        { value: "2.5k+", label: "Households & pros touched by programs (est.)", isPlaceholder: true },
-        { value: "800+", label: "Certified green homes in the region (est.)", isPlaceholder: true },
-        { value: "1", label: "Mission: community-centered sustainability", isPlaceholder: false },
+        { value: "Since 2001", label: "Regional nonprofit continuity", isPlaceholder: false },
+        { value: "WNC", label: "Programs rooted in Western North Carolina", isPlaceholder: false },
+        { value: "All in one", label: "Certification, training, outreach & directory", isPlaceholder: false },
+        { value: "Community-funded", label: "Independence from ad-driven noise", isPlaceholder: false },
       ],
     },
   },
@@ -115,7 +113,7 @@ const supportOurWorkBlocks: FunnelBlock[] = [
             "Recurring options where enabled",
             "Questions? Use the form below and we’ll route you",
           ],
-          cta: { href: LEGACY_GIVEWP_DONATE_URL, label: "Open donation form" },
+          cta: { href: LEGACY_GIVEWP_DONATE_URL, label: "Donate securely" },
         },
         {
           title: "Corporate or foundation partners",
@@ -145,16 +143,6 @@ const supportOurWorkBlocks: FunnelBlock[] = [
       page: "/support-our-work/",
       formName: "support-impact-updates",
       intent: "support-our-work-impact-updates",
-    },
-  },
-  {
-    id: "testimonial",
-    type: "testimonial",
-    data: {
-      quote:
-        "We give because the Alliance meets people with practical help—not doom—and because our region needs that voice.",
-      attribution: "Placeholder supporter quote — replace with named donor if permitted",
-      isPlaceholder: true,
     },
   },
   {

@@ -5,6 +5,12 @@
  * Primary green & gray sampled from logo art: ~#82BC00, #616365; light leaf tone: #C6E0B4.
  * Legacy lime CTAs (#96c11f / #5a7c00) remain in many components; migrate incrementally to vars.
  */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 :root {
   --gb-text: #262626;
   --gb-text-muted: #616365;
@@ -92,3 +98,4 @@
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
+

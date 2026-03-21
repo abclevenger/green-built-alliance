@@ -13,9 +13,9 @@ export function GreenBuildingNewsHubView({ model }: { model: NativePostHubModel 
       impactStrip={editorialHubImpactStats}
       eyebrow="Green Building News"
       headline="Ideas, guides & perspectives"
-      intro="This is the native Green Building News archive—the same migrated articles as our shorter /news/ entry, organized for discovery by topic. Legacy pagination and thousands of historical URLs still fall back to WordPress until those posts are moved into the registry."
+      intro="Practical articles on high-performance homes, building science, and what is happening in Western North Carolina—sorted by topic so you can skim or go deep. For a shorter feed, visit News; for the annual print guide and PDFs, head to Magazine."
       featuredSectionTitle="Editor’s picks"
-      featuredSectionSubtitle="A rotating mix of design, building science, and program context from the native library."
+      featuredSectionSubtitle="Design, building science, and program context—refreshed as we publish."
       footnote={
         <>
           Prefer a compact view? Visit{" "}

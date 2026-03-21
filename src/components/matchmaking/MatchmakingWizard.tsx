@@ -13,10 +13,28 @@ import {
   toMatchmakingMemberCard,
 } from "@/lib/matchmaking";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 type Step = 1 | 2 | 3;
+
+function findAProPath(step: Step, intent: MatchIntentId): string {
+  if (step === 1) return "/find-a-pro/";
+  const p = new URLSearchParams();
+  p.set("intent", intent);
+  p.set("step", String(step));
+  return `/find-a-pro/?${p.toString()}`;
+}
+
+function stepFromSearchParams(
+  intent: MatchIntentId | null,
+  stepRaw: string | null
+): Step {
+  if (!intent) return 1;
+  if (stepRaw === "3") return 3;
+  if (stepRaw === "2") return 2;
+  return 2;
+}
 
 const introLeadBlock: LeadCaptureBlock = {
   headline: "Request an introduction",
@@ -32,20 +50,42 @@ const introLeadBlock: LeadCaptureBlock = {
 };
 
 export function MatchmakingWizard() {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const initialIntent = useMemo(() => {
     const raw = searchParams.get("intent");
     return isMatchIntentId(raw) ? raw : null;
   }, [searchParams]);
 
-  const [step, setStep] = useState<Step>(initialIntent ? 2 : 1);
+  const initialStep = useMemo(
+    () => stepFromSearchParams(initialIntent, searchParams.get("step")),
+    [initialIntent, searchParams]
+  );
+
+  const [step, setStep] = useState<Step>(initialStep);
   const [intent, setIntent] = useState<MatchIntentId>(initialIntent ?? "not-sure");
   const [locationHint, setLocationHint] = useState("");
   const [budget, setBudget] = useState<string>("");
   const [timeline, setTimeline] = useState<string>("");
 
   const stepContentRef = useRef<HTMLDivElement>(null);
+  const stepTitleRef = useRef<HTMLHeadingElement>(null);
   const prevStepRef = useRef<Step | null>(null);
+
+  const syncUrl = useCallback(
+    (nextStep: Step, nextIntent: MatchIntentId) => {
+      const path = findAProPath(nextStep, nextIntent);
+      if (typeof window === "undefined") return;
+      const current = `${window.location.pathname}${window.location.search}`;
+      if (current === path) return;
+      router.replace(path, { scroll: false });
+    },
+    [router]
+  );
+
+  useEffect(() => {
+    syncUrl(step, intent);
+  }, [step, intent, syncUrl]);
 
   useEffect(() => {
     if (prevStepRef.current === null) {
@@ -57,6 +97,9 @@ export function MatchmakingWizard() {
     const reduce =
       typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     stepContentRef.current?.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    requestAnimationFrame(() => {
+      stepTitleRef.current?.focus({ preventScroll: true });
+    });
   }, [step]);
 
   const recommended = useMemo(() => getRecommendedMembersForIntent(intent).map(toMatchmakingMemberCard), [intent]);
@@ -75,21 +118,85 @@ export function MatchmakingWizard() {
             Answer a few questions—we’ll suggest member profiles and categories that fit. You stay in control of who
             you contact.
           </p>
-          <ol className="mt-6 flex list-none flex-wrap justify-center gap-x-2 gap-y-1 text-xs font-semibold text-neutral-500">
-            <li className={step === 1 ? "text-[#5a7c00]" : step > 1 ? "text-neutral-700" : ""} aria-current={step === 1 ? "step" : undefined}>
-              <span className="sr-only">Step 1 of 3: </span>Goal
+          <ol
+            className="mt-8 flex list-none items-center justify-center gap-2 sm:gap-4"
+            aria-label="Guided match progress"
+          >
+            <li>
+              <button
+                type="button"
+                onClick={() => setStep(1)}
+                className={`flex min-h-11 flex-col items-center gap-1 rounded-lg px-2 py-1 text-center transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a7c00] sm:px-3 ${
+                  step === 1 ? "text-[#5a7c00]" : "text-neutral-500 hover:text-neutral-800"
+                }`}
+                aria-current={step === 1 ? "step" : undefined}
+              >
+                <span
+                  className={`flex size-9 items-center justify-center rounded-full text-sm font-bold ${
+                    step === 1
+                      ? "bg-[#96c11f] text-white"
+                      : step > 1
+                        ? "border-2 border-[#96c11f] bg-white text-[#5a7c00]"
+                        : "border-2 border-neutral-200 bg-white text-neutral-400"
+                  }`}
+                  aria-hidden
+                >
+                  1
+                </span>
+                <span className="text-[10px] font-semibold uppercase tracking-wide sm:text-xs">Goal</span>
+              </button>
             </li>
-            <li aria-hidden className="text-neutral-400">
-              →
+            <li aria-hidden className="hidden pb-6 text-neutral-300 sm:block">
+              —
             </li>
-            <li className={step === 2 ? "text-[#5a7c00]" : step > 2 ? "text-neutral-700" : ""} aria-current={step === 2 ? "step" : undefined}>
-              <span className="sr-only">Step 2 of 3: </span>Details
+            <li>
+              <button
+                type="button"
+                disabled={step < 2}
+                onClick={() => step >= 2 && setStep(2)}
+                className={`flex min-h-11 flex-col items-center gap-1 rounded-lg px-2 py-1 text-center transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a7c00] sm:px-3 ${
+                  step === 2 ? "text-[#5a7c00]" : step > 2 ? "text-neutral-700" : "text-neutral-400"
+                } disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:text-neutral-400`}
+                aria-current={step === 2 ? "step" : undefined}
+              >
+                <span
+                  className={`flex size-9 items-center justify-center rounded-full text-sm font-bold ${
+                    step === 2
+                      ? "bg-[#96c11f] text-white"
+                      : step > 2
+                        ? "border-2 border-[#96c11f] bg-white text-[#5a7c00]"
+                        : "border-2 border-neutral-200 bg-white text-neutral-400"
+                  }`}
+                  aria-hidden
+                >
+                  2
+                </span>
+                <span className="text-[10px] font-semibold uppercase tracking-wide sm:text-xs">Details</span>
+              </button>
             </li>
-            <li aria-hidden className="text-neutral-400">
-              →
+            <li aria-hidden className="hidden pb-6 text-neutral-300 sm:block">
+              —
             </li>
-            <li className={step === 3 ? "text-[#5a7c00]" : ""} aria-current={step === 3 ? "step" : undefined}>
-              <span className="sr-only">Step 3 of 3: </span>Matches
+            <li>
+              <button
+                type="button"
+                disabled={step < 3}
+                onClick={() => step >= 3 && setStep(3)}
+                className={`flex min-h-11 flex-col items-center gap-1 rounded-lg px-2 py-1 text-center transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5a7c00] sm:px-3 ${
+                  step === 3 ? "text-[#5a7c00]" : "text-neutral-500 hover:text-neutral-800"
+                } disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:text-neutral-400`}
+                aria-current={step === 3 ? "step" : undefined}
+              >
+                <span
+                  className={`flex size-9 items-center justify-center rounded-full text-sm font-bold ${
+                    step === 3 ? "bg-[#96c11f] text-white" : "border-2 border-neutral-200 bg-white text-neutral-400"
+                  }`}
+                  aria-hidden
+                >
+                  3
+                </span>
+                <span className="text-[10px] font-semibold uppercase tracking-wide sm:text-xs">Matches</span>
+              </button>
             </li>
           </ol>
         </div>
@@ -100,9 +207,20 @@ export function MatchmakingWizard() {
         tabIndex={-1}
         className="mx-auto max-w-3xl scroll-mt-24 px-4 py-12 md:py-16 focus:outline-none"
       >
+        <p className="sr-only" aria-live="polite" aria-atomic="true">
+          Step {step} of 3
+          {step === 1 ? ": choose your goal." : step === 2 ? ": add optional details." : ": your matches."}
+        </p>
         {step === 1 ? (
           <div className="space-y-4">
-            <h2 className="text-xl font-bold text-neutral-900">What are you trying to do?</h2>
+            <h2
+              ref={stepTitleRef}
+              id="match-step-title"
+              tabIndex={-1}
+              className="text-xl font-bold text-neutral-900 outline-none focus:outline-none"
+            >
+              What are you trying to do?
+            </h2>
             <ul className="grid gap-3 sm:grid-cols-2">
               {MATCH_INTENT_OPTIONS.map((opt) => (
                 <li key={opt.id}>
@@ -129,11 +247,18 @@ export function MatchmakingWizard() {
               <button
                 type="button"
                 onClick={() => setStep(1)}
-                className="rounded-md text-sm font-semibold text-[#5a7c00] hover:underline"
+                className="min-h-11 rounded-md px-1 text-sm font-semibold text-[#5a7c00] hover:underline"
               >
                 <span aria-hidden>← </span>Change goal
               </button>
-              <h2 className="mt-4 text-xl font-bold text-neutral-900">A few details (optional)</h2>
+              <h2
+                ref={stepTitleRef}
+                id="match-step-title"
+                tabIndex={-1}
+                className="mt-4 text-xl font-bold text-neutral-900 outline-none focus:outline-none"
+              >
+                A few details (optional)
+              </h2>
               <p className="mt-2 text-sm text-neutral-600">
                 We don’t route by ZIP yet—this helps you remember what to mention when you reach out.
               </p>
@@ -178,7 +303,7 @@ export function MatchmakingWizard() {
             <button
               type="button"
               onClick={() => setStep(3)}
-              className="min-h-11 w-full rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00] sm:w-auto"
+              className="min-h-12 w-full rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00] sm:w-auto"
             >
               See my matches
             </button>
@@ -191,26 +316,34 @@ export function MatchmakingWizard() {
               <button
                 type="button"
                 onClick={() => setStep(2)}
-                className="rounded-md text-sm font-semibold text-[#5a7c00] hover:underline"
+                className="min-h-11 rounded-md px-1 text-sm font-semibold text-[#5a7c00] hover:underline"
               >
                 <span aria-hidden>← </span>Edit details
               </button>
-              <h2 className="mt-4 text-xl font-bold text-neutral-900">Recommended professionals</h2>
+              <h2
+                ref={stepTitleRef}
+                id="match-step-title"
+                tabIndex={-1}
+                className="mt-4 text-xl font-bold text-neutral-900 outline-none focus:outline-none"
+              >
+                Recommended professionals
+              </h2>
               <p className="mt-2 text-sm text-neutral-600">
-                Native member profiles in our network—open a profile to call, email, or visit their site. Mention your
-                goal
+                Alliance members below—open a profile to call, email, or visit their website. Mention your goal
                 {locationHint ? ` (${locationHint})` : ""} when you reach out.
               </p>
             </div>
 
             {recommended.length === 0 ? (
-              <p className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 px-4 py-8 text-center text-neutral-600">
-                No spotlight profiles are wired for this path yet.{" "}
-                <Link href="/directory/" className="font-semibold text-[#5a7c00] underline">
-                  Browse the full directory
-                </Link>
-                .
-              </p>
+              <div className="rounded-xl border border-dashed border-neutral-300 bg-neutral-50 px-4 py-8 text-center text-neutral-600">
+                <p className="font-medium text-neutral-800">No featured matches for this path yet</p>
+                <p className="mt-2 text-sm">
+                  <Link href="/directory/" className="font-semibold text-[#5a7c00] underline underline-offset-2">
+                    Browse the full member directory
+                  </Link>{" "}
+                  by trade—or adjust your goal above.
+                </p>
+              </div>
             ) : (
               <ul className="grid gap-6 sm:grid-cols-2">
                 {recommended.map((m) => (
@@ -292,7 +425,7 @@ function MemberResultCard({ member }: { member: MatchmakingMemberCard }) {
         {member.location ? <p className="mt-2 text-xs text-neutral-500">{member.location}</p> : null}
         <Link
           href={member.path}
-          className="mt-4 inline-flex min-h-9 min-w-[7.5rem] items-center justify-center rounded-full bg-[#96c11f] px-4 py-2 text-xs font-bold text-white hover:bg-[#5a7c00]"
+          className="mt-4 inline-flex min-h-11 min-w-[7.5rem] items-center justify-center rounded-full bg-[#96c11f] px-4 py-2.5 text-sm font-bold text-white hover:bg-[#5a7c00]"
         >
           View profile
         </Link>

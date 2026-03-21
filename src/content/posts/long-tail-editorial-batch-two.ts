@@ -213,7 +213,7 @@ export const longTailEditorialPostsTwo: NativePost[] = [
       },
       {
         type: "cta",
-        title: "Explore",
+        title: "Directory & certification",
         primary: { href: "/directory/realtors/", label: "Realtors directory" },
         secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
       },

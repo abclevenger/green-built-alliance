@@ -53,9 +53,9 @@ export const postGreenBuiltNcBeyondEnergyStar: NativePost = {
     {
       type: "cta",
       title: "Take a next step",
-      body: "Explore certification, classes, or membership—whatever matches your role in the project.",
+      body: "See certification, classes, or membership—whatever matches your role in the project.",
       primary: { href: "/find-a-pro/?intent=new-home", label: "Get matched with a pro" },
-      secondary: { href: "/green-built-homes/", label: "Explore certification" },
+      secondary: { href: "/green-built-homes/", label: "Certification overview" },
     },
   ],
   introLeadCapture: {
