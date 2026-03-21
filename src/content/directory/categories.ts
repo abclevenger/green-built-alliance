@@ -36,12 +36,15 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         summary:
           "Ecologically sensitive craft building with a large in-house team focused on thoughtful homes.",
         href: nativeDirectoryMemberProfilePath("290"),
+        featured: true,
+        badges: ["Green Built Homes", "Certified"],
       },
       {
         name: "JAG & Assoc. Construction, Inc.",
         locationHint: "Urban infill, Asheville",
         summary: "Small team specializing in healthy, creative in-town homes with lower environmental impact.",
         href: nativeDirectoryMemberProfilePath("401"),
+        badges: ["Certified builder"],
       },
       {
         name: "Evergreen Construct Inc.",
@@ -49,6 +52,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         summary:
           "Custom homes, ADUs, and large renovations with Energy Star and Green Built NC experience.",
         href: nativeDirectoryMemberProfilePath("257"),
+        badges: ["Energy Star", "Green Built NC"],
       },
     ],
     relatedNativePostPaths: [
@@ -82,6 +86,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "WNC / Upstate SC",
         summary: "Modern, biophilic residential and light commercial—new construction and renovations.",
         href: nativeDirectoryMemberProfilePath("71"),
+        featured: true,
       },
       {
         name: "Assembly Architecture + Build",
@@ -123,6 +128,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Asheville & Boone",
         summary: "Construction, business, and litigation counsel for firms and projects across WNC.",
         href: nativeDirectoryMemberProfilePath("958"),
+        featured: true,
       },
     ],
     relatedNativePostPaths: ["/green-built-homes/", "/site-planning/", "/moisture-drainage-management/"],
@@ -153,6 +159,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         summary:
           "Construction management, sustainability technologies, and applied trades programs with hands-on green building skills.",
         href: nativeDirectoryMemberProfilePath("304"),
+        featured: true,
       },
     ],
     relatedNativePostPaths: [
@@ -185,6 +192,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Asheville & Boone",
         summary: "Construction, business, and litigation counsel for projects and firms across WNC.",
         href: nativeDirectoryMemberProfilePath("958"),
+        featured: true,
       },
       {
         name: "Greenhem Inc.",
@@ -220,6 +228,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         summary:
           "Technical consulting and certification support led by architect and engineer experience.",
         href: nativeDirectoryMemberProfilePath("40"),
+        featured: true,
       },
       {
         name: "Greenhem Inc.",
@@ -264,6 +273,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "WNC",
         summary: "Building-performance HVAC design, install, and diagnostics with BPI-certified pros.",
         href: nativeDirectoryMemberProfilePath("895"),
+        featured: true,
       },
       {
         name: "Fair Air Heating & Cooling",
@@ -305,6 +315,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         summary:
           "Snapshot from the legacy category grid—this category has fewer public listings; TODO:DIR_API to sync full roster.",
         href: nativeDirectoryMemberProfilePath("726"),
+        featured: true,
       },
     ],
     relatedNativePostPaths: ["/rainscreens-protecting-your-investment/", "/are-the-energy-bills-in-my-new-house-too-high/"],
@@ -334,6 +345,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "WNC & beyond",
         summary: "Technical consulting and certification support with architecture and engineering depth.",
         href: nativeDirectoryMemberProfilePath("40"),
+        featured: true,
       },
       {
         name: "Greenhem Inc.",
@@ -374,6 +386,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Asheville area",
         summary: "Green builder with strong craft focus—verify waterproofing scope when engaging for envelope work.",
         href: nativeDirectoryMemberProfilePath("726"),
+        featured: true,
       },
     ],
     relatedNativePostPaths: ["/moisture-drainage-management/", "/rainscreens-simple-strategies-for-protecting-ones-biggest-investment/"],
@@ -403,6 +416,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Asheville",
         summary: "Design-forward team—confirm brokerage referrals if you need a dedicated agent partner.",
         href: nativeDirectoryMemberProfilePath("938"),
+        featured: true,
       },
       {
         name: "Arcisan, Inc.",
@@ -438,6 +452,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Asheville area",
         summary: "Custom homes and substantial renovations with craft-forward green building.",
         href: nativeDirectoryMemberProfilePath("726"),
+        featured: true,
       },
     ],
     relatedNativePostPaths: ["/green-building-resources/remodeling/", "/moisture-drainage-management/"],
@@ -467,6 +482,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "WNC & beyond",
         summary: "Multidisciplinary consulting with architecture and engineering depth for high-performance homes.",
         href: nativeDirectoryMemberProfilePath("40"),
+        featured: true,
       },
     ],
     relatedNativePostPaths: ["/design-matters/", "/rainscreens-simple-strategies-for-protecting-ones-biggest-investment/"],
@@ -496,6 +512,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Western North Carolina",
         summary: "BPI-certified team focused on building-performance-based HVAC and related electrical coordination.",
         href: nativeDirectoryMemberProfilePath("895"),
+        featured: true,
       },
     ],
     relatedNativePostPaths: [
@@ -528,6 +545,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Western North Carolina",
         summary: "Appraisal, brokerage, and building under one roof—confirm which service line you need when you call.",
         href: nativeDirectoryMemberProfilePath("924"),
+        featured: true,
       },
       {
         name: "Sure Foot Builders Inc.",
@@ -566,6 +584,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Asheville area",
         summary: "Boutique residential interiors for new construction and substantial renovations.",
         href: nativeDirectoryMemberProfilePath("733"),
+        featured: true,
       },
       {
         name: "Carrie Moore Interior Design, LLC",
@@ -607,6 +626,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Asheville in-town",
         summary: "Urban spec and infill focused on healthy, durable homes with lower environmental footprint.",
         href: nativeDirectoryMemberProfilePath("401"),
+        featured: true,
       },
       {
         name: "Nicholson and Sun LLC",
@@ -660,6 +680,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Western North Carolina",
         summary: "Family-owned residential and commercial plumbing—service, replacement, and new construction.",
         href: nativeDirectoryMemberProfilePath("944"),
+        featured: true,
       },
       {
         name: "Sure Foot Builders Inc.",
@@ -696,6 +717,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         summary:
           "Green builder listed in legacy roofing categories—confirm roofing scope and trade partners when you inquire.",
         href: nativeDirectoryMemberProfilePath("726"),
+        featured: true,
       },
       {
         name: "Living Roofs, Inc.",
@@ -734,6 +756,7 @@ const nativeDirectoryCategories: NativeDirectoryCategory[] = [
         locationHint: "Western North Carolina",
         summary: "Landscape architecture, conservation planning, and environmental design.",
         href: nativeDirectoryMemberProfilePath("515"),
+        featured: true,
       },
       {
         name: "Osgood Landscape Architecture, Inc.",

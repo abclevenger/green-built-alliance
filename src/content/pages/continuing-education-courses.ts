@@ -18,7 +18,7 @@ const continuingEducationBlocks: FunnelBlock[] = [
       subheadline:
         "Earn credits, stay code-sharp, and learn beside peers who care about performance—not greenwash. Start here, then open the full event calendar to register for the sessions that fit your license and schedule.",
       primaryCta: { href: "/events/", label: "Browse calendar & register" },
-      secondaryCta: { href: "/events/continuing-education-courses/#lead", label: "Get class alerts" },
+      secondaryCta: { href: "/find-a-pro/?intent=not-sure", label: "Get matched with a pro" },
       visualTagline: "Credentials · building science · regional practice",
     },
   },
@@ -146,6 +146,7 @@ const continuingEducationBlocks: FunnelBlock[] = [
       sourceSlug: "native-ce-courses",
       page: "/events/continuing-education-courses/",
       formName: "continuing-education-alerts",
+      intent: "continuing-education-alerts",
     },
   },
   {
@@ -156,7 +157,7 @@ const continuingEducationBlocks: FunnelBlock[] = [
       subheadline:
         "Calendar and registration stay on the legacy events system for now—this funnel gets you oriented fast.",
       primaryCta: { href: "/events/", label: "Open event calendar" },
-      secondaryCta: { href: "/support-our-work/", label: "Support our work" },
+      secondaryCta: { href: "/find-a-pro/", label: "See your pro options" },
     },
   },
 ];

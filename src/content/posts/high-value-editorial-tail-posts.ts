@@ -46,11 +46,13 @@ export const highValueEditorialTailPosts: NativePost[] = [
       },
       {
         type: "cta",
-        title: "Go deeper",
-        primary: { href: "/build-green/", label: "Build green" },
+        title: "Build or retrofit with trusted pros",
+        body: "Shortlist members who understand rentals, performance documentation, and regional programs.",
+        primary: { href: "/find-a-pro/?intent=not-sure", label: "Get matched with a pro" },
         secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
       },
     ],
+    stickyCta: { href: "/find-a-pro/?intent=not-sure", label: "Get matched with a pro" },
   },
   {
     path: "/act-locallybuild-green/",
@@ -89,10 +91,12 @@ export const highValueEditorialTailPosts: NativePost[] = [
       {
         type: "cta",
         title: "Get involved",
+        body: "Join as a member, browse classes—or get matched with pros for your next project.",
         primary: { href: "/membership/", label: "Membership" },
-        secondary: { href: "/events/", label: "Events" },
+        secondary: { href: "/find-a-pro/", label: "Get matched with a pro" },
       },
     ],
+    stickyCta: { href: "/find-a-pro/", label: "Find a green professional" },
   },
   {
     path: "/kelvin-bonilla-tips-to-save-energy-at-home/",
@@ -133,11 +137,13 @@ export const highValueEditorialTailPosts: NativePost[] = [
       },
       {
         type: "cta",
-        title: "Related",
-        primary: { href: "/energysaversnetwork/", label: "Energy Savers Network" },
-        secondary: { href: "/save-energy/", label: "Save energy ideas" },
+        title: "Lower bills with local help",
+        body: "Guided match points you to efficiency-minded pros; Energy Savers adds programs and tips.",
+        primary: { href: "/find-a-pro/?intent=save-energy", label: "Get matched for energy savings" },
+        secondary: { href: "/energysaversnetwork/", label: "Energy Savers Network" },
       },
     ],
+    stickyCta: { href: "/find-a-pro/?intent=save-energy", label: "Save energy — get matched" },
   },
   {
     path: "/emilio-ancaya-blue-sky-green-roof-reimagining-ashevilles-rooftops/",
@@ -166,10 +172,12 @@ export const highValueEditorialTailPosts: NativePost[] = [
       },
       {
         type: "cta",
-        title: "Find pros",
-        primary: { href: "/directory/landscape-architects/", label: "Landscape architects" },
-        secondary: { href: "/directory/roofers/", label: "Roofing & living-roof partners" },
+        title: "Find pros for green roofs",
+        body: "Start with guided match, then open category hubs for landscape and roofing partners.",
+        primary: { href: "/find-a-pro/?intent=not-sure", label: "Get matched with a pro" },
+        secondary: { href: "/directory/landscape-architects/", label: "Landscape architects" },
       },
     ],
+    stickyCta: { href: "/find-a-pro/?intent=not-sure", label: "Get matched with a pro" },
   },
 ];

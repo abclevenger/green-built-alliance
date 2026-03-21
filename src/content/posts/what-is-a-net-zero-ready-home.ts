@@ -27,6 +27,7 @@ export const postWhatIsNetZeroReadyHome: NativePost = {
     sourceSlug: "native-post-net-zero-ready",
     page: "/what-is-a-net-zero-ready-home/",
     formName: "native-post-net-zero-ready",
+    intent: "post-net-zero-ready-updates",
   },
   blocks: [
     {
@@ -57,11 +58,26 @@ export const postWhatIsNetZeroReadyHome: NativePost = {
       ],
     },
     {
+      type: "leadCapture",
+      data: {
+        headline: "Get matched with a green professional",
+        subheadline:
+          "Share your email—we’ll follow up with builder and rater introductions that fit Net Zero Ready and Green Built Homes pathways.",
+        fieldLabel: "Email",
+        submitLabel: "Request a match",
+        trustText: "Unsubscribe anytime.",
+        sourceSlug: "native-post-net-zero-ready",
+        page: "/what-is-a-net-zero-ready-home/",
+        formName: "native-post-net-zero-match",
+        intent: "post-net-zero-ready-match",
+      },
+    },
+    {
       type: "cta",
-      title: "Work with the program directly",
-      body: "Builders and design teams can review certification pathways, documentation, and training in one place.",
-      primary: { href: "/green-built-homes/", label: "Green Built Homes program" },
-      secondary: { href: "/events/continuing-education-courses/", label: "Continuing education" },
+      title: "What’s your next step?",
+      body: "Homeowners can shortlist certified teams; builders and design leads can open the program hub and CE calendar.",
+      primary: { href: "/find-a-pro/?intent=new-home", label: "Find a certified builder" },
+      secondary: { href: "/green-built-homes/", label: "Explore certification" },
     },
     {
       type: "callout",
@@ -71,13 +87,14 @@ export const postWhatIsNetZeroReadyHome: NativePost = {
     },
   ],
   footerLeadCapture: {
-    headline: "Energy programs & homeowner guidance",
-    subheadline: "The Energy Savers Network shares practical ways to cut waste and lower bills in WNC.",
+    headline: "Get local incentives & efficiency guidance",
+    subheadline: "Energy Savers Network: practical ways to cut waste and lower bills in WNC—stack with a high-performance build.",
     fieldLabel: "Email",
     submitLabel: "Send me Energy Savers updates",
     trustText: "Optional—unsubscribe anytime.",
     sourceSlug: "native-post-net-zero-ready-esn",
     page: "/what-is-a-net-zero-ready-home/",
     formName: "native-post-energy-savers",
+    intent: "post-net-zero-ready-energy-savers",
   },
 };

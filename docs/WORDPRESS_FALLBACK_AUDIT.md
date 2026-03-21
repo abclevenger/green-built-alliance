@@ -2,15 +2,17 @@
 
 **Goal:** Make the remaining WordPress dependency visible for shutdown planning and trim obvious legacy surface without breaking hybrid routes.
 
+**Endgame framing (plugin vs content):** [`WORDPRESS_ENDGAME.md`](./WORDPRESS_ENDGAME.md) — read this before mixing “migrate HTML” with “replace checkout.”
+
 ## Typed inventory
 
 Machine-readable categories, examples, and migration hints live in:
 
-- [`src/content/wordpress-fallback-registry.ts`](../src/content/wordpress-fallback-registry.ts)
+- [`src/content/wordpress-fallback-registry.ts`](../src/content/wordpress-fallback-registry.ts) — includes re-exports from `plugin-hosted-paths.ts` for audits.
 
-Plugin / commerce / account URL space (planning helper, **not** wired into routing):
+**Plugin / backend URL space** (Woo, MemberPress, Give, tickets — **not** editorial fallback):
 
-- [`src/content/site/plugin-hosted-paths.ts`](../src/content/site/plugin-hosted-paths.ts)
+- [`src/content/site/plugin-hosted-paths.ts`](../src/content/site/plugin-hosted-paths.ts) (`PLUGIN_HOSTED_ROUTE_BUCKETS`, `isLikelyPluginHostedPath`)
 
 ## How fallback works today
 
@@ -25,17 +27,17 @@ Dedicated native routes (**not** this catch-all) include `/`, `/magazine/`, `/ne
 
 | Area | Business value | Difficulty | Shutdown approach |
 |------|----------------|------------|-------------------|
-| Unmigrated WP pages (resources, GBH child pages, legal) | Medium–high | Medium | Native sections/funnel/MDX |
-| Unmigrated blog posts | Medium | Easy–medium | Extend `content/posts/registry.ts` |
+| **Content-tail:** unmigrated WP pages | Medium | Medium | Native marketing sections / `NativePost` |
+| **Content-tail:** unmigrated blog posts | Medium | Easy–medium | Extend `content/posts/registry.ts` |
 | Directory grids + unknown `member-profile` | Critical | Hard (plugins/API) | Headless directory + auth |
-| Shop / cart / checkout / account / Give / login | Critical | Hard | Keep on plugin host or rebuild payments |
-| Events (TEC) singles | Critical | Hard | Already headless; tickets still legacy |
+| **Plugin backend:** shop / cart / checkout / account / Give / login / tickets | Critical | Hard | **Not** HTML migration — keep PHP host or rebuild (`WORDPRESS_ENDGAME.md`) |
+| Events (TEC) read + ticket edge | Critical | Hard | Native `/event/…` read; tickets on legacy |
 | Search / odd utilities | Low | Medium | Redirect or native search |
 
 ## Pragmatic reductions applied
 
 - **`/news/newsletters/` → `/news/`** (Next `redirects` in `next.config.ts`) — newsletters consolidated under the native news hub.
-- **Plugin path list** — explicit exclusion from “HTML migration” scope (see `plugin-hosted-paths.ts`).
+- **Plugin path buckets** — structured inventory separating backend dependencies from content-tail fallback (`PLUGIN_HOSTED_ROUTE_BUCKETS` in `plugin-hosted-paths.ts`).
 - **Native batch (ongoing):** legal/thank-you pages, GBH child pages, full `green-building-resources` mirror of topic pages (videos, glossary, case studies, etc.), about/mission paths, long-tail `NativePost` batches, and directory whitelists — see `src/content/pages/*.ts` and `src/content/posts/long-tail-editorial-batch*.ts`.
 
 ## Suggested next migration batch

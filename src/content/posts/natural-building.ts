@@ -25,6 +25,7 @@ export const postNaturalBuilding: NativePost = {
     sourceSlug: "native-post-natural-building",
     page: "/natural-building/",
     formName: "native-post-alliance-news",
+    intent: "post-natural-building-news",
   },
   blocks: [
     {
@@ -44,8 +45,8 @@ export const postNaturalBuilding: NativePost = {
       type: "cta",
       title: "Connect with practitioners",
       body: "Use classes and the member directory to find teams who’ve built similar projects here.",
-      primary: { href: "/events/continuing-education-courses/", label: "Continuing education" },
-      secondary: { href: "/directory/consultants/", label: "Find consultants" },
+      primary: { href: "/find-a-pro/?intent=design", label: "Get matched with a designer" },
+      secondary: { href: "/events/continuing-education-courses/", label: "Continuing education" },
     },
   ],
 };

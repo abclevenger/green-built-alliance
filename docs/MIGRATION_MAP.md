@@ -10,7 +10,7 @@
 | Global nav / footer / defaults | Hardcoded in components | `src/content/site/settings.ts` + `site-config.ts` | P0 | **Native** |
 | Root layout metadata | Static in `layout.tsx` | `settings.defaultSeo` + `buildDefaultMetadata()` | P0 | **Native** |
 | Global WP CSS | Was in `layout` | `WpLegacyStyles` inside `WordPressArticle` only | P1 | **Done** |
-| Dynamic `[...slug]` | REST pages/posts + Tribe | Local registry first → `resolveWordPressRoute` fallback | P1 | **Local-first** — inventory: [`WORDPRESS_FALLBACK_AUDIT.md`](./WORDPRESS_FALLBACK_AUDIT.md), `src/content/wordpress-fallback-registry.ts` |
+| Dynamic `[...slug]` | REST pages/posts (content tail) | Local registry first → `resolveWordPressRoute` fallback | P1 | **Local-first** — [`WORDPRESS_FALLBACK_AUDIT.md`](./WORDPRESS_FALLBACK_AUDIT.md), [`WORDPRESS_ENDGAME.md`](./WORDPRESS_ENDGAME.md) (plugin vs content), `wordpress-fallback-registry.ts` |
 | Native marketing pages | — | `src/content/pages/marketing.ts` (+ per-page modules) | P1 | **About (sections)** + **GBH / Energy Savers (composable `blocks[]`)** |
 | Blog posts | REST `posts` | `src/content/posts/*.ts` registry + `NativePost` model | P2 | **Partial** — registry paths resolve before WP; **`/news/`** + **`/green-building-news/`** hubs native |
 | Magazine / annual directory | WP page | `src/content/site/magazine-hub.ts` + `app/magazine/page.tsx` | P2 | **Native hub** — PDFs/covers centralized in `magazineEditionSources` + `resolveNativeMediaUrl` (legacy host until files land in `public/media/`) |
@@ -27,7 +27,7 @@
 | `src/lib/wordpress.ts` | `resolveWordPressRoute` — **fallback only** |
 | `src/lib/content-source.ts` | Chooses native vs WP |
 | `src/content/wordpress-fallback-registry.ts` | Typed fallback categories + next-batch hints |
-| `src/content/site/plugin-hosted-paths.ts` | Commerce/account/login prefixes (planning; not wired into routing) |
+| `src/content/site/plugin-hosted-paths.ts` | **Authoritative** Woo / MemberPress / Give / ticket path buckets — backend deps, not “fallback articles” |
 | `src/components/WordPressArticle.tsx` | Renders WP HTML + legacy CSS |
 | `src/lib/env.ts` | `WORDPRESS_ORIGIN` (fallback); `WORDPRESS_HOME_PAGE_ID` **unused** by app |
 | `src/lib/native-media.ts` | `LEGACY_MEDIA_ORIGIN`, `resolveNativeMediaUrl` — swap to `public/media/` via env |
@@ -38,7 +38,7 @@
 
 Search codebase for `TODO:WP_FALLBACK` — remove `resolveWordPressRoute` calls when all routes have native sources.
 
-**Fallback deep-dive:** [`WORDPRESS_FALLBACK_AUDIT.md`](./WORDPRESS_FALLBACK_AUDIT.md).
+**Fallback deep-dive:** [`WORDPRESS_FALLBACK_AUDIT.md`](./WORDPRESS_FALLBACK_AUDIT.md). **Shutdown / plugin boundary:** [`WORDPRESS_ENDGAME.md`](./WORDPRESS_ENDGAME.md).
 
 ## Phase 8 snapshot (latest wiring)
 

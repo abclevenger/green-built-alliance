@@ -33,6 +33,7 @@ export const newsIndexLeadCapture: LeadCaptureBlock = {
   sourceSlug: "native-news-index",
   page: "/news/",
   formName: "news-hub-alerts",
+  intent: "news-hub-digest",
 };
 
 /** Curated hero row; paths must match `NativePost.path` (trailing slash). */

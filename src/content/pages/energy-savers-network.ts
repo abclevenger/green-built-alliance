@@ -14,8 +14,8 @@ const energySaversBlocks: FunnelBlock[] = [
       headline: "Cut Energy Waste Without Guessing What Actually Works",
       subheadline:
         "The Energy Savers Network helps Western North Carolina homeowners and renters take the next step—clear guidance, trusted partners, and real savings on bills.",
-      primaryCta: { href: "/energysaversnetwork/#lead", label: "Get Program Updates" },
-      secondaryCta: { href: "/save-energy/", label: "Browse Energy Saving Ideas" },
+      primaryCta: { href: "/find-a-pro/?intent=save-energy", label: "Get matched for energy upgrades" },
+      secondaryCta: { href: "/energysaversnetwork/#lead", label: "Get program updates" },
       visualTagline: "Lower bills. Smarter upgrades. Local support.",
     },
   },
@@ -58,6 +58,17 @@ const energySaversBlocks: FunnelBlock[] = [
     },
   },
   {
+    id: "esn-match-cta",
+    type: "finalCta",
+    data: {
+      headline: "Want a trusted pro—not just tips?",
+      subheadline:
+        "Tell us what you’re trying to fix (bills, comfort, electrification). We’ll point you to directory categories and members who fit Western NC homes.",
+      primaryCta: { href: "/find-a-pro/?intent=save-energy", label: "Start guided match" },
+      secondaryCta: { href: "/directory/", label: "Browse the directory" },
+    },
+  },
+  {
     id: "proof",
     type: "proof",
     data: {
@@ -89,6 +100,23 @@ const energySaversBlocks: FunnelBlock[] = [
       sourceSlug: "energysaversnetwork",
       page: "/energysaversnetwork/",
       formName: "energy-savers-network-updates",
+      intent: "energy-savers-network-updates",
+    },
+  },
+  {
+    id: "esn-incentives",
+    type: "leadCapture",
+    data: {
+      headline: "Get local incentives guide",
+      subheadline:
+        "We’ll email practical notes on rebates, weatherization paths, and when to bring in a pro—WNC focused.",
+      fieldLabel: "Email",
+      submitLabel: "Email me the guide",
+      trustText: "Unsubscribe anytime.",
+      sourceSlug: "energysaversnetwork",
+      page: "/energysaversnetwork/",
+      formName: "energy-savers-incentives-guide",
+      intent: "energy-savers-incentives-guide",
     },
   },
   {
@@ -97,12 +125,15 @@ const energySaversBlocks: FunnelBlock[] = [
     data: {
       headline: "Want to Go Faster? Talk to a Human.",
       subheadline:
-        "Pros can stack CE with membership; homeowners can pair tips with the member directory.",
+        "Homeowners: guided match or directory. Pros: CE plus membership visibility.",
       primaryCta: {
-        href: "/events/continuing-education-courses/",
-        label: "See Upcoming Classes",
+        href: "/find-a-pro/?intent=save-energy",
+        label: "Get matched with a pro",
       },
-      secondaryCta: { href: "/membership/", label: "Membership" },
+      secondaryCta: {
+        href: "/events/continuing-education-courses/",
+        label: "See upcoming classes",
+      },
     },
   },
 ];

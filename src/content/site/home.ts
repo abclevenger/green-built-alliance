@@ -16,8 +16,8 @@ export const homeContent: HomeContent = {
     title: "Build, Buy, or Upgrade a Truly Green Home — Without the Guesswork",
     description:
       "We connect you with trusted builders, proven programs, and real energy-saving solutions across Western North Carolina.",
-    primaryCta: { href: "/green-built-homes/", label: "Find a Green Built Home" },
-    secondaryCta: { href: "#programs", label: "Explore Programs" },
+    primaryCta: { href: "/find-a-pro/", label: "Get matched with a pro" },
+    secondaryCta: { href: "/green-built-homes/", label: "Explore Green Built Homes" },
     trustBullets: [
       "Trusted since 2001",
       "Serving Western North Carolina",
@@ -27,10 +27,10 @@ export const homeContent: HomeContent = {
   pillarsSectionTitle: "How can we help you?",
   pillars: [
     {
-      href: "/green-built-homes/",
+      href: "/find-a-pro/?intent=new-home",
       title: "Build or Buy a Green Home",
       description:
-        "Explore the Green Built Homes program, connect with certified builders, and find a healthier, high-performance home you can trust.",
+        "Get matched with certified builders and programs, or go straight to Green Built Homes and the member directory.",
     },
     {
       href: "/energysaversnetwork/",
@@ -83,10 +83,10 @@ export const homeContent: HomeContent = {
     { value: "Programs", label: "Education · Certification · Magazine" },
   ],
   midCta: {
-    title: "How can we support your green building or sustainability goals?",
+    title: "Turn your project from “research mode” into action",
     description:
-      "Search the site, explore the directory, or browse continuing education for pros—we’re here to help.",
-    primary: { href: "/search/", label: "Search our website" },
-    secondary: { href: "/directory/", label: "Find a professional" },
+      "Use our guided match for suggested pros and categories—or go straight to Green Built Homes, Energy Savers, or the member directory.",
+    primary: { href: "/find-a-pro/", label: "Start guided match" },
+    secondary: { href: "/directory/", label: "Browse the directory" },
   },
 };

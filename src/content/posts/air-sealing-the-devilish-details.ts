@@ -41,5 +41,23 @@ export const postAirSealingTheDevilishDetails: NativePost = {
         "Coordinate with your HVAC designer so ventilation is intentional, not accidental leakage.",
       ],
     },
+    {
+      type: "cta",
+      title: "Tighten the envelope with the right team",
+      body: "Shortlist builders, raters, and consultants who treat air sealing as a process—not a one-off product.",
+      primary: { href: "/find-a-pro/?intent=rate-verify", label: "Get matched with a rater or builder" },
+      secondary: { href: "/events/continuing-education-courses/", label: "Continuing education" },
+    },
   ],
+  footerLeadCapture: {
+    headline: "Performance & building science updates",
+    subheadline: "Guides, classes, and program news from Green Built Alliance—unsubscribe anytime.",
+    fieldLabel: "Email",
+    submitLabel: "Keep me posted",
+    trustText: "We never sell your address.",
+    sourceSlug: "native-post-air-sealing",
+    page: "/air-sealing-the-devilish-details/",
+    formName: "native-post-air-sealing-updates",
+    intent: "post-air-sealing-updates",
+  },
 };

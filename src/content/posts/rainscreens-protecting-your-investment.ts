@@ -49,8 +49,8 @@ export const postRainscreensProtectingInvestment: NativePost = {
       type: "cta",
       title: "Work with pros who detail for climate",
       body: "Find members who pair building science with local experience.",
-      primary: { href: "/directory/builders/", label: "Browse builders" },
-      secondary: { href: "/directory/consultants/", label: "Browse consultants" },
+      primary: { href: "/find-a-pro/?intent=remodel", label: "Get matched with a pro" },
+      secondary: { href: "/directory/builders/", label: "Browse builders" },
     },
   ],
   footerLeadCapture: {
@@ -62,5 +62,6 @@ export const postRainscreensProtectingInvestment: NativePost = {
     sourceSlug: "native-post-rainscreens",
     page: "/rainscreens-simple-strategies-for-protecting-ones-biggest-investment/",
     formName: "native-post-building-science",
+    intent: "post-rainscreens-building-science",
   },
 };

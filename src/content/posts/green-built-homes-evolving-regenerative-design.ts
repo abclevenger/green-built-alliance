@@ -12,6 +12,7 @@ export const postGreenBuiltHomesEvolvingRegenerative: NativePost = {
   author: { name: "Green Built Alliance" },
   categories: ["Green Built Homes", "Design"],
   tags: ["regenerative design", "new construction", "certification", "WNC"],
+  stickyCta: { href: "/find-a-pro/?intent=new-home", label: "Find a certified builder" },
   seo: {
     title: "Green Built Homes & Regenerative Design | Green Built Alliance",
     description:
@@ -26,6 +27,7 @@ export const postGreenBuiltHomesEvolvingRegenerative: NativePost = {
     sourceSlug: "native-post-regenerative-gbh",
     page: "/green-built-homes-evolving-to-encourage-regenerative-design-in-new-home-construction/",
     formName: "native-post-builder-news",
+    intent: "post-regenerative-gbh-builder-news",
   },
   blocks: [
     {

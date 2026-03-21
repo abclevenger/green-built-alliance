@@ -15,7 +15,7 @@ const greenBuiltHomesBlocks: FunnelBlock[] = [
       headline: "Build or Buy a Certified Green Home You Can Trust",
       subheadline:
         "The Green Built Homes program connects you with vetted builders and verifies energy-efficient, healthy, and sustainable homes—so you don’t have to guess.",
-      primaryCta: { href: "/directory/", label: "Find a Green Built Home" },
+      primaryCta: { href: "/find-a-pro/?intent=new-home", label: "Get matched with a certified builder" },
       secondaryCta: {
         href: "/green-built-homes/steps-to-certify-a-home/",
         label: "Are You a Builder? Join the Program",
@@ -145,6 +145,22 @@ const greenBuiltHomesBlocks: FunnelBlock[] = [
     },
   },
   {
+    id: "gbh-lead",
+    type: "leadCapture",
+    data: {
+      headline: "Start your green home plan",
+      subheadline:
+        "Drop your email—we’ll connect you with program pathways, classes, and trusted pros in North Carolina.",
+      fieldLabel: "Email",
+      submitLabel: "Send me next steps",
+      trustText: "We respect your inbox.",
+      sourceSlug: "green-built-homes",
+      page: "/green-built-homes/",
+      formName: "gbh-homeowner-plan",
+      intent: "green-built-homes-plan",
+    },
+  },
+  {
     id: "testimonial",
     type: "testimonial",
     data: {
@@ -162,12 +178,12 @@ const greenBuiltHomesBlocks: FunnelBlock[] = [
       subheadline:
         "Start with trusted standards, real performance, and the right people at your side.",
       primaryCta: {
-        href: "/green-built-homes/steps-to-certify-a-home/",
-        label: "Get Started",
+        href: "/find-a-pro/?intent=new-home",
+        label: "See your builder options",
       },
       secondaryCta: {
-        href: "/events/continuing-education-courses/",
-        label: "Continuing education",
+        href: "/green-built-homes/steps-to-certify-a-home/",
+        label: "Builders: join the program",
       },
     },
   },

@@ -91,7 +91,8 @@ export default async function CatchAllPage({ params, searchParams }: Props) {
     return <DirectoryMemberProfileView profile={resolved.profile} relatedPosts={related} />;
   }
 
-  // TODO:WP_FALLBACK — delete when all routes are native (see docs/WORDPRESS_FALLBACK_AUDIT.md)
+  // Content-tail: unmigrated WP pages/posts. Plugin/checkout/login URLs are a different class — see
+  // `plugin-hosted-paths.ts` + `docs/WORDPRESS_ENDGAME.md` (may still render here if REST matches).
   const articlePath = segmentsToPath(slug);
   return (
     <WordPressArticle

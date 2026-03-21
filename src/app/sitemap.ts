@@ -23,6 +23,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
   const nativePaths = new Set<string>([
     "/",
+    "/find-a-pro/",
     "/events/",
     "/news/",
     "/green-building-news/",

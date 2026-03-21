@@ -1,6 +1,12 @@
 /**
- * WordPress REST resolution for unmigrated catch-all routes.
- * @see `src/content/wordpress-fallback-registry.ts` — inventory + shutdown classification.
+ * WordPress REST resolution for unmigrated **content-tail** catch-all routes (pages + posts).
+ *
+ * **Not plugin routing:** WooCommerce, MemberPress, Give, tickets, and related paths are **backend/plugin**
+ * dependencies (`plugin-hosted-paths.ts`, `docs/WORDPRESS_ENDGAME.md`). They may still return documents here
+ * if WP exposes them as normal REST entities — that is fragile for payments; production should route those
+ * URLs to PHP on `WORDPRESS_ORIGIN` when possible.
+ *
+ * @see `src/content/wordpress-fallback-registry.ts` — inventory; `classifyPluginHostedPath()` for audits.
  */
 import { cache } from "react";
 import { WORDPRESS_ORIGIN } from "@/lib/env";

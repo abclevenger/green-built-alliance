@@ -4,8 +4,9 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   poweredByHeader: false,
   /*
-   * App Router: local-first content in `src/content/*`; unmigrated paths may still use WP REST
-   * via `[...slug]` → `resolveWordPressRoute`. `public/mirror/` is optional crawl output.
+   * App Router: local-first content in `src/content/*`. Content-tail fallback: `[...slug]` → WP REST.
+   * Commerce/login/Give/tickets are **plugin/backend** routes (`plugin-hosted-paths.ts`) — not “normal” fallback;
+   * endgame doc: `docs/WORDPRESS_ENDGAME.md`. `public/mirror/` is optional crawl output.
    */
   async redirects() {
     return [

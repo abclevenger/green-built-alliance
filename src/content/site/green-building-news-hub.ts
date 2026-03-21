@@ -34,6 +34,7 @@ export const greenBuildingNewsLeadCapture: LeadCaptureBlock = {
   sourceSlug: "native-green-building-news-index",
   page: "/green-building-news/",
   formName: "green-building-news-hub-alerts",
+  intent: "green-building-news-hub-digest",
 };
 
 /** Featured row — editorial mix; paths must exist on `NativePost`. */

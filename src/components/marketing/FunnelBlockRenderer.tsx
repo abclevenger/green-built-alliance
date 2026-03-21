@@ -27,7 +27,7 @@ export function FunnelBlockRenderer({ block }: { block: FunnelBlock }) {
     case "testimonial":
       return <FunnelTestimonial testimonial={block.data} />;
     case "leadCapture":
-      return <FunnelLeadCapture block={block.data} />;
+      return <FunnelLeadCapture block={block.data} sectionId={block.id ?? "lead"} />;
     case "finalCta":
       return <FunnelFinalCta finalCta={block.data} />;
     default: {

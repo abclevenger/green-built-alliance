@@ -188,6 +188,8 @@ export type LeadCaptureBlock = {
   page?: string;
   /** Label for GHL mapping, e.g. `energy-savers-updates` (hidden as `formName`) */
   formName?: string;
+  /** Funnel intent for CRM / webhook mapping (hidden field `intent`) */
+  intent?: string;
 };
 
 /**
@@ -244,7 +246,8 @@ export type NativePostBlock =
       body?: string;
       primary: PageCta;
       secondary?: PageCta;
-    };
+    }
+  | { type: "leadCapture"; data: LeadCaptureBlock };
 
 /**
  * Curated row on a native directory category hub.
@@ -257,6 +260,10 @@ export type DirectorySpotlightListing = {
   summary?: string;
   /** Often `/directory/member-profile/?member-id=` until profiles are native */
   href: string;
+  /** Paid / priority placement hook — sort spotlights with `featured` first in UI */
+  featured?: boolean;
+  /** Small labels, e.g. “Certified”, “Featured” */
+  badges?: readonly string[];
 };
 
 /**
@@ -300,6 +307,12 @@ export type NativeDirectoryMemberProfile = {
   directoryCategorySlugs: string[];
   relatedNativePostPaths?: string[];
   seo: SeoFields;
+  /** Monetization / matchmaking: lower sorts earlier among peers */
+  listingPriority?: number;
+  /** Spotlight in matchmaking and category cards when space is limited */
+  featured?: boolean;
+  /** Display chips — “Featured”, “Green Built Homes”, etc. */
+  badges?: readonly string[];
 };
 
 /** Native blog/article — resolved before WordPress in catch-all. */
@@ -321,6 +334,8 @@ export type NativePost = {
   introLeadCapture?: LeadCaptureBlock;
   /** Client lead form after all blocks */
   footerLeadCapture?: LeadCaptureBlock;
+  /** Mobile sticky bar — defaults to matchmaking if omitted */
+  stickyCta?: PageCta;
 };
 
 /** Future: event model for calendar shutdown. */

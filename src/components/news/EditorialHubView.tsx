@@ -44,14 +44,26 @@ export function EditorialHubView({
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-600">{intro}</p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <Link
-              href="/events/"
+              href="/find-a-pro/"
               className="inline-flex items-center justify-center rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00]"
+            >
+              Get matched with a pro
+            </Link>
+            <Link
+              href="/directory/"
+              className="inline-flex items-center justify-center rounded-full border-2 border-[#96c11f] bg-white px-6 py-3 text-sm font-bold text-[#5a7c00] transition hover:bg-[#96c11f]/10"
+            >
+              Browse the directory
+            </Link>
+            <Link
+              href="/events/"
+              className="inline-flex items-center justify-center rounded-full border-2 border-[#96c11f] bg-white px-6 py-3 text-sm font-bold text-[#5a7c00] transition hover:bg-[#96c11f]/10"
             >
               Upcoming events
             </Link>
             <Link
               href="/green-built-homes/"
-              className="inline-flex items-center justify-center rounded-full border-2 border-[#96c11f] bg-white px-6 py-3 text-sm font-bold text-[#5a7c00] transition hover:bg-[#96c11f]/10"
+              className="inline-flex items-center justify-center rounded-full border-2 border-neutral-300 bg-white px-6 py-3 text-sm font-bold text-neutral-800 transition hover:border-[#96c11f]"
             >
               Green Built Homes
             </Link>
@@ -60,12 +72,6 @@ export function EditorialHubView({
               className="inline-flex items-center justify-center rounded-full border-2 border-neutral-300 bg-white px-6 py-3 text-sm font-bold text-neutral-800 transition hover:border-[#96c11f]"
             >
               Membership
-            </Link>
-            <Link
-              href="/support-our-work/"
-              className="inline-flex items-center justify-center rounded-full border-2 border-neutral-300 bg-white px-6 py-3 text-sm font-bold text-neutral-800 transition hover:border-[#96c11f]"
-            >
-              Support our work
             </Link>
           </div>
           {footnote ? <div className="mt-8 max-w-3xl text-sm text-neutral-500">{footnote}</div> : null}
@@ -129,8 +135,14 @@ export function EditorialHubView({
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
-              href="/events/continuing-education-courses/"
+              href="/find-a-pro/?intent=new-home"
               className="inline-flex rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white hover:bg-[#5a7c00]"
+            >
+              Find a builder near you
+            </Link>
+            <Link
+              href="/events/continuing-education-courses/"
+              className="inline-flex rounded-full border-2 border-[#96c11f] bg-white px-6 py-3 text-sm font-bold text-[#5a7c00] hover:bg-[#96c11f]/10"
             >
               Continuing education
             </Link>

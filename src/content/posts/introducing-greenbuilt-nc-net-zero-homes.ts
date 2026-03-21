@@ -13,6 +13,7 @@ export const postIntroducingGreenbuiltNcNetZero: NativePost = {
   author: { name: "Green Built Alliance" },
   categories: ["Green Built Homes", "Certification"],
   tags: ["net zero", "net zero ready", "Green Built NC", "certification"],
+  stickyCta: { href: "/find-a-pro/?intent=new-home", label: "Get matched with a builder" },
   seo: {
     title: "Introducing Green Built NC Net Zero & Net Zero Ready | Green Built Alliance",
     description:
@@ -57,5 +58,6 @@ export const postIntroducingGreenbuiltNcNetZero: NativePost = {
     sourceSlug: "native-post-intro-net-zero",
     page: "/introducing-greenbuilt-nc-net-zero-and-net-zero-ready-homes/",
     formName: "native-post-pro-program",
+    intent: "post-intro-net-zero-pro-program",
   },
 };

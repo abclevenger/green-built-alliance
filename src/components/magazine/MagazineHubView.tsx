@@ -41,8 +41,14 @@ export function MagazineHubView({ content }: { content: MagazineHubContent }) {
               </a>
             ) : null}
             <Link
-              href="/directory/"
+              href="/find-a-pro/"
               className="inline-flex items-center justify-center rounded-full border-2 border-[#96c11f] bg-white px-6 py-3 text-sm font-bold text-[#5a7c00] transition hover:bg-[#96c11f]/10"
+            >
+              Get matched with a pro
+            </Link>
+            <Link
+              href="/directory/"
+              className="inline-flex items-center justify-center rounded-full border-2 border-neutral-300 bg-white px-6 py-3 text-sm font-bold text-neutral-800 transition hover:border-[#96c11f]"
             >
               Browse the directory
             </Link>

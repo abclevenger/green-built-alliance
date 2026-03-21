@@ -53,6 +53,9 @@ export function FunnelLeadCapture({
             <input type="hidden" name="source" value={block.sourceSlug ?? ""} />
             <input type="hidden" name="page" value={page} />
             <input type="hidden" name="formName" value={formName} />
+            {block.intent?.trim() ? (
+              <input type="hidden" name="intent" value={block.intent.trim()} />
+            ) : null}
             <label className="block">
               <span className="text-sm font-semibold text-neutral-800">{block.fieldLabel}</span>
               <input

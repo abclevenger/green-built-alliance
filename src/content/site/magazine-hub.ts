@@ -276,6 +276,11 @@ export const magazineHubContent: MagazineHubContent = {
   editions: magazineEditionSources.map(mapMagazineEdition),
   exploreLinks: [
     {
+      href: "/find-a-pro/",
+      label: "Get matched with a pro",
+      description: "Guided questions, then suggested directory categories and member spotlights for your project.",
+    },
+    {
       href: "/directory/",
       label: "Member directory",
       description: "Search pros online year-round—beyond the annual print listings.",

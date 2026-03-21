@@ -54,8 +54,8 @@ export const postGreenBuiltNcBeyondEnergyStar: NativePost = {
       type: "cta",
       title: "Take a next step",
       body: "Explore certification, classes, or membership—whatever matches your role in the project.",
-      primary: { href: "/green-built-homes/", label: "Green Built Homes" },
-      secondary: { href: "/membership/", label: "Membership" },
+      primary: { href: "/find-a-pro/?intent=new-home", label: "Get matched with a pro" },
+      secondary: { href: "/green-built-homes/", label: "Explore certification" },
     },
   ],
   introLeadCapture: {
@@ -66,5 +66,6 @@ export const postGreenBuiltNcBeyondEnergyStar: NativePost = {
     sourceSlug: "native-post-green-built-nc",
     page: "/green-built-nc-beyond-energy-star/",
     formName: "native-post-member-news",
+    intent: "post-green-built-nc-beyond-es-member-news",
   },
 };

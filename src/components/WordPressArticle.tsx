@@ -5,7 +5,10 @@ import { sanitizeWordPressHtml } from "@/lib/wp-html";
 
 type WpKind = "page" | "post";
 
-/** Renders legacy WordPress HTML; loads block + Astra CSS only for this subtree. */
+/**
+ * Renders legacy WordPress HTML for **content-tail** fallback (unmigrated pages/posts).
+ * Plugin/checkout surfaces should not be treated as long-term “articles” — see `plugin-hosted-paths.ts`.
+ */
 export function WordPressArticle({
   html,
   legacyKind = "page",

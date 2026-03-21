@@ -139,9 +139,15 @@ export function EventsIndexView({ events }: { events: EventSummary[] }) {
             >
               Continuing education hub
             </Link>
+            <Link
+              href="/find-a-pro/"
+              className="inline-flex items-center justify-center rounded-full border-2 border-[#96c11f] bg-white px-6 py-3 text-sm font-bold text-[#5a7c00] transition hover:bg-[#96c11f]/10"
+            >
+              Get matched with a pro
+            </Link>
             <a
               href="#events-alerts"
-              className="inline-flex items-center justify-center rounded-full border-2 border-[#96c11f] bg-white px-6 py-3 text-sm font-bold text-[#5a7c00] transition hover:bg-[#96c11f]/10"
+              className="inline-flex items-center justify-center rounded-full border-2 border-neutral-300 bg-white px-6 py-3 text-sm font-bold text-neutral-800 transition hover:border-[#96c11f]"
             >
               Get event alerts
             </a>
@@ -186,6 +192,12 @@ export function EventsIndexView({ events }: { events: EventSummary[] }) {
                   className="inline-flex rounded-full bg-[#96c11f] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#5a7c00]"
                 >
                   Continuing education
+                </Link>
+                <Link
+                  href="/find-a-pro/"
+                  className="inline-flex rounded-full border-2 border-[#96c11f] bg-white px-5 py-2.5 text-sm font-bold text-[#5a7c00] hover:bg-[#96c11f]/10"
+                >
+                  Get matched with a pro
                 </Link>
                 <Link
                   href="/membership/"
@@ -238,10 +250,10 @@ export function EventsIndexView({ events }: { events: EventSummary[] }) {
               Support our work
             </Link>
             <Link
-              href="/directory/"
+              href="/find-a-pro/"
               className="inline-flex rounded-full border-2 border-neutral-300 bg-white px-6 py-3 text-sm font-bold text-neutral-800 hover:border-[#96c11f]"
             >
-              Find a professional
+              Get matched with a pro
             </Link>
           </div>
         </div>

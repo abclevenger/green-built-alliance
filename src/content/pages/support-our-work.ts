@@ -144,6 +144,7 @@ const supportOurWorkBlocks: FunnelBlock[] = [
       sourceSlug: "native-support-our-work",
       page: "/support-our-work/",
       formName: "support-impact-updates",
+      intent: "support-our-work-impact-updates",
     },
   },
   {

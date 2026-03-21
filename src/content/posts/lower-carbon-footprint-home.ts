@@ -26,6 +26,7 @@ export const postLowerCarbonFootprintHome: NativePost = {
     sourceSlug: "native-post-carbon-footprint",
     page: "/lower-carbon-footprint-home/",
     formName: "native-post-alliance-updates",
+    intent: "post-lower-carbon-alliance-updates",
   },
   blocks: [
     {
@@ -53,8 +54,8 @@ export const postLowerCarbonFootprintHome: NativePost = {
       type: "cta",
       title: "Go deeper with trusted programs",
       body: "Certification and local pros help you document performance—not just intent.",
-      primary: { href: "/green-built-homes/", label: "Green Built Homes" },
-      secondary: { href: "/energysaversnetwork/", label: "Energy Savers Network" },
+      primary: { href: "/find-a-pro/?intent=save-energy", label: "See your options" },
+      secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
     },
   ],
 };

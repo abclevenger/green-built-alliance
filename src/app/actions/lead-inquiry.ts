@@ -10,6 +10,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_SOURCE = 200;
 const MAX_PAGE = 256;
 const MAX_FORM_NAME = 120;
+const MAX_INTENT = 200;
 
 function sanitizePage(raw: string): string | null {
   const t = raw.trim();
@@ -23,6 +24,13 @@ function sanitizeFormName(raw: string): string | null {
   const t = raw.trim();
   if (!t) return "native-funnel-lead";
   if (t.length > MAX_FORM_NAME) return null;
+  return t;
+}
+
+function sanitizeIntent(raw: string | null): string {
+  if (!raw || typeof raw !== "string") return "";
+  const t = raw.trim();
+  if (t.length > MAX_INTENT || /[\r\n<>]/.test(t)) return "";
   return t;
 }
 
@@ -67,6 +75,9 @@ export async function submitLeadInquiryPlaceholder(
   const source = typeof sourceRaw === "string" ? sourceRaw.trim() : "";
   const sourceValue = source || "website";
 
+  const intentRaw = formData.get("intent");
+  const intent = sanitizeIntent(typeof intentRaw === "string" ? intentRaw : null);
+
   if (!LEAD_WEBHOOK_URL) {
     console.warn(
       "[lead-inquiry] LEAD_WEBHOOK_URL is not set — configure inbound webhook URL in environment."
@@ -82,6 +93,7 @@ export async function submitLeadInquiryPlaceholder(
     source: sourceValue,
     page,
     formName,
+    ...(intent ? { intent } : {}),
   };
 
   try {

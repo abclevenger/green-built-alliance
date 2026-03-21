@@ -21,4 +21,5 @@ export const eventsIndexLeadCapture: LeadCaptureBlock = {
   sourceSlug: "native-events-index",
   page: "/events/",
   formName: "events-hub-alerts",
+  intent: "events-hub-alerts",
 };

@@ -38,8 +38,8 @@ export const postComfortAndAshevilleGreenBuilding: NativePost = {
       type: "cta",
       title: "Free help for homeowners",
       body: "Energy Savers Network offers regional guidance without sales pressure.",
-      primary: { href: "/energysaversnetwork/", label: "Energy Savers Network" },
-      secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
+      primary: { href: "/find-a-pro/?intent=save-energy", label: "Get matched for comfort & efficiency" },
+      secondary: { href: "/energysaversnetwork/", label: "Energy Savers Network" },
     },
   ],
   footerLeadCapture: {
@@ -51,5 +51,6 @@ export const postComfortAndAshevilleGreenBuilding: NativePost = {
     sourceSlug: "native-post-comfort-asheville",
     page: "/comfort-and-asheville-green-building/",
     formName: "native-post-esn",
+    intent: "post-comfort-asheville-esn",
   },
 };

@@ -32,6 +32,7 @@ export const postWhatIsNetZeroEnergyHome: NativePost = {
     sourceSlug: "native-post-net-zero-energy",
     page: "/what-is-a-net-zero-energy-home/",
     formName: "native-post-net-zero-energy",
+    intent: "post-net-zero-energy-intro",
   },
   blocks: [
     {
@@ -88,5 +89,6 @@ export const postWhatIsNetZeroEnergyHome: NativePost = {
     sourceSlug: "native-post-net-zero-energy-esn",
     page: "/what-is-a-net-zero-energy-home/",
     formName: "native-post-energy-savers",
+    intent: "post-net-zero-energy-esn",
   },
 };

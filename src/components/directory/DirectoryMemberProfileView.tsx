@@ -40,11 +40,26 @@ export function DirectoryMemberProfileView({
             {profile.organizationName}
           </h1>
           <p className="mt-2 text-lg font-semibold text-neutral-700">{profile.roleLabel}</p>
-          {profile.memberLevel ? (
-            <p className="mt-2 inline-flex rounded-full bg-[#f8faf3] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#5a7c00]">
-              {profile.memberLevel}
-            </p>
-          ) : null}
+          <div className="mt-3 flex flex-wrap items-center gap-2">
+            {profile.featured ? (
+              <span className="inline-flex rounded-full bg-[#5a7c00] px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                Featured
+              </span>
+            ) : null}
+            {(profile.badges ?? []).map((b) => (
+              <span
+                key={b}
+                className="inline-flex rounded-full border border-[#96c11f]/50 bg-[#f8faf3] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#5a7c00]"
+              >
+                {b}
+              </span>
+            ))}
+            {profile.memberLevel ? (
+              <span className="inline-flex rounded-full bg-[#f8faf3] px-3 py-1 text-xs font-bold uppercase tracking-wide text-[#5a7c00]">
+                {profile.memberLevel}
+              </span>
+            ) : null}
+          </div>
           {profile.location ? (
             <p className="mt-4 text-sm font-medium text-neutral-600">{profile.location}</p>
           ) : null}

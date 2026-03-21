@@ -14,8 +14,8 @@ const directoryLandingBlocks: FunnelBlock[] = [
       headline: "Find Green Building Pros Who Show Their Work",
       subheadline:
         "The Green Built Alliance directory connects homeowners, developers, and partners with members who invest in education, visibility, and credible practice—not just a splashy landing page.",
-      primaryCta: { href: "/directory/builders/", label: "Browse builders" },
-      secondaryCta: { href: "/membership/", label: "Get listed as a member" },
+      primaryCta: { href: "/find-a-pro/", label: "Get matched with a pro" },
+      secondaryCta: { href: "/directory/builders/", label: "Browse builders" },
       visualTagline: "Jump to a category—or join the network.",
     },
   },
@@ -158,17 +158,30 @@ const directoryLandingBlocks: FunnelBlock[] = [
     },
   },
   {
+    id: "directory-lead",
+    type: "leadCapture",
+    data: {
+      headline: "Get matched with a green professional",
+      subheadline:
+        "Share your email—we’ll follow up with program options or member introductions that fit your project.",
+      fieldLabel: "Email",
+      submitLabel: "Request a match",
+      trustText: "No spam. Unsubscribe anytime.",
+      sourceSlug: "directory-landing",
+      page: "/directory/",
+      formName: "directory-match-request",
+      intent: "directory-landing-match",
+    },
+  },
+  {
     id: "final",
     type: "finalCta",
     data: {
       headline: "Not Sure Where to Start?",
       subheadline:
-        "Homeowners: Energy Savers. Builders & pros: CE classes, Green Built Homes, or membership to get listed.",
-      primaryCta: { href: "/energysaversnetwork/", label: "Energy Savers Network" },
-      secondaryCta: {
-        href: "/events/continuing-education-courses/",
-        label: "Continuing education",
-      },
+        "Try guided match first. Homeowners: Energy Savers. Builders & pros: CE, Green Built Homes, or membership.",
+      primaryCta: { href: "/find-a-pro/", label: "Start guided match" },
+      secondaryCta: { href: "/energysaversnetwork/", label: "Energy Savers Network" },
     },
   },
 ];

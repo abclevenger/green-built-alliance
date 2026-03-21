@@ -25,6 +25,7 @@ export const postIndoorAirPlusCertification: NativePost = {
     sourceSlug: "native-post-indoor-airplus",
     page: "/indoor-air-plus-a-green-building-certification-program-thats-all-about-the-details/",
     formName: "native-post-healthy-homes",
+    intent: "post-indoor-airplus-healthy-homes",
   },
   blocks: [
     {
@@ -54,8 +55,8 @@ export const postIndoorAirPlusCertification: NativePost = {
       type: "cta",
       title: "Connect with pros who build for health and performance",
       body: "Explore Green Built Homes and the member directory for teams used to layered programs.",
-      primary: { href: "/green-built-homes/", label: "Green Built Homes" },
-      secondary: { href: "/directory/home-energy-raters/", label: "Find a rater" },
+      primary: { href: "/find-a-pro/?intent=rate-verify", label: "Get matched with a rater" },
+      secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
     },
   ],
 };

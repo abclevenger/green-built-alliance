@@ -43,8 +43,8 @@ export const postDesignMatters: NativePost = {
       type: "cta",
       title: "Go deeper with training & programs",
       body: "CE classes and Green Built Homes help teams align on the same playbook.",
-      primary: { href: "/events/continuing-education-courses/", label: "Continuing education" },
-      secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
+      primary: { href: "/find-a-pro/?intent=design", label: "Find an architect or designer" },
+      secondary: { href: "/events/continuing-education-courses/", label: "Continuing education" },
     },
   ],
   footerLeadCapture: {
@@ -56,5 +56,6 @@ export const postDesignMatters: NativePost = {
     sourceSlug: "native-post-design-matters",
     page: "/design-matters/",
     formName: "native-post-pro-updates",
+    intent: "post-design-matters-pro-updates",
   },
 };

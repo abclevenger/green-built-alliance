@@ -47,6 +47,13 @@ export const longTailEditorialPosts: NativePost[] = [
           "Forget that housing and job security shape how people hear risk",
         ],
       },
+      {
+        type: "cta",
+        title: "Act where you live",
+        body: "Match with local pros, explore programs, or join the member community.",
+        primary: { href: "/find-a-pro/", label: "Get matched with a pro" },
+        secondary: { href: "/membership/", label: "Membership" },
+      },
     ],
   },
   {
@@ -116,6 +123,12 @@ export const longTailEditorialPosts: NativePost[] = [
           "Work early with your jurisdiction, insurer, and a rater or builder who understands small-volume HVAC and moisture. The goal is a home that is legal, safe, and efficient—not just photogenic.",
         ],
       },
+      {
+        type: "cta",
+        title: "Get the right team on small spaces",
+        primary: { href: "/find-a-pro/?intent=rate-verify", label: "Find a rater or builder" },
+        secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
+      },
     ],
   },
   {
@@ -150,9 +163,10 @@ export const longTailEditorialPosts: NativePost[] = [
       },
       {
         type: "cta",
-        title: "Read next",
-        primary: { href: "/know-your-stormwater/", label: "Know your stormwater" },
-        secondary: { href: "/site-planning/", label: "Site planning" },
+        title: "Plan the site with pros",
+        body: "Landscape and design members help align plantings, grading, and drainage.",
+        primary: { href: "/find-a-pro/?intent=design", label: "Get matched with a pro" },
+        secondary: { href: "/know-your-stormwater/", label: "Know your stormwater" },
       },
     ],
   },
@@ -180,6 +194,12 @@ export const longTailEditorialPosts: NativePost[] = [
           "Electronically commutated motors (ECMs) can cut fan energy compared with older PSC designs—especially important when ventilation runs continuously. Combined energy recovery ventilators (CERVs or similar products) pair fresh air with tempering and sometimes filtration or sensing.",
           "Specifications on paper are not the same as field performance. Commission flows, balance supply and exhaust, and verify controls with your HVAC partner after occupancy patterns are understood.",
         ],
+      },
+      {
+        type: "cta",
+        title: "Need ventilation or HVAC help?",
+        primary: { href: "/find-a-pro/?intent=hvac-mechanical", label: "Get matched with a pro" },
+        secondary: { href: "/events/continuing-education-courses/", label: "Continuing education" },
       },
     ],
   },
@@ -210,6 +230,12 @@ export const longTailEditorialPosts: NativePost[] = [
           "What is warranted, and who services the system regionally?",
         ],
       },
+      {
+        type: "cta",
+        title: "Solar & storage pros",
+        primary: { href: "/find-a-pro/?intent=solar-renewables", label: "Get matched with a pro" },
+        secondary: { href: "/directory/renewable-energy/", label: "Renewable energy directory" },
+      },
     ],
   },
   {
@@ -235,6 +261,12 @@ export const longTailEditorialPosts: NativePost[] = [
         paragraphs: [
           "Traditional always-on recirculation can erase efficiency gains from a great water heater. Demand controls, push buttons, or occupancy sensors can move hot water when people need it while shortening pipe runs remain the first prize.",
         ],
+      },
+      {
+        type: "cta",
+        title: "Upgrade water & energy systems",
+        primary: { href: "/find-a-pro/?intent=save-energy", label: "Get matched with a pro" },
+        secondary: { href: "/directory/nc-licensed-plumbers/", label: "Plumbers directory" },
       },
     ],
   },
@@ -262,6 +294,12 @@ export const longTailEditorialPosts: NativePost[] = [
           "All-or-nothing framing slows adoption. A better story: choose durable improvements you can verify—envelope testing, right-sized HVAC, safer materials in the rooms where they matter most—and plan upgrades over time.",
         ],
       },
+      {
+        type: "cta",
+        title: "Stack real wins",
+        primary: { href: "/find-a-pro/", label: "Get matched with a pro" },
+        secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
+      },
     ],
   },
   {
@@ -287,6 +325,12 @@ export const longTailEditorialPosts: NativePost[] = [
         paragraphs: [
           "Open shelves in kitchens look great in photos; they also collect grease and dust. Barn doors can bypass poorly sealed pockets. Before you replicate a pin, ask how the detail handles moisture, sound, and maintenance.",
         ],
+      },
+      {
+        type: "cta",
+        title: "Design that survives our climate",
+        primary: { href: "/find-a-pro/?intent=design", label: "Find a designer or architect" },
+        secondary: { href: "/directory/builders/", label: "Browse builders" },
       },
     ],
   },
@@ -316,9 +360,10 @@ export const longTailEditorialPosts: NativePost[] = [
       },
       {
         type: "cta",
-        title: "Program basics",
-        primary: { href: "/what-is-a-net-zero-ready-home/", label: "What is net zero ready?" },
-        secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
+        title: "Build or buy net zero ready",
+        body: "Read the explainer, then shortlist pros who deliver verified performance.",
+        primary: { href: "/find-a-pro/?intent=new-home", label: "Get matched with a pro" },
+        secondary: { href: "/what-is-a-net-zero-ready-home/", label: "What is net zero ready?" },
       },
     ],
   },
@@ -346,6 +391,12 @@ export const longTailEditorialPosts: NativePost[] = [
           "Filtration upgrades, managed ventilation, and reducing tracked-in pollutants are practical steps. So are safer pathways, lighting, and baths that support aging in place. Coordinate medical advice with qualified builders and IAQ professionals.",
         ],
       },
+      {
+        type: "cta",
+        title: "Healthier home, trusted pros",
+        primary: { href: "/find-a-pro/?intent=not-sure", label: "Get matched with a pro" },
+        secondary: { href: "/directory/home-energy-raters/", label: "Home energy raters" },
+      },
     ],
   },
   {
@@ -372,6 +423,12 @@ export const longTailEditorialPosts: NativePost[] = [
           "Parade homes are a snapshot of what builders want to showcase. Look past staging for the bones: envelope specs, HVAC approach, solar readiness, and moisture details that will matter long after the open house ends.",
         ],
       },
+      {
+        type: "cta",
+        title: "Tour-ready vs. long-term quality",
+        primary: { href: "/find-a-pro/?intent=new-home", label: "Find a high-performance builder" },
+        secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
+      },
     ],
   },
   {
@@ -397,6 +454,12 @@ export const longTailEditorialPosts: NativePost[] = [
         paragraphs: [
           "Hygroscopic finishes can absorb and release moisture within a narrow band, smoothing short swings. They do not replace ventilation or a sound air barrier, but they can complement good assemblies in mixed-humidity climates.",
         ],
+      },
+      {
+        type: "cta",
+        title: "Healthy materials & assemblies",
+        primary: { href: "/find-a-pro/?intent=remodel", label: "Get matched with a pro" },
+        secondary: { href: "/directory/consultants/", label: "Consultants" },
       },
     ],
   },
@@ -449,6 +512,12 @@ export const longTailEditorialPosts: NativePost[] = [
         paragraphs: [
           "Solar on schools cuts operating costs and gives students a real-world example of clean energy. Programs that pair donations, technical help, and education multiply impact beyond a single array.",
         ],
+      },
+      {
+        type: "cta",
+        title: "Renewables for homes & businesses",
+        primary: { href: "/find-a-pro/?intent=solar-renewables", label: "Get matched with a pro" },
+        secondary: { href: "/directory/renewable-energy/", label: "Renewable energy directory" },
       },
     ],
   },

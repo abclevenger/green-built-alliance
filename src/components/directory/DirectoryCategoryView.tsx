@@ -1,5 +1,7 @@
+import { FunnelLeadCapture } from "@/components/marketing/funnel/FunnelLeadCapture";
 import { listNativeDirectoryCategories } from "@/content/directory/categories";
-import type { NativeDirectoryCategory, NativePost } from "@/lib/content-types";
+import { suggestedIntentForDirectorySlug } from "@/lib/matchmaking";
+import type { LeadCaptureBlock, NativeDirectoryCategory, NativePost } from "@/lib/content-types";
 import Link from "next/link";
 
 export function DirectoryCategoryView({
@@ -10,6 +12,23 @@ export function DirectoryCategoryView({
   relatedPosts: NativePost[];
 }) {
   const siblings = listNativeDirectoryCategories().filter((c) => c.slug !== category.slug);
+  const matchIntent = suggestedIntentForDirectorySlug(category.slug);
+  const matchHref = `/find-a-pro/?intent=${encodeURIComponent(matchIntent)}`;
+  const spotlightRows = [...category.spotlightListings].sort((a, b) => {
+    if (a.featured === b.featured) return 0;
+    return a.featured ? -1 : 1;
+  });
+  const categoryLeadBlock: LeadCaptureBlock = {
+    headline: "Get matched with a green professional",
+    subheadline: `Tell us about your project—we’ll suggest ${category.title.toLowerCase()} and related directory paths, and follow up by email.`,
+    fieldLabel: "Email",
+    submitLabel: "Request a match",
+    trustText: "No spam. Unsubscribe anytime.",
+    sourceSlug: `directory-category-${category.slug}`,
+    page: category.path,
+    formName: `directory-category-${category.slug}`,
+    intent: `directory-category-${category.slug}-intro`,
+  };
 
   return (
     <div className="bg-white">
@@ -44,16 +63,34 @@ export function DirectoryCategoryView({
               <li key={b}>{b}</li>
             ))}
           </ul>
+          <div className="mt-8 rounded-2xl border border-[#96c11f]/40 bg-[#f8faf3] px-5 py-5 md:px-6 md:py-6">
+            <p className="text-sm font-bold text-neutral-900">Not sure who to call first?</p>
+            <p className="mt-2 max-w-2xl text-sm text-neutral-600">
+              Answer a few questions—we’ll recommend directory categories and member spotlights that fit your goal.
+            </p>
+            <Link
+              href={matchHref}
+              className="mt-4 inline-flex items-center justify-center rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00]"
+            >
+              Get matched with a pro
+            </Link>
+          </div>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <a
+              href="#member-spotlights"
+              className="inline-flex items-center justify-center rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00]"
+            >
+              Browse spotlights below
+            </a>
             <Link
               href="/membership/"
-              className="inline-flex items-center justify-center rounded-full bg-[#96c11f] px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-[#5a7c00]"
+              className="inline-flex items-center justify-center rounded-full border-2 border-[#96c11f] bg-white px-6 py-3 text-sm font-bold text-[#5a7c00] transition hover:bg-[#96c11f]/10"
             >
               Join the directory
             </Link>
             <Link
               href="/events/continuing-education-courses/"
-              className="inline-flex items-center justify-center rounded-full border-2 border-[#96c11f] bg-white px-6 py-3 text-sm font-bold text-[#5a7c00] transition hover:bg-[#96c11f]/10"
+              className="inline-flex items-center justify-center rounded-full border-2 border-neutral-300 bg-white px-6 py-3 text-sm font-bold text-neutral-800 transition hover:border-[#96c11f]"
             >
               Continuing education
             </Link>
@@ -67,7 +104,7 @@ export function DirectoryCategoryView({
         </div>
       </section>
 
-      <section className="px-4 py-14 md:py-16">
+      <section id="member-spotlights" className="scroll-mt-24 px-4 py-14 md:py-16">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-2xl font-bold text-neutral-900">Member spotlights</h2>
           <p className="mt-2 max-w-3xl text-sm text-neutral-600">
@@ -75,16 +112,35 @@ export function DirectoryCategoryView({
             Sample of members in this category. Open a profile for full legacy details (contact, logos, and
             longer bios) until native profiles ship.
           </p>
-          {category.spotlightListings.length === 0 ? (
+          {spotlightRows.length === 0 ? (
             <div className="mt-10 rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 px-6 py-12 text-center text-neutral-700">
               Listings will appear here after the directory API is connected.
             </div>
           ) : (
             <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {category.spotlightListings.map((listing) => (
+              {spotlightRows.map((listing) => (
                 <li key={listing.href + listing.name}>
-                  <article className="flex h-full flex-col rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:border-[#96c11f]/50">
-                    <h3 className="text-lg font-bold text-neutral-900">
+                  <article
+                    className={`relative flex h-full flex-col rounded-2xl border bg-white p-6 shadow-sm transition hover:border-[#96c11f]/50 ${
+                      listing.featured ? "border-[#96c11f]/60 ring-1 ring-[#96c11f]/25" : "border-neutral-200"
+                    }`}
+                  >
+                    {listing.featured ? (
+                      <p className="absolute right-4 top-4 rounded-full bg-[#5a7c00] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+                        Featured
+                      </p>
+                    ) : null}
+                    <div className="flex flex-wrap gap-1.5 pr-16">
+                      {(listing.badges ?? []).map((b) => (
+                        <span
+                          key={b}
+                          className="rounded-full border border-[#96c11f]/40 bg-[#f8faf3] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#5a7c00]"
+                        >
+                          {b}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="mt-3 text-lg font-bold text-neutral-900">
                       <Link href={listing.href} className="hover:text-[#5a7c00] hover:underline">
                         {listing.name}
                       </Link>
@@ -113,6 +169,8 @@ export function DirectoryCategoryView({
           )}
         </div>
       </section>
+
+      <FunnelLeadCapture block={categoryLeadBlock} sectionId={`directory-category-${category.slug}-lead`} />
 
       {relatedPosts.length > 0 ? (
         <section className="border-t border-neutral-200 bg-neutral-50 px-4 py-14 md:py-16">

@@ -30,6 +30,7 @@ export const postAreEnergyBillsTooHigh: NativePost = {
     sourceSlug: "native-post-energy-bills",
     page: "/are-the-energy-bills-in-my-new-house-too-high/",
     formName: "native-post-energy-bills-intro",
+    intent: "post-energy-bills-esn-intro",
   },
   blocks: [
     {
@@ -63,8 +64,8 @@ export const postAreEnergyBillsTooHigh: NativePost = {
       type: "cta",
       title: "Get local support",
       body: "The Energy Savers Network connects residents with workshops, advice, and community resources across our region.",
-      primary: { href: "/energysaversnetwork/", label: "Energy Savers Network" },
-      secondary: { href: "/green-built-homes/", label: "Green Built Homes" },
+      primary: { href: "/find-a-pro/?intent=save-energy", label: "Get matched for energy help" },
+      secondary: { href: "/energysaversnetwork/", label: "Energy Savers Network" },
     },
   ],
   footerLeadCapture: {
@@ -76,5 +77,6 @@ export const postAreEnergyBillsTooHigh: NativePost = {
     sourceSlug: "native-post-energy-bills-footer",
     page: "/are-the-energy-bills-in-my-new-house-too-high/",
     formName: "native-post-alliance-updates",
+    intent: "post-energy-bills-alliance-updates",
   },
 };

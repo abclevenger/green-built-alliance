@@ -142,6 +142,7 @@ const membershipBlocks: FunnelBlock[] = [
       sourceSlug: "native-membership",
       page: "/membership/",
       formName: "membership-precheck",
+      intent: "membership-precheck",
     },
   },
   {

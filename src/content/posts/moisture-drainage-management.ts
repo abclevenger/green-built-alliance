@@ -39,8 +39,8 @@ export const postMoistureDrainageManagement: NativePost = {
       type: "cta",
       title: "Dig deeper with pros",
       body: "Continuing education and the directory connect you with teams that detail for local weather.",
-      primary: { href: "/events/continuing-education-courses/", label: "Continuing education" },
-      secondary: { href: "/directory/consultants/", label: "Find consultants" },
+      primary: { href: "/find-a-pro/?intent=not-sure", label: "Get matched with a pro" },
+      secondary: { href: "/events/continuing-education-courses/", label: "Continuing education" },
     },
   ],
   footerLeadCapture: {
@@ -52,5 +52,6 @@ export const postMoistureDrainageManagement: NativePost = {
     sourceSlug: "native-post-moisture-esn",
     page: "/moisture-drainage-management/",
     formName: "native-post-energy-savers",
+    intent: "post-moisture-drainage-esn",
   },
 };

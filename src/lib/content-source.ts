@@ -1,15 +1,19 @@
 /**
  * Local-first content resolution.
- * TODO:WP_FALLBACK — Delete WordPress branch when every public route has a native source.
+ * TODO:WP_FALLBACK — Delete the WordPress REST branch when every **content-tail** path has a native source.
  *
- * **Inventory:** `src/content/wordpress-fallback-registry.ts` + `docs/WORDPRESS_FALLBACK_AUDIT.md`.
- * **Plugin URL space (planning):** `src/content/site/plugin-hosted-paths.ts` — not applied in routing.
+ * **Two WordPress roles (do not conflate):**
+ * - **Plugin / backend** — checkout, account, login, Give, tickets, `/membership/…` registration children.
+ *   Inventoried in `plugin-hosted-paths.ts`. Not “migrate HTML”; see `docs/WORDPRESS_ENDGAME.md`.
+ * - **Content-tail fallback** — unmigrated WP pages/posts fetched below via `resolveWordPressRoute` → `WordPressArticle`.
  *
- * Next high-intent native page targets:
- * - `/magazine/` — native product hub (`app/magazine/page.tsx`); PDFs may still load from legacy media URLs
- * - `/news/` + `/green-building-news/` — native editorial hubs (`NativePost` registry)
- * - `/directory/member-profile/?member-id=` — native when id is in `content/directory/members/registry.ts`; else WP
- * - Native event singles: `app/event/[...slug]` + Tribe REST; RSVP/tickets still on legacy URLs
+ * **Inventory:** `wordpress-fallback-registry.ts` + `WORDPRESS_FALLBACK_AUDIT.md` + `WORDPRESS_ENDGAME.md`.
+ *
+ * Next high-intent native targets:
+ * - `/magazine/` — native hub; PDFs may still use legacy media URLs
+ * - `/news/` + `/green-building-news/` — `NativePost` registry
+ * - `/directory/member-profile/?member-id=` — native when id is in `members/registry.ts`; else WP
+ * - `/event/…` — native read UI + Tribe REST; purchase/RSVP links stay on legacy plugin URLs
  */
 import { homeContent } from "@/content/site/home";
 import { getNativeDirectoryCategoryBySegments } from "@/content/directory/categories";
@@ -140,7 +144,8 @@ export async function resolveCatchAllRoute(
     }
   }
 
-  // TODO:WP_FALLBACK — remove when posts/events/pages are native
+  // Content-tail only: unmigrated WP pages/posts. Plugin routes (checkout, login, etc.) are separate —
+  // see `plugin-hosted-paths.ts`; they may still pass through here if REST returns HTML — prefer edge → PHP.
   const doc = await resolveWordPressRoute(segments);
   if (doc) {
     return { kind: "wordpress-html", doc };

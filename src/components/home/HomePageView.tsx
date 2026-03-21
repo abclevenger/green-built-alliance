@@ -90,7 +90,7 @@ export function HomePageView({ content }: { content: HomeContent }) {
                       : "mt-4 text-sm font-semibold text-[#e34d0c]"
                   }
                 >
-                  {isPrimary ? "Find a Green Built Home →" : "Learn more →"}
+                  {isPrimary ? "Explore program →" : "Explore program →"}
                 </span>
               </Link>
             );

@@ -1,4 +1,7 @@
 import { FunnelLeadCapture } from "@/components/marketing/funnel/FunnelLeadCapture";
+import { PostMidActionStrip } from "@/components/posts/PostMidActionStrip";
+import { PostStickyCtaBar } from "@/components/posts/PostStickyCtaBar";
+import { defaultPostFooterLeadCapture } from "@/content/site/post-conversion-defaults";
 import type { NativePost, NativePostBlock } from "@/lib/content-types";
 import Link from "next/link";
 
@@ -35,8 +38,16 @@ export function NativePostView({ post }: { post: NativePost }) {
     post.publishedAt &&
     !sameCalendarDay(post.publishedAt, post.updatedAt);
 
+  const footerLead = post.footerLeadCapture ?? defaultPostFooterLeadCapture(post.path, post.slug);
+  const midInsertIndex =
+    post.blocks.length >= 3 ? Math.floor(post.blocks.length / 2) : post.blocks.length >= 2 ? 1 : -1;
+  const stickyPrimary = post.stickyCta ?? {
+    href: "/find-a-pro/",
+    label: "Get matched with a pro",
+  };
+
   return (
-    <article className="native-post-article bg-white">
+    <article className="native-post-article relative bg-white pb-20 md:pb-0">
       <header className="border-b border-neutral-100 bg-gradient-to-b from-[#f8faf3] to-white px-4 py-12 md:py-16">
         <div className="mx-auto max-w-3xl">
           {post.categories?.length ? (
@@ -96,21 +107,62 @@ export function NativePostView({ post }: { post: NativePost }) {
 
         <div className="prose-post space-y-12">
           {post.blocks.map((block, i) => (
-            <PostBlock key={i} block={block} />
+            <div key={i} className="space-y-12">
+              <PostBlock block={block} sectionIndex={i} />
+              {i === midInsertIndex ? <PostMidActionStrip /> : null}
+            </div>
           ))}
         </div>
 
-        {post.footerLeadCapture ? (
-          <div className="mt-16">
-            <FunnelLeadCapture block={post.footerLeadCapture} sectionId="post-footer-lead" />
+        <section className="mt-16 rounded-2xl border border-neutral-200 bg-neutral-50/80 px-6 py-10">
+          <h2 className="text-center text-lg font-bold text-neutral-900">What’s your next step?</h2>
+          <p className="mx-auto mt-2 max-w-xl text-center text-sm text-neutral-600">
+            Move from reading to action—match with pros, explore certification, or save energy with local guidance.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/find-a-pro/"
+              className="inline-flex rounded-full bg-[#96c11f] px-5 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-[#5a7c00]"
+            >
+              Get matched with a pro
+            </Link>
+            <Link
+              href="/directory/"
+              className="inline-flex rounded-full border-2 border-neutral-300 bg-white px-5 py-2.5 text-sm font-bold text-neutral-800 hover:border-[#96c11f]"
+            >
+              Browse directory
+            </Link>
+            <Link
+              href="/green-built-homes/"
+              className="inline-flex rounded-full border-2 border-neutral-300 bg-white px-5 py-2.5 text-sm font-bold text-neutral-800 hover:border-[#96c11f]"
+            >
+              Green Built Homes
+            </Link>
+            <Link
+              href="/energysaversnetwork/"
+              className="inline-flex rounded-full border-2 border-transparent px-5 py-2.5 text-sm font-bold text-[#5a7c00] underline-offset-2 hover:underline"
+            >
+              Energy Savers Network
+            </Link>
           </div>
-        ) : null}
+        </section>
+
+        <div className="mt-12">
+          <FunnelLeadCapture block={footerLead} sectionId="post-footer-lead" />
+        </div>
       </div>
+
+      <PostStickyCtaBar
+        href={stickyPrimary.href}
+        label={stickyPrimary.label}
+        secondaryHref="/directory/"
+        secondaryLabel="Directory"
+      />
     </article>
   );
 }
 
-function PostBlock({ block }: { block: NativePostBlock }) {
+function PostBlock({ block, sectionIndex }: { block: NativePostBlock; sectionIndex: number }) {
   switch (block.type) {
     case "prose":
       return (
@@ -185,5 +237,7 @@ function PostBlock({ block }: { block: NativePostBlock }) {
           </div>
         </section>
       );
+    case "leadCapture":
+      return <FunnelLeadCapture block={block.data} sectionId={`post-inline-lead-${sectionIndex}`} />;
   }
 }

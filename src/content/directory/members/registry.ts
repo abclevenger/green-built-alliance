@@ -37,6 +37,9 @@ const nativeDirectoryMembers: NativeDirectoryMemberProfile[] = [
       description:
         "Jade Mountain Builders—Green Built Alliance member builder serving Asheville and WNC with ecologically sensitive custom homes.",
     },
+    listingPriority: 10,
+    featured: true,
+    badges: ["Featured listing", "Green Built Homes"],
   },
   {
     legacyMemberId: "304",
@@ -88,6 +91,8 @@ const nativeDirectoryMembers: NativeDirectoryMemberProfile[] = [
       description:
         "JAG Construction—member builder focused on healthy, durable in-town homes in Asheville and WNC.",
     },
+    listingPriority: 30,
+    badges: ["Certified builder"],
   },
   {
     legacyMemberId: "257",
@@ -109,6 +114,8 @@ const nativeDirectoryMembers: NativeDirectoryMemberProfile[] = [
       description:
         "Evergreen Construct—Asheville custom builder for high-performance homes, ADUs, and renovations.",
     },
+    listingPriority: 20,
+    badges: ["Energy Star", "Green Built NC"],
   },
   {
     legacyMemberId: "71",

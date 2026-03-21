@@ -44,5 +44,23 @@ export const postKnowYourStormwater: NativePost = {
       title: "Professional help",
       body: "Stormwater rules vary by jurisdiction. Use this article as orientation, then confirm details with your designer, engineer, or local permitting office.",
     },
+    {
+      type: "cta",
+      title: "Get site-savvy pros on your team",
+      body: "Landscape architects, designers, and builders in our network understand grading and drainage in WNC.",
+      primary: { href: "/find-a-pro/?intent=not-sure", label: "Get matched with a pro" },
+      secondary: { href: "/directory/landscape-architects/", label: "Landscape architects" },
+    },
   ],
+  footerLeadCapture: {
+    headline: "Stormwater, site design & program news",
+    subheadline: "Occasional articles and local resources from Green Built Alliance.",
+    fieldLabel: "Email",
+    submitLabel: "Notify me",
+    trustText: "Unsubscribe anytime.",
+    sourceSlug: "native-post-stormwater",
+    page: "/know-your-stormwater/",
+    formName: "native-post-stormwater-updates",
+    intent: "post-stormwater-updates",
+  },
 };
